@@ -1,0 +1,41 @@
+type: PowerTurret
+health: 700
+consumes: {
+  power: 2.3
+}
+reload: 50
+recoil: 0
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-arrows"
+      progress: warmup
+      colorFrom: 00000000
+      colorTo: ffffff
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  homingPower: 0.12
+  sprite: circle-bullet
+  width: 2
+  height: 2
+  trailWidth: 1
+  trailLength: 12
+  backColor: 7382f0
+  frontColor: 7382f0
+  trailColor: 7382f0
+  lightColor: 7382f0
+  shrinkY: 0
+  despawnHit: true
+  hitEffect: hitLancer
+  despawnEffect: none
+}
+research: arc
+category: turret
+requirements: [
+  silicon/25
+]
