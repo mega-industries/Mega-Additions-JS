@@ -27,6 +27,7 @@ smokeEffect: {
  }
 shootType: {
   type: BasicBulletType
+  shrinkY: 0
   damage: 40
   splashDamage: 85
   splashDamageRadius: 28
