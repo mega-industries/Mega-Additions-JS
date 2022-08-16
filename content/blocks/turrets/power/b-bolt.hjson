@@ -1,6 +1,7 @@
 type: PowerTurret
 health: 700
 shootY: 0
+range: 120
 consumes: {
   power: 2.3
 }
@@ -15,7 +16,7 @@ drawer: {
       progress: warmup
       color: 00000000
       colorTo: ffffff
-      outlineColor: 00000000
+      outline: false
     }
   ]
 }
@@ -24,6 +25,9 @@ shootType: {
   homingPower: 0.093
   sprite: circle-bullet
   speed: 3
+  damage: 25
+  splashDamage: 32
+  splashDamageRadius: 10
   width: 2
   height: 2
   trailWidth: 1
