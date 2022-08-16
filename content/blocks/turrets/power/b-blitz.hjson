@@ -1,0 +1,63 @@
+type: PowerTurret
+range: 150
+size: 2
+health: 1030
+reloadTime: 30
+rotateSpeed: 3
+shoot: {
+  type: ShootHelix
+  mag: 1
+  scl: 5
+}
+consumes: {
+  power: 5.3
+}
+shootY: 0
+shootSound: sap
+shootEffect: shootSmall
+smokeEffect: {
+  type: ParticleEffect
+  lifetime: 120
+  length: 20
+  cone: 20
+  interp: pow5Out
+  colorFrom: 7382f0
+  colorTo: 7382f0
+ }
+shootType: {
+  type: BasicBulletType
+  damage: 25
+  splashDamage: 40
+  splashDamageRadius: 28
+  speed: 3
+  lifetime: 50
+  sprite: circle-bullet
+  width: 7
+  height: 7
+  frontColor: 7382f0
+  backColor: 7382f0
+  lightColor: 7382f0
+  hitShake: 1
+  trailColor: 7382f0
+  trailWidth: 7
+  trailLength: 20
+  despawnHit: true
+  hitEffect: {
+    type: WaveEffect
+    lifetime: 20
+    sizeFrom: 0
+    sizeTo: 20
+    strokeFrom: 5
+    strokeTo: 0
+    colorFrom: 7382f0
+    colorTo: 7382f0
+  }
+  despawnEffect: none
+}
+research: lancer
+category: turret
+requirements: [
+  copper/50
+  lead/50
+  silicon/40
+]
