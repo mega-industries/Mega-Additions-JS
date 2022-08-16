@@ -1,5 +1,6 @@
 type: PowerTurret
 health: 700
+shootY: 0
 consumes: {
   power: 2.3
 }
@@ -12,15 +13,17 @@ drawer: {
       type: RegionPart
       suffix: "-arrows"
       progress: warmup
-      colorFrom: 00000000
+      color: 00000000
       colorTo: ffffff
+      outlineColor: 00000000
     }
   ]
 }
 shootType: {
   type: BasicBulletType
-  homingPower: 0.12
+  homingPower: 0.093
   sprite: circle-bullet
+  speed: 3
   width: 2
   height: 2
   trailWidth: 1
