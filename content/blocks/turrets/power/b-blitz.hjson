@@ -27,8 +27,8 @@ smokeEffect: {
  }
 shootType: {
   type: BasicBulletType
-  damage: 25
-  splashDamage: 40
+  damage: 40
+  splashDamage: 85
   splashDamageRadius: 28
   speed: 3
   lifetime: 50
