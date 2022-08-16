@@ -57,7 +57,7 @@ shootType: {
   }
   despawnEffect: none
 }
-research: lancer
+research: b-bolt
 category: turret
 requirements: [
   copper/50
