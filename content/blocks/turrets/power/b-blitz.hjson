@@ -32,6 +32,7 @@ shootType: {
   splashDamageRadius: 28
   speed: 3
   lifetime: 50
+  homingPower: 0.12
   sprite: circle-bullet
   width: 6
   height: 6
