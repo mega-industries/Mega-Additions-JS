@@ -11,15 +11,15 @@ drawer: {
       suffix: "-blade"
       mirror: true
       moveX: -1
-      moveY: -1.5
-      moveRot: -4
+      moveY: -2.7
+      moveRot: 6
       progress: recoil
     }
     {
       type: RegionPart
       suffix: "-glow"
       drawRegion: false
-      mirror: true
+      mirror: false
       moveX: 0
       moveY: 0
       moveRot: 0
@@ -43,6 +43,8 @@ drawer: {
 }
 shootType: {
   type: BasicBulletType
+  backColor: 8aa3f4
+  frontColor: 8aa3f4
   homingPower: 0.17
   speed: 3
   lifetime: 120
