@@ -3,7 +3,7 @@ health: 3200
 size: 3
 range: 300
 reload: 100
-shootSound: sap
+shootSound: missile
 shoot: {
   type: ShootSpread
   shots: 3
