@@ -14,13 +14,21 @@ shootEffect: {
     lancerLaserShoot
     {
       type: ParticleEffect
-      sizeFrom: 8
+      sizeFrom: 4
       sizeTo: 0
       colorFrom: ffffff
       colorTo: 7382f0
-      baseLength: 30
-      length: -30
-      cone: 30
+      length: 45
+      lifetime: 40
+      particles: 6
+    }
+    {
+      type: ParticleEffect
+      sizeFrom: 5
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 7382f0
+      length: -75
       lifetime: 25
       particles: 13
     }
