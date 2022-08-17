@@ -58,6 +58,15 @@ drawer: {
       progress: warmup
       heatColor: 8aa3f4
       heatProgress: warmup
+      moves: [
+        {
+          type: PartMove
+          progress: reload
+          x: -1
+          y: -2.2
+          rot: 3
+        }
+      ]
     }
   ]
 }
