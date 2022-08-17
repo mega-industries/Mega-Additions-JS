@@ -17,6 +17,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-glow"
+      drawRegion: false
       mirror: true
       moveX: 0
       moveY: 0
@@ -28,6 +29,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-blade-glow"
+      drawRegion: false
       mirror: true
       moveX: -1
       moveY: -1.5
@@ -73,7 +75,7 @@ shootType: {
   intervalBullet: {
     type: LightningBulletType
     damage: 40
-    lightningLength: 12
+    lightningLength: 2
     lightningColor: 8aa3f4
   }
   bulletInterval: 3
