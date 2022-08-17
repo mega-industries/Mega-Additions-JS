@@ -12,6 +12,7 @@ range: 300
 shootSOund: laser
 consumes: {
   power: 9.7
+  liquid: water/0.12
 }
 reload: 100
 cooldownTime: 45
