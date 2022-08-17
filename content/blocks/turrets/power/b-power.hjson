@@ -80,7 +80,8 @@ shootType: {
   intervalBullets: 4
   intervalRandomSpread: 360
 }
-requirementd: [
+category: turret
+requirements: [
   lead/300
   titanium/445
 ]
