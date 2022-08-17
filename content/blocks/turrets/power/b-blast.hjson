@@ -8,7 +8,8 @@ shoot: {
   spread: 4.6
 }
 shootY: 1
-range: 200
+range: 300
+shootSOund: laser
 consumes: {
   power: 9.7
 }
