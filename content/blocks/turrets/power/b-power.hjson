@@ -11,9 +11,9 @@ drawer: {
       suffix: "-blade"
       mirror: true
       moveX: -1
-      moveY: -2.7
+      moveY: 0
       moveRot: 6
-      progress: recoil
+      progress: warmup
     }
     {
       type: RegionPart
@@ -33,9 +33,9 @@ drawer: {
       drawRegion: false
       mirror: true
       moveX: -1
-      moveY: -1.5
-      moveRot: -4
-      progress: recoil
+      moveY: 0
+      moveRot: 6
+      progress: warmup
       heatColor: 8aa3f4
       heatProgress: warmup
     }
@@ -80,7 +80,7 @@ shootType: {
   intervalBullet: {
     type: LightningBulletType
     damage: 40
-    lightningLength: 2
+    lightningLength: 4
     lightningColor: 8aa3f4
   }
   bulletInterval: 3
