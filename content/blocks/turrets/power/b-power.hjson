@@ -20,6 +20,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-blade"
+      behind: true
       mirror: true
       moveX: -1
       moveY: 0
