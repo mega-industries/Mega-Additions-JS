@@ -2,10 +2,18 @@ type: PowerTurret
 health: 3200
 size: 3
 range: 300
+reload: 100
+shootSound: sap
+shoot: {
+  type: ShootHelix
+  shots: 4
+  mag: 1
+  scl: 3
+}
 recoil: 2
 consumes: {
   power: 4.2
-  liquid: water/0.02
+  liquid: water/0.05
 }
 drawer: {
   type: DrawTurret
@@ -85,7 +93,7 @@ shootType: {
     // for show only
     type: LightningBulletType
     damage: 0.000000001
-    lightningLength: 3
+    lightningLength: 3.7
     lightningColor: 8aa3f4
   }
   bulletInterval: 3
