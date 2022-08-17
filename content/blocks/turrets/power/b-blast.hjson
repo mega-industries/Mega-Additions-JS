@@ -5,8 +5,10 @@ shoot: {
   type: ShootAlternate
   barrels: 3
   shots: 3
-  spread: 5.2
+  spread: 4.6
 }
+shootY: 1
+range: 200
 consumes: {
   power: 9.7
 }
@@ -19,6 +21,7 @@ shootType: {
   sprite: circle-bullet
   speed: 3
   damage: 100
+  lifetime: 120
   splashDamage: 135
   splashDamageRadius: 10
   width: 4
