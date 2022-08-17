@@ -20,6 +20,7 @@ shootEffect: {
       colorTo: 7382f0
       length: 45
       lifetime: 40
+      cone: 30
       particles: 6
     }
     {
@@ -30,6 +31,7 @@ shootEffect: {
       colorTo: 7382f0
       length: -75
       lifetime: 25
+      cone: 30
       particles: 13
     }
   ]
