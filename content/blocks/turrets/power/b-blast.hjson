@@ -5,11 +5,11 @@ shoot: {
   type: ShootAlternate
   barrels: 3
   shots: 3
-  spread: 4.6
+  spread: 4.4
 }
 shootY: 1
 range: 300
-shootSOund: laser
+shootSound: laser
 consumes: {
   power: 9.7
   liquid: water/0.12
