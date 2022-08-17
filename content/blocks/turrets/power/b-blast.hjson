@@ -1,0 +1,43 @@
+type: PowerTurret
+size: 3
+health: 4780
+shoot: {
+  type: ShootAlternate
+  barrels: 3
+  shots: 3
+  spread: 5.2
+}
+consumes: {
+  power: 9.7
+}
+reload: 100
+cooldownTime: 45
+recoil: 3
+shootType: {
+  type: BasicBulletType
+  homingPower: 0.175
+  sprite: circle-bullet
+  speed: 3
+  damage: 100
+  splashDamage: 135
+  splashDamageRadius: 10
+  width: 4
+  height: 4
+  trailWidth: 2
+  trailLength: 25
+  backColor: 7382f0
+  frontColor: 7382f0
+  trailColor: 7382f0
+  lightColor: 7382f0
+  shrinkY: 0
+  despawnHit: true
+  hitEffect: hitLancer
+  despawnEffect: none
+}
+category: turret
+research: b-blitz
+requirements: [
+  silicon/300
+  graphite/530
+  lead/200
+]
