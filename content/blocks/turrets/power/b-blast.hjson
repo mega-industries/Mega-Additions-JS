@@ -8,6 +8,25 @@ shoot: {
   spread: 4.4
 }
 shootY: 1
+shootEffect: {
+  type: MultiEffect
+  effects: [
+    lancerLaserShoot
+    {
+      type: ParticleEffect
+      sizeFrom: 8
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 7382f0
+      baseLength: 30
+      length: -30
+      cone: 30
+      lifetime: 25
+      particles: 13
+    }
+  ]
+}
+smokeEffect: shootBigSmoke
 range: 300
 shootSound: laser
 consumes: {
