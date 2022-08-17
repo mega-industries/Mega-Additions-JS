@@ -1,6 +1,7 @@
 type: PowerTurret
 health: 3200
 size: 3
+range: 300
 recoil: 2
 drawer: {
   type: DrawTurret
@@ -43,6 +44,8 @@ drawer: {
 shootType: {
   type: BasicBulletType
   homingPower: 0.17
+  speed: 3
+  lifetime: 120
   sprite: circle-bullet
   shrinkY: 0
   width: 6
