@@ -25,6 +25,16 @@ drawer: {
       moveY: 0
       moveRot: 6
       progress: warmup
+      moves: [
+        {
+          type: PartMove
+          progress: reload
+          x: -1
+          y: -2.2
+          rot: 3
+        }
+      ]
+    }
     }
     {
       type: RegionPart
