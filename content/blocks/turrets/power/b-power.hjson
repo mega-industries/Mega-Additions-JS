@@ -3,6 +3,10 @@ health: 3200
 size: 3
 range: 300
 recoil: 2
+consumes: {
+  power: 4.2
+  liquid: water/0.02
+}
 drawer: {
   type: DrawTurret
   parts: [
@@ -78,9 +82,10 @@ shootType: {
     ]
   }
   intervalBullet: {
+    // for show only
     type: LightningBulletType
-    damage: 40
-    lightningLength: 4
+    damage: 0.000000001
+    lightningLength: 3
     lightningColor: 8aa3f4
   }
   bulletInterval: 3
