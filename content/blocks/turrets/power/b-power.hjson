@@ -1,0 +1,40 @@
+type: PowerTurret
+health: 3200
+size: 3
+recoil: 2
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-blade"
+      mirror: true
+      moveX: -1
+      moveY: -1.5
+      moveRot: -4
+      progress: recoil
+    }
+    {
+      type: RegionPart
+      suffix: "-glow"
+      mirror: true
+      moveX: 0
+      moveY: 0
+      moveRot: 0
+      progress: recoil
+      heatColor: 8aa3f4
+      heatProgress: warmup
+    }
+    {
+      type: RegionPart
+      suffix: "-blade-glow"
+      mirror: true
+      moveX: -1
+      moveY: -1.5
+      moveRot: -4
+      progress: recoil
+      heatColor: 8aa3f4
+      heatProgress: warmup
+    }
+  ]
+}
