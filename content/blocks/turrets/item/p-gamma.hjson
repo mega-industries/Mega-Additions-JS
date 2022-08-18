@@ -62,7 +62,7 @@ ammoTypes: {
       colorFrom: bf92f9
       colorTo: bf92f9
     }
-    pointEffectSpace: 0.01
+    pointEffectSpace: 1
     length: 185
   }
 }
