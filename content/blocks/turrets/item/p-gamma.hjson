@@ -22,6 +22,8 @@ ammoTypes: {
       strokeTo: 0
       lifetime: 17
       length: 0
+      colorFrom: bf92f9
+      colorTo: bf92f9
     }
     pointEffectSpace: 2
     length: 185
