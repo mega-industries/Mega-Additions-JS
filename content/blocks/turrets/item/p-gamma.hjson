@@ -1,0 +1,36 @@
+type: ItemTurret
+size: 2
+health: 6300
+consumes: {
+  power: 12.3
+  liquid: water/1.7
+}
+ammoTypes: {
+  thorium: {
+    type: RailBulletType
+    damage: 425
+    shootEffect: thoriumShoot
+    smokeEffect: reactorsmoke
+    pierceEffect: hitLancer
+    endEffect: hitLancer
+    lineEffect: {
+      type: ParticleEffect
+      line: true
+      lenFrom: 2
+      lenTo: 1.5
+      strokeFrom: 2
+      strokeTo: 0
+      lifetime: 17
+      length: 0
+    }
+    length: 185
+  }
+}
+category: turret
+requirements: [
+  lead/500
+  silicon/420
+  titanium/700
+  thorium/500
+  graphite/200
+]
