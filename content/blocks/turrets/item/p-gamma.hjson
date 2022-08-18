@@ -5,6 +5,46 @@ consumes: {
   power: 12.3
   liquid: water/1.7
 }
+shootSound: spark
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-blade"
+      under: true
+      mirror: true
+      progress: warmup
+      moveX: -2.5
+      moveY: 0
+      moveRot: 0
+      heatProgress: recoil
+      heatColor: ff0000
+      moves: [
+        {
+          type: PartMove
+          progress: recoil
+          x: -0.3
+          y: -2.3
+        }
+      ]
+      children: [
+        {
+          type: RegionPart
+          suffix: "-blade-glow"
+          drawRegion: false
+          mirror: true
+          progress: warmup
+          moveX: 0
+          moveY: 0
+          moveRot: 0
+          heatProgress: warmup
+          heatColor: bf92f9
+        }
+      ]
+    }
+  ]
+}
 ammoTypes: {
   thorium: {
     type: RailBulletType
@@ -12,7 +52,6 @@ ammoTypes: {
     shootEffect: thoriumShoot
     smokeEffect: reactorsmoke
     pierceEffect: hitLancer
-    endEffect: hitLancer
     pointEffect: {
       type: ParticleEffect
       strokeTo: 0
