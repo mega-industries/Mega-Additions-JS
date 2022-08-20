@@ -35,6 +35,20 @@ drawer: {
           rot: 3
         }
       ]
+      children: [
+        {
+          type: RegionPart
+          suffix: "-blade-glow"
+          drawRegion: false
+          mirror: true
+          moveX: 0
+          moveY: 0
+          moveRot: 0
+          progress: warmup
+          heatColor: 8aa3f4
+          heatProgress: warmup
+        }
+      ]
     }
     {
       type: RegionPart
@@ -47,27 +61,6 @@ drawer: {
       progress: recoil
       heatColor: 8aa3f4
       heatProgress: warmup
-    }
-    {
-      type: RegionPart
-      suffix: "-blade-glow"
-      drawRegion: false
-      mirror: true
-      moveX: -1
-      moveY: 0
-      moveRot: 6
-      progress: warmup
-      heatColor: 8aa3f4
-      heatProgress: warmup
-      moves: [
-        {
-          type: PartMove
-          progress: reload
-          x: -1
-          y: -2.2
-          rot: 3
-        }
-      ]
     }
   ]
 }
