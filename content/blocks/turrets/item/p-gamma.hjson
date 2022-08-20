@@ -1,6 +1,9 @@
 type: ItemTurret
 size: 2
 health: 6300
+reload: 200
+cooldownTime: 115
+shootY: 0
 consumes: {
   power: 12.3
   liquid: water/1.7
@@ -15,7 +18,7 @@ drawer: {
       under: true
       mirror: true
       progress: warmup
-      moveX: -2.5
+      moveX: -1.9
       moveY: 0
       moveRot: 0
       heatProgress: recoil
@@ -48,7 +51,7 @@ drawer: {
 ammoTypes: {
   thorium: {
     type: RailBulletType
-    damage: 425
+    damage: 620
     shootEffect: thoriumShoot
     smokeEffect: reactorsmoke
     pierceEffect: hitLancer
