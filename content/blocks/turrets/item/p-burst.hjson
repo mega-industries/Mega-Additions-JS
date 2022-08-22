@@ -18,7 +18,7 @@ collidesAir: false
 drawer: {
 type: DrawTurret
 parts: [
-{
+}
 type: RegionPart
 progress: reload
 moveX: 1.3
