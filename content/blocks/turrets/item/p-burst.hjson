@@ -2,7 +2,7 @@ type: ItemTurret
 health: 4200
 size: 2
 targetsAir: false
-ammoTypes: [
+ammoTypes: {
 thorium: {
 type: BasicBulletType
 damage: 135
@@ -14,7 +14,7 @@ splashDamage: 45
 aplashDamageRadius: 30
 collidesAir: false
 }
-]
+}
 drawer: {
 type: DrawTurret
 parts: [
