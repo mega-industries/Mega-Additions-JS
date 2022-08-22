@@ -20,17 +20,17 @@ type: DrawTurret
 parts: [
 {
 type: RegionPart
-progress: recoil
-moveX: -1.3
-moveY: -1.3
+progress: reload
+moveX: 1.3
+moveY: 1.3
 mirror. true
 suffix: "-bottom"
 }
 {
 type: RegionPart
-progress: recoil
-moveX: -1.3
-moveY: 1.3
+progress: reload
+moveX: 1.3
+moveY: -1.3
 mirror: true
 suffix: "-top"
 }
