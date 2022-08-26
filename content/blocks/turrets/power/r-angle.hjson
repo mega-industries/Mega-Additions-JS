@@ -60,9 +60,10 @@ shootType: {
         lenTo: 0
         lenFrom: 6.5
         strokeFrom: 3
-        strokeTo: 3
+        strokeTo: 1
         length: 85
         lifetime: 32
+        interp: fout
       }
       {
         type: ParticleEffect
@@ -72,13 +73,14 @@ shootType: {
         lenTo: 0
         lenFrom: 6.5
         strokeFrom: 3
-        strokeTo: 3
+        strokeTo: 1
         length: 45
         lifetime: 32
+        interp: fout
       }
       {
         type: ParticleEffect
-        lifetime: 7
+        lifetime: 3
         particles: 1
         length: 0
         sizeFrom: 60
