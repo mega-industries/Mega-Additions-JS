@@ -71,6 +71,7 @@ ammoTypes: {
   }
 }
 category: turret
+research: salvo
 requirements: [
   lead/500
   silicon/420
