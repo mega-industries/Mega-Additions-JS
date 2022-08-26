@@ -9,8 +9,8 @@ rotateSpeed: 0
 shootCone: 360
 shoot: {
   type: ShootSpread
-  shots: 120
-  spread: 3
+  shots: 15
+  spread: 24
 }
 shootSound: shootBig
 drawer: {
@@ -40,23 +40,16 @@ drawer: {
 }
 ammoTypes: {
   thorium: {
-    type: RailBulletType
-    damage: 620
-    shootEffect: thoriumShoot
-    smokeEffect: reactorsmoke
+    type: BasicBulletType
+    damage: 115
     pierceEffect: hitLancer
-    pointEffect: {
-      type: ParticleEffect
-      strokeTo: 0
-      lifetime: 17
-      length: 0
-      sizeFrom: 1.3
-      sizeTo: 0
-      colorFrom: bf92f9
-      colorTo: bf92f9
-    }
-    pointEffectSpace: 1
-    length: 185
+    trailColor: bf92f9
+    trailLength: 12
+    trailWidth: 3
+    width: 3
+    height: 7
+    backColor: bf92f9
+    frontColor: ffffff
   }
 }
 category: turret
