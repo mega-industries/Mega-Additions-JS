@@ -9,6 +9,27 @@ consumes: {
 rotateSpeed: 3.4
 shootSound: laser
 shake: 1.5
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-glow"
+      colorFrom: e5666600
+      colorTo: e56666
+      progress: warmup
+      blending: additive
+      outline: false
+    }
+    {
+      type: RegionPart
+      suffix: "-wing"
+      mirror: true
+      progress: warmup
+      moveX: -2.2
+    }
+  ]
+}
 shootType: {
   type: EmpBulletType
   scaleLife: true
@@ -19,7 +40,6 @@ shootType: {
   unitDamageScl: 0.8
   timeIncrease: 0
   timeDuration: 0
-  healPercent: 7
   speed: 5
   lifetime: 40
   sprite: circle-bullet
@@ -30,15 +50,8 @@ shootType: {
   backColor: e56666
   lightColor: e56666
   hitColor: e56666
-  chainEffect: {
-    type: ParticleEffect
-    length: 0
-    colorFrom: e56666
-    colorTo: e56666
-    sizeFrom: 3
-    sizeTo: 0
-    lifetime: 25
-  }
+  chainEffect: none
+  hitPowerEFfect: none
   applyEffect: {
     type: WaveEffect
     lifetime: 25
