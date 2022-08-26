@@ -58,11 +58,11 @@ shootType: {
         colorFrom: ffffff
         colorTo: e56666
         lenTo: 0
-        lenFrom: 5
+        lenFrom: 6.5
         strokeFrom: 3
-        strokeTo: 0
+        strokeTo: 3
         length: 85
-        lifetime: 20
+        lifetime: 32
       }
       {
         type: ParticleEffect
@@ -70,11 +70,11 @@ shootType: {
         colorFrom: ffffff
         colorTo: e56666
         lenTo: 0
-        lenFrom: 5
+        lenFrom: 6.5
         strokeFrom: 3
-        strokeTo: 0
+        strokeTo: 3
         length: 45
-        lifetime: 20
+        lifetime: 32
       }
       {
         type: ParticleEffect
