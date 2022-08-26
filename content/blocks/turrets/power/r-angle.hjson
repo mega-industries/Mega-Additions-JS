@@ -36,11 +36,11 @@ shootType: {
     colorTo: e56666
     sizeFrom: 3
     sizeTo: 0
-    lifetime: 10
+    lifetime: 25
   }
   applyEffect: {
     type: WaveEffect
-    lifetime: 20
+    lifetime: 25
     sizeFrom: 0
     sizeTo: 15
     strokeFrom: 2
