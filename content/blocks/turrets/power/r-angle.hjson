@@ -1,0 +1,132 @@
+type: PowerTurret
+size: 2
+range: 200
+health: 650
+reload: 150
+consumes: {
+  power: 6.3
+}
+rotateSpeed: 3.4
+shootSound: laser
+shootShake: 1.5
+shootType: {
+  type: EmpBulletType
+  scaleVelocity: true
+  damage: 40
+  splashDamage: 60
+  splashDamageRadius: 60
+  radius: 60
+  unitDamageScl: 0.8
+  timeIncrease: 0
+  timeDuration: 0
+  speed: 5
+  lifetime: 40
+  sprite: circle-bullet
+  width: 6
+  height: 6
+  shrinkY: 0
+  frontColor: ffffff
+  backColor: e56666
+  lightColor: e56666
+  hitColor: e56666
+  chainEffect: {
+    type: ParticleEffect
+    length: 0
+    colorFrom: e56666
+    colorTo: e56666
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 10
+  }
+  applyEffect: {
+    type: WaveEffect
+    lifetime: 20
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: e56666
+    colorTo: e56666
+  }
+  hitEffect: {
+    type: MultiEffect
+    lifetime: 70
+    effects: [
+      {
+        type: ParticleEffect
+        line: true
+        colorFrom: ffffff
+        colorTo: e56666
+        lenTo: 0
+        lenFrom: 5
+        strokeFrom: 3
+        strokeTo: 0
+        length: 85
+        lifetime: 20
+      }
+      {
+        type: ParticleEffect
+        line: true
+        colorFrom: ffffff
+        colorTo: e56666
+        lenTo: 0
+        lenFrom: 5
+        strokeFrom: 3
+        strokeTo: 0
+        length: 45
+        lifetime: 20
+      }
+      {
+        type: ParticleEffect
+        lifetime: 7
+        particles: 1
+        length: 0
+        sizeFrom: 60
+        sizeTo: 60
+        colorFrom: e56666
+        colorTo: e56666
+      }
+      {
+        type: WaveEffect
+        lifetime: 70
+        sizeFrom: 30
+        sizeTo: 30
+        strokeFrom: 2
+        strokeTo: 0
+        colorFrom: e56666
+        colorTo: e56666
+      }
+      {
+        type: WaveEffect
+        lifetime: 70
+        sizeFrom: 60
+        sizeTo: 60
+        strokeFrom: 2
+        strokeTo: 0
+        colorFrom: e56666
+        colorTo: e56666
+      }
+      {
+        type: ParticleEffect
+        lifetime: 70
+        length: 0
+        particles: 1
+        sizeFrom: 4
+        sizeTo: 0
+        colorTo: e56666
+      }
+    ]
+  }
+  trailWidth: 3
+  trailLength: 15
+  trailColor: e56666
+  despawnEffect: none
+  despawnHit: true
+}
+category: turret
+research: lancer
+requirements: [
+  lead/120
+  graphite/40
+  silicon/60
+]
