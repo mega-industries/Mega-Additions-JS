@@ -1,6 +1,6 @@
 type: ItemTurret
 size: 2
-range: 185
+range: 200
 health: 6300
 reload: 80
 cooldownTime: 50
@@ -42,7 +42,11 @@ ammoTypes: {
   thorium: {
     type: BasicBulletType
     damage: 115
-    pierceEffect: hitLancer
+    hitEffect: hitLancer
+    despawnEffect: none
+    despawnHit: true
+    lifetime: 60
+    speed: 6
     trailColor: bf92f9
     trailLength: 12
     trailWidth: 3
