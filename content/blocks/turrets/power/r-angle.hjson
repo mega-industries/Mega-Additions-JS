@@ -63,7 +63,7 @@ shootType: {
         strokeTo: 1
         length: 85
         lifetime: 32
-        interp: fout
+        interp: pow5Out
       }
       {
         type: ParticleEffect
@@ -76,7 +76,7 @@ shootType: {
         strokeTo: 1
         length: 45
         lifetime: 32
-        interp: fout
+        interp: pow5Out
       }
       {
         type: ParticleEffect
