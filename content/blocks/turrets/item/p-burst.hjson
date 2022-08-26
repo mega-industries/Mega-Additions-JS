@@ -2,9 +2,16 @@ type: ItemTurret
 size: 2
 range: 185
 health: 6300
-reload: 200
-cooldownTime: 115
+reload: 80
+cooldownTime: 50
 shootY: 0
+rotateSpeed: 0
+shootCone: 360
+shoot: {
+  type: ShootSpread
+  shots: 120
+  spread: 3
+}
 shootSound: shootBig
 drawer: {
   type: DrawTurret
@@ -14,9 +21,9 @@ drawer: {
       suffix: "-bottom"
       under: true
       mirror: true
-      progress: reload
-      moveX: 1.3
-      moveY: 1.3
+      progress: recoil
+      moveX: -1.3
+      moveY: -1.3
       moveRot: 0
     }
     {
@@ -24,9 +31,9 @@ drawer: {
       suffix: "-top"
       under: true
       mirror: true
-      progress: reload
-      moveX: 1.3
-      moveY: -1.3
+      progress: recoil
+      moveX: -1.3
+      moveY: 1.3
       moveRot: 0
     }
   ]
