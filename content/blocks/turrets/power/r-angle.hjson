@@ -19,6 +19,7 @@ shootType: {
   unitDamageScl: 0.8
   timeIncrease: 0
   timeDuration: 0
+  healPercent: 7
   speed: 5
   lifetime: 40
   sprite: circle-bullet
