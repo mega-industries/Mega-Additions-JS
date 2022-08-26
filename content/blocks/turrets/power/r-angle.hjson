@@ -8,10 +8,10 @@ consumes: {
 }
 rotateSpeed: 3.4
 shootSound: laser
-shootShake: 1.5
+shake: 1.5
 shootType: {
   type: EmpBulletType
-  scaleVelocity: true
+  scaleLife: true
   damage: 40
   splashDamage: 60
   splashDamageRadius: 60
