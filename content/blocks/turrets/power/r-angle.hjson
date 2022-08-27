@@ -34,7 +34,7 @@ drawer: {
           progress: {
             type: warmup
             op: delay
-            amount: 3.2
+            amount: 12.7
           }
           progress: warmup
           haloRadius: 0
@@ -47,7 +47,7 @@ drawer: {
           triLength: 0
           triLengthTo: 12
           mirror: true
-          y: 1.2
+          y: 2.2
           x: -2
         }
         {
@@ -55,7 +55,7 @@ drawer: {
           progress: {
             type: warmup
             op: delay
-            amount: 3.2
+            amount: 12.7
           }
           progress: warmup
           haloRadius: 0
@@ -69,7 +69,7 @@ drawer: {
           triLengthTo: 2
           mirror: true
           shapeRotation: 180
-          y: 1.2
+          y: 2.2
           x: -2
         }
       ]
