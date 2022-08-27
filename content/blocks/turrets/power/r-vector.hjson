@@ -68,7 +68,7 @@ shootType: {
     hitEffect: none
     despawnEffect: none
     fragBullets: 3
-    fragBullet: [
+    fragBullet: {
       type: BasicBulletType
       sprite: circle-bullet
       damage: 7
@@ -86,7 +86,7 @@ shootType: {
       trailWidth: 1
       trailLength: 7
       trailColor: e56666
-    ]
+    }
   }
   hitEffect: {
     type: MultiEffect
