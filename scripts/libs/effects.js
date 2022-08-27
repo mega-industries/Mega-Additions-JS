@@ -61,4 +61,4 @@ const angleBlastSparks = extend(ParticleEffect, {
     length: 83,
     particles: 12,
 });
-exports.angleBlast = new MultiEffct(angleBlastRing1, angleBlastRing2, angleBlastFlash, angleBlastMid, angleBlastSparks)
+exports.angleBlast = new MultiEffect(angleBlastRing1, angleBlastRing2, angleBlastFlash, angleBlastMid, angleBlastSparks)
