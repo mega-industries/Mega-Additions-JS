@@ -1,0 +1,56 @@
+type: PowerTurret
+size: 2
+health: 3200
+consumes: {
+  power/4.7
+  liquid: water/0.11
+}
+shootSound: pulseBlast
+shoot: {
+  type: ShootAlternate
+  barrels: 2
+  shots: 2
+  spread: 3.4
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-arrows"
+      moveY: 4
+      color: e5666600
+      colorTo: e56666
+      blending: additive
+      outline: false
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  sprite: missile-large
+  damage: 65
+  width: 10
+  height: 20
+  backColor: e56666
+  frontColor: e78888
+  trailWidth: 3.5
+  trailLength: 13
+  trailEffect: disperseTrail
+  lifetime: 60
+  speed: 6
+  hitEffect: {
+    type: WrapEffect
+    effect: dynamicSpikes
+    color: e56666
+  }
+  despawnEffect: none
+  despawnHit: true
+}
+category: turret
+research: bolt
+requirements: [
+  copper/110
+  graphite/300
+  silicon/200
+]
