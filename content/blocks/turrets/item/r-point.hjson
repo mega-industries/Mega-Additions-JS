@@ -120,3 +120,8 @@ ammoTypes: {
     despawnHit: true
   }
 }
+research: duo
+category: turret
+requirements: {
+  copper/60
+}
