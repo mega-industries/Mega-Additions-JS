@@ -59,7 +59,7 @@ shootType: {
     type: BasicBulletType
       sprite: circle-bullet
       damage: 7
-      lifetime: 45
+      lifetime: 17
       speed: 1
       drag: -0.1
       backColor: e56666
