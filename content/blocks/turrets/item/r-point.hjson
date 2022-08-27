@@ -13,22 +13,18 @@ smokeEffect: {
   type: ParticleEffect
   cone: 30
   particles: 12
-  colorFrom: 7a7a7a
-  colorTo: 4f4f59
+  colorFrom: 7a7a7a7a
+  colorTo: 4f4f5900
   sizeFrom: 5
   sizeTo: 0
   length: 16
   interp: pow5Out
   lifetime: 45
 }
+shootEffect: 
 ammoTypes: {
   copper: {
     type: BasicBulletType
-    shootEffect: {
-      type: WrapEffect
-      effect: colorSparkBig
-      color: feb380
-    }
     damage: 23
     splashDamage: 9
     splashDamageRadius: 12
@@ -58,11 +54,6 @@ ammoTypes: {
   }
   silicon: {
     type: BasicBulletType
-    shootEffect: {
-      type: WrapEffect
-      effect: colorSparkBig
-      color: 747484
-    }
     damage: 14
     splashDamage: 8
     splashDamageRadius: 12
@@ -70,8 +61,8 @@ ammoTypes: {
     height: 17
     speed: 3
     lifetime: 40
-    backColor: 4f4f59
-    frontColor: 747484
+    backColor: 4f4f59ff
+    frontColor: 7a7a7a7a
     hitEffect: {
       type: MultiEffect
       effects: [
@@ -94,11 +85,6 @@ ammoTypes: {
   }
   pyratite: {
     type: BasicBulletType
-    shootEffect: {
-      type: WrapEffect
-      effect: colorSparkBig
-      color: fc8e6c
-    }
     damage: 32
     splashDamage: 12
     status: burning
