@@ -97,7 +97,7 @@ shootType: {
   lightColor: e56666
   hitColor: e56666
   chainEffect: none
-  powerHitEFfect: none
+  hitPowerEffect: none
   applyEffect: {
     type: WaveEffect
     lifetime: 25
