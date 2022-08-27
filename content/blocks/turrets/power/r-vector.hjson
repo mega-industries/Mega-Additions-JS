@@ -4,6 +4,7 @@ health: 2300
 range: 410
 reload: 85
 recoil: 4.3
+shootSound: shockBlast
 cooldownTime: 30
 drawer: {
   type: DrawTurret
@@ -48,6 +49,31 @@ shootType: {
   trailLength: 15
   trailColor: e56666
   homingPower: 0.18
+  hitSound: plasmaboom
+  lightning: 5
+  lightningColor: e56666
+  lightningLength: 4
+  lightningLengthRand: 1
+  lightningDamage: 20
+  lightningAngleRand: 3
+  lightningType: {
+    type: BasicBulletType
+    sprite: circle-bullet
+    lifetime: 10
+    speed: 0.8
+    drag: -0.06
+    backColor: e56666
+    frontColor: ffffff
+    width: 2
+    height: 2
+    shrinkY: 0
+    trailWidth: 1
+    trailLength: 7
+    trailColor: e56666
+    hitEffect: mineBig
+    despawnEffect: none
+    despawnHit: true
+  }
   hitEffect: {
     type: MultiEffect
     effects: [
@@ -103,6 +129,8 @@ shootType: {
       }
     ]
   }
+  despawnEffect: none
+  despawnHit: true
 }
 research: r-angle
 category: turret
