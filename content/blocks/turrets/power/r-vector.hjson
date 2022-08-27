@@ -1,21 +1,15 @@
 type: PowerTurret
 size: 3
 health: 2300
+range: 410
 shoot: {
-  type: ShootMulti
-  source: {
-    type: ShootPattern
-    shots: 6
-    shotDelay: 3
-  }
-  dest: [
-    {
-      type: ShootHelix
-      scl: 2
-      mag: 1.5
-    }
-  ]
+  type: ShootHelix
+  Scl: 2
+  mag: 1.5
 }
+reload: 85
+recoil: 4.3
+cooldownTime: 30
 drawer: {
   type: DrawTurret
   parts: [
@@ -31,7 +25,7 @@ drawer: {
         {
           type: RegionPart
           suffix: "-spikes-glow"
-          color: e5666600
+          color: e56666
           colorTo: e56666
           outline: false
           blending: additive
@@ -57,6 +51,8 @@ shootType: {
   type: BasicBulletType
   sprite: circle-bullet
   damage: 82
+  speed: 3
+  lifetime: 120
   splashDamage: 30
   splashDamageRadius: 70
   backColor: e56666
