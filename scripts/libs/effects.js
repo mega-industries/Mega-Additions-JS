@@ -5,7 +5,7 @@ exports.redFlare = new Effect(40, 100, e => {
 
     Draw.color(palette.red);
     for(let i = 0; i < 2; i++){
-        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+e.rotation/*+90*/);
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
     }
 });
 
