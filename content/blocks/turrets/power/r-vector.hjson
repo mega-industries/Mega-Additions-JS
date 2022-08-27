@@ -2,11 +2,6 @@ type: PowerTurret
 size: 3
 health: 2300
 range: 410
-shoot: {
-  type: ShootHelix
-  Scl: 2
-  mag: 1.5
-}
 reload: 85
 recoil: 4.3
 cooldownTime: 30
@@ -21,16 +16,6 @@ drawer: {
       progress: recoil
       mirror: true
       under: true
-      children: [
-        {
-          type: RegionPart
-          suffix: "-spikes-glow"
-          color: e56666
-          colorTo: e56666
-          outline: false
-          blending: additive
-        }
-      ]
     }
     {
       type: RegionPart
@@ -62,6 +47,7 @@ shootType: {
   trailWidth: 2
   trailLength: 15
   trailColor: e56666
+  homingPower: 0.18
   hitEffect: {
     type: MultiEffect
     effects: [
