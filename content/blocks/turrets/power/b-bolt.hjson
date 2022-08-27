@@ -15,7 +15,7 @@ drawer: {
       type: RegionPart
       suffix: "-arrows"
       progress: warmup
-      color: 00000000
+      color: ffffff00
       colorTo: ffffff
       outline: false
     }
