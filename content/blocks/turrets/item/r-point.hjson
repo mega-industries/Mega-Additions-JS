@@ -22,7 +22,11 @@ smokeEffect: {
 ammoTypes: {
   copper: {
     type: BasicBulletType
-    shootEffect: colorSparkBig
+    shootEffect: {
+      type: WrapEffect
+      effect: colorSparkBig
+      color: feb380
+    }
     damage: 23
     splashDamage: 9
     splashDamageRadius: 12
@@ -52,7 +56,11 @@ ammoTypes: {
   }
   silicon: {
     type: BasicBulletType
-    shootEffect: colorSparkBig
+    shootEffect: {
+      type: WrapEffect
+      effect: colorSparkBig
+      color: 747484
+    }
     damage: 14
     splashDamage: 8
     splashDamageRadius: 12
@@ -84,7 +92,11 @@ ammoTypes: {
   }
   pyratite: {
     type: BasicBulletType
-    shootEffect: colorSparkBig
+    shootEffect: {
+      type: WrapEffect
+      effect: colorSparkBig
+      color: fc8e6c
+    }
     damage: 32
     splashDamage: 12
     status: burning
