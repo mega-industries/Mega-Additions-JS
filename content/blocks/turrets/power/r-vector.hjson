@@ -1,0 +1,129 @@
+type: PowerTurret
+size: 3
+health: 2300
+shoot: {
+  type: ShootMulti
+  {
+    type: ShootPattern
+    shots: 6
+    shotDelay: 3
+  }
+  {
+    type: ShootHelix
+    Scl: 2
+    mag: 1.5
+  }
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-spikes"
+      moveX: -1.3
+      moveY: -1.3
+      progress: recoil
+      mirror: true
+      under: true
+      children: [
+        {
+          type: RegionPart
+          suffix: "-spikes-glow"
+          color: e5666600
+          colorTo: e56666
+          outline: false
+          blending: additive
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: "-glow"
+      color: e5666600
+      colorTo: e56666
+      outline: false
+      blending: additive
+    }
+    {
+      type: RegionPart
+      suffix: "-top"
+      outline: false
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  sprite: circle-bullet
+  damage: 82
+  splashDamage: 30
+  splashDamageRadius: 70
+  backColor: e56666
+  frontColor: ffffff
+  width: 4
+  height: 4
+  trailWidth: 2
+  trailLength: 15
+  trailColor: e56666
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 35
+        colorFrom: ffffff
+        colorTo: e56666
+        lifetime: 20
+      }
+      {
+        type: WaveEffect
+        sizeFrom: 35
+        sizeTo: 70
+        colorFrom: ffffff
+        colorTo: e56666
+        lifetime: 20
+      }
+      {
+        type: ParticleEffect
+        sizeFrom: 17
+        sizeTo: 0
+        colorFrom: 989aa4
+        colorTo: 6e7080
+        lifetime: 85
+        interp: pow5Out
+        particles: 13
+        length: 73
+      }
+      {
+        type: ParticleEffect
+        sizeFrom: 17
+        sizeTo: 0
+        colorFrom: e78888ff
+        colorTo: e5666600
+        lifetime: 68
+        interp: pow5Out
+        particles: 8
+        length: 67
+      }
+      {
+        type: ParticleEffect
+        lenFrom: 7.5
+        lenTo: 0
+        strokeFrom: 3.2
+        strokeTo: 1.2
+        colorFrom: e78888ff
+        colorTo: e5666600
+        lifetime: 32
+        length: 80
+        interp: pow5Out
+      }
+    ]
+  }
+}
+research: r-angle
+requirements: [
+  copper/200
+  lead/130
+  silicon/320
+  graphite/80
+]
