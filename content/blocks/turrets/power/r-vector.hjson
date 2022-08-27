@@ -3,16 +3,18 @@ size: 3
 health: 2300
 shoot: {
   type: ShootMulti
-  {
-    type: ShootPattern
-    shots: 6
-    shotDelay: 3
-  }
-  {
-    type: ShootHelix
-    Scl: 2
-    mag: 1.5
-  }
+  patterns: [
+      {
+        type: ShootPattern
+        shots: 6
+        shotDelay: 3
+      }
+      {
+        type: ShootHelix
+        scl: 2
+        mag: 1.5
+    }
+  ]
 }
 drawer: {
   type: DrawTurret
