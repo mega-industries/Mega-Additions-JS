@@ -11,7 +11,7 @@ shoot: {
   dest: [
     {
       type: ShootHelix
-      Scl: 2
+      scl: 2
       mag: 1.5
     }
   ]
@@ -123,6 +123,7 @@ shootType: {
   }
 }
 research: r-angle
+category: turret
 requirements: [
   copper/200
   lead/130
