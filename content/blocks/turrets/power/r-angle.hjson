@@ -15,7 +15,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-glow"
-      colorFrom: e5666600
+      colorFrom: e5666660
       colorTo: e56666
       progress: warmup
       blending: additive
@@ -27,6 +27,7 @@ drawer: {
       mirror: true
       progress: warmup
       moveX: -2.2
+      under: true
     }
   ]
 }
