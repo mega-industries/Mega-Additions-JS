@@ -34,6 +34,17 @@ drawer: {
           rot: 3
         }
       ]
+      children: [
+        {
+          type: RegionPart
+          suffix: "-blade-glow"
+          progress: warmup
+          color: 8aa3f400
+          colorTo: 8aa3f4
+          blending: additive
+          outline: false
+        }
+      ]
     }
     {
       type: RegionPart
@@ -43,26 +54,6 @@ drawer: {
       colorTo: 8aa3f4
       blending: additive
       outline: false
-    }
-    {
-          type: RegionPart
-          suffix: "-blade-glow"
-          progress: warmup
-          color: 8aa3f400
-          colorTo: 8aa3f4
-          blending: additive
-          outline: false
-          moveX: -1
-          moveRot: 6
-          moves: [
-        {
-          type: PartMove
-          progress: reload
-          x: -1
-          y: -2.2
-          rot: 3
-        }
-      ]
     }
   ]
 }
