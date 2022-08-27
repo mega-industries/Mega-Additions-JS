@@ -122,6 +122,6 @@ ammoTypes: {
 }
 research: duo
 category: turret
-requirements: {
+requirements: [
   copper/60
-}
+]
