@@ -15,6 +15,7 @@ const angle = extend(PowerTurret, "r-angle", {
     width: 6,
     height: 6,
     sprite: "circle-bullet",
+    hitSound: Sounds.plasmaBoom,
     shrinkY: 0,
     trailWidth: 3,
     trailLength: 15,
