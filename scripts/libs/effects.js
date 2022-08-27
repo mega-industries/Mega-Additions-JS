@@ -1,6 +1,6 @@
 const palette = require("libs/palette")
 
-exports.redFlare = new Effect(40, 100, e => {
+exports.redFlare = new Effect(16, 100, e => {
     Lines.stroke(e.fout() * 2);
 
     Draw.color(palette.red);
