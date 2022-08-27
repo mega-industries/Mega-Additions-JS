@@ -73,7 +73,7 @@ drawer: {
   ]
 }
 category: turret
-research: lancer
+research: r-point
 requirements: [
   lead/120
   graphite/40
