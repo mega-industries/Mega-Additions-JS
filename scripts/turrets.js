@@ -14,6 +14,7 @@ const angle = extend(PowerTurret, "r-angle", {
     speed: 5,
     width: 6,
     height: 6,
+    sprite: "circle-bullet",
     shrinkY: 0,
     trailWidth: 3,
     trailLength: 15,
