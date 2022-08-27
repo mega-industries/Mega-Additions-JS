@@ -8,3 +8,7 @@ const redFlare = new Effect(40, 100, e => {
         Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*90+90);
     }
 });
+
+module.exports = {
+    redFlare: redFlare;
+}
