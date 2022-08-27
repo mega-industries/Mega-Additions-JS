@@ -8,11 +8,13 @@ shoot: {
     shots: 6
     shotDelay: 3
   }
-  dest: {
-    type: ShootHelix
-    Scl: 2
-    mag: 1.5
-  }
+  dest: [
+    {
+      type: ShootHelix
+      Scl: 2
+      mag: 1.5
+    }
+  ]
 }
 drawer: {
   type: DrawTurret
