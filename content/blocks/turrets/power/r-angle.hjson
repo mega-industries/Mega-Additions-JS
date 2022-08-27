@@ -15,7 +15,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-glow"
-      color: e5666660
+      color: e5666600
       colorTo: e56666
       progress: warmup
       blending: additive
@@ -28,6 +28,29 @@ drawer: {
       progress: warmup
       moveX: -2.2
       under: true
+      children: [
+        {
+          type: HaloPart
+          progress: {
+            type: warmup
+            op: delay
+            amount: 1.25
+          }
+          haloRotationSpeed: 0
+          haloRadius: 0
+          haloRadiusTo: 0
+          shapes: 1
+          color: e56666ff
+          stroke: 0
+          strokeTo: 0
+          tri: true
+          triLength: 0
+          triLengthTo: 20
+          mirror: true
+          y: -1
+          x: -2
+        }
+      ]
     }
   ]
 }
