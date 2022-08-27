@@ -2,6 +2,7 @@ const effects = require("libs/effects");
 const palette = require("libs/palette");
 
 const angle = extend(PowerTurret, "r-angle", {
+  shootSound: Sounds.malignShoot,
   shootType: extend(EmpBulletType, {
     scaleLife: true,
     lifetime: 40,
@@ -15,7 +16,7 @@ const angle = extend(PowerTurret, "r-angle", {
     width: 6,
     height: 6,
     sprite: "circle-bullet",
-    hitSound: Sounds.plasmaBoom,
+    hitSound: Sounds.plasmaboom,
     shrinkY: 0,
     trailWidth: 3,
     trailLength: 15,
