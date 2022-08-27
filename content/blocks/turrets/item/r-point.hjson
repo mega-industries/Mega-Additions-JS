@@ -5,6 +5,8 @@ shoot: {
   shots: 3
   shotDelay: 3
 }
+reload: 45
+recoil: 1.7
 range: 200
 shootSound: pew
 smokeEffect: {
