@@ -39,28 +39,22 @@ drawer: {
         {
           type: RegionPart
           suffix: "-blade-glow"
-          drawRegion: false
-          mirror: true
-          moveX: 0
-          moveY: 0
-          moveRot: 0
           progress: warmup
-          heatColor: 8aa3f4
-          heatProgress: warmup
+          color: 8aa3f400
+          colorTo: 8aa3f4
+          blending: additive
+          outline: false
         }
       ]
     }
     {
       type: RegionPart
       suffix: "-glow"
-      drawRegion: false
-      mirror: false
-      moveX: 0
-      moveY: 0
-      moveRot: 0
-      progress: recoil
-      heatColor: 8aa3f4
-      heatProgress: warmup
+      progress: warmup
+      color: 8aa3f400
+      colorTo: 8aa3f4
+      blending: additive
+      outline: false
     }
   ]
 }
