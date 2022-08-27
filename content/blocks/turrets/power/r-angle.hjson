@@ -36,7 +36,7 @@ drawer: {
             op: delay
             amount: 1.25
           }
-          haloRotationSpeed: 0
+          progress: warmup
           haloRadius: 0
           haloRadiusTo: 0
           shapes: 1
@@ -45,9 +45,31 @@ drawer: {
           strokeTo: 0
           tri: true
           triLength: 0
-          triLengthTo: 20
+          triLengthTo: 12
           mirror: true
-          y: -1
+          y: 0.5
+          x: -2
+        }
+        {
+          type: HaloPart
+          progress: {
+            type: warmup
+            op: delay
+            amount: 1.25
+          }
+          progress: warmup
+          haloRadius: 0
+          haloRadiusTo: 0
+          shapes: 1
+          color: e56666ff
+          stroke: 0
+          strokeTo: 0
+          tri: true
+          triLength: 0
+          triLengthTo: 2
+          mirror: true
+          shapeRotation: 180
+          y: 0.5
           x: -2
         }
       ]
