@@ -15,7 +15,7 @@ drawer: {
     {
       type: RegionPart
       suffix: "-glow"
-      colorFrom: e5666660
+      color: e5666660
       colorTo: e56666
       progress: warmup
       blending: additive
@@ -52,7 +52,7 @@ shootType: {
   lightColor: e56666
   hitColor: e56666
   chainEffect: none
-  hitPowerEFfect: none
+  powerHitEFfect: none
   applyEffect: {
     type: WaveEffect
     lifetime: 25
