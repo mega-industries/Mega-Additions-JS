@@ -57,22 +57,9 @@ shootType: {
   lightningDamage: 20
   lightningType: {
     type: BasicBulletType
-    sprite: circle-bullet
-    lifetime: 20
-    speed: 0
-    backColor: e56666
-    frontColor: ffffff
-    width: 2
-    height: 2
-    shrinkY: 0
-    hitEffect: none
-    despawnEffect: none
-    fragBullets: 3
-    fragBullet: {
-      type: BasicBulletType
       sprite: circle-bullet
       damage: 7
-      lifetime: 20
+      lifetime: 45
       speed: 1
       drag: -0.1
       backColor: e56666
@@ -86,7 +73,6 @@ shootType: {
       trailWidth: 1
       trailLength: 7
       trailColor: e56666
-    }
   }
   hitEffect: {
     type: MultiEffect
