@@ -18,6 +18,7 @@ drawer: {
       color: ffffff00
       colorTo: ffffff
       outline: false
+      blending: additive
     }
   ]
 }
