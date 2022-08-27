@@ -21,7 +21,7 @@ smokeEffect: {
   interp: pow5Out
   lifetime: 45
 }
-shootEffect: 
+shootEffect: shootSmallFlame
 ammoTypes: {
   copper: {
     type: BasicBulletType
