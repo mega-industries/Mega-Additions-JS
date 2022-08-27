@@ -2,8 +2,8 @@ type: PowerTurret
 size: 2
 health: 3200
 consumes: {
-  power/4.7
-  liquid: water/0.11
+  power: 3.3
+  liquid: water/0.06
 }
 shootSound: pulseBlast
 shoot: {
