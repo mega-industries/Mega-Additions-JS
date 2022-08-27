@@ -6,7 +6,7 @@ consumes: {
   power: 6.3
 }
 rotateSpeed: 3.4
-shootSound: laser
+shootSound: malignShoot
 shake: 1.5
 drawer: {
   type: DrawTurret
