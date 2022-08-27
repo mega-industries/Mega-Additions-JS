@@ -32,8 +32,7 @@ drawer: {
           type: HaloPart
           progress: {
             type: warmup
-            op: delay
-            amount: 12.7
+            delay: 1.2
           }
           progress: warmup
           haloRadius: 0
