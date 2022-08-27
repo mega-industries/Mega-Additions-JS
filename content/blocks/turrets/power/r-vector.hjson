@@ -4,7 +4,7 @@ health: 2300
 range: 410
 reload: 85
 recoil: 4.3
-shootSound: shockBlast
+shootSound: malignShoot
 cooldownTime: 30
 drawer: {
   type: DrawTurret
