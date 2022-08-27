@@ -20,8 +20,6 @@ drawer: {
       mirror: true
       progress: warmup
       moveX: -1.9
-      moveY: 0
-      moveRot: 0
       heatProgress: recoil
       heatColor: ff0000
       moves: [
@@ -32,15 +30,22 @@ drawer: {
           y: -2.3
         }
       ]
-      children: [
+    }
+    {
+      type: RegionPart
+      suffix: "-blade-glow"
+      color: bf92f900
+      colorTo: bf92f9
+      progress: warmup
+      blending: additive
+      outline: false
+      moveX: -1.9
+      moves: [
         {
-          type: RegionPart
-          suffix: "-blade-glow"
-          color: bf92f900
-          colorTo: bf92f9
-          progress: warmup
-          blending: additive
-          outline: false
+          type: PartMove
+          progress: recoil
+          x: -0.3
+          y: -2.3
         }
       ]
     }
