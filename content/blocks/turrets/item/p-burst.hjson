@@ -49,8 +49,8 @@ ammoTypes: {
     speed: 6
     trailColor: bf92f9
     trailLength: 12
-    trailWidth: 3
-    width: 3
+    trailWidth: 2.1
+    width: 11
     height: 7
     backColor: bf92f9
     frontColor: ffffff
