@@ -56,7 +56,7 @@ const angleBlastSparks = extend(ParticleEffect, {
     lenTo: 0,
     srokeFrom: 3,
     strokeTo: 1.35,
-    interp: interp.pow5Out,
+    interp: Interp.pow5Out,
     lifetime: 32,
     length: 83,
     particles: 12,
