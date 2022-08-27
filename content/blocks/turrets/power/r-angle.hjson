@@ -6,7 +6,6 @@ consumes: {
   power: 6.3
 }
 rotateSpeed: 3.4
-shootSound: malignShoot
 shake: 1.5
 drawer: {
   type: DrawTurret
@@ -32,7 +31,7 @@ drawer: {
           type: HaloPart
           progress: {
             type: warmup
-            delay: 1.2
+            delay: 3.5
           }
           progress: warmup
           haloRadius: 0
@@ -52,14 +51,13 @@ drawer: {
           type: HaloPart
           progress: {
             type: warmup
-            op: delay
-            amount: 12.7
+            delay: 3.5
           }
           progress: warmup
           haloRadius: 0
           haloRadiusTo: 0
           shapes: 1
-          color: e56666ff
+          color: e56666
           stroke: 0
           strokeTo: 0
           tri: true
