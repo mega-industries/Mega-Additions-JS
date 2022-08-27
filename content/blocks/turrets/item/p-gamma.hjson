@@ -30,22 +30,15 @@ drawer: {
           y: -2.3
         }
       ]
-    }
-    {
-      type: RegionPart
-      suffix: "-blade-glow"
-      color: bf92f900
-      colorTo: bf92f9
-      progress: warmup
-      blending: additive
-      outline: false
-      moveX: -1.9
-      moves: [
+      children: [
         {
-          type: PartMove
-          progress: recoil
-          x: -0.3
-          y: -2.3
+          type: RegionPart
+          suffix: "-blade-glow"
+          color: bf92f900
+          colorTo: bf92f9
+          progress: warmup
+          blending: additive
+          outline: false
         }
       ]
     }
