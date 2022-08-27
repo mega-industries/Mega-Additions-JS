@@ -24,5 +24,6 @@ const angle = extend(PowerTurret, "r-angle", {
     lightColor: palette.red,
     hitColor: palette.red,
     trailEffect: effects.redFlare,
+    trailInterval: 3,
   }),
 });
