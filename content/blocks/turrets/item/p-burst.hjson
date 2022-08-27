@@ -1,6 +1,6 @@
 type: ItemTurret
 size: 2
-range: 200
+range: 440
 health: 6300
 reload: 80
 cooldownTime: 50
