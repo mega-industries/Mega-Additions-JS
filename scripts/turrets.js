@@ -3,6 +3,8 @@ const palette = require("libs/palette");
 
 const angle = extend(PowerTurret, "r-angle", {
   shootType: extend(EmpBulletType, {
+    scaleLife: true,
+    lifetime: 40,
     damage: 60,
     areaDamage: 75,
     areaDamageRadius: 60,
@@ -25,5 +27,6 @@ const angle = extend(PowerTurret, "r-angle", {
     hitColor: palette.red,
     trailEffect: effects.redFlare,
     trailInterval: 3,
+    trailRotation: true,
   }),
 });
