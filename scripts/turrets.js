@@ -40,17 +40,18 @@ const angle = extend(PowerTurret, "r-angle", {
 
 const vector = extend(PowerTurret, "r-vector", {});
 
-
 const bolt = extend(PowerTurret, "b-bolt", {});
-
-const volt = extend(PowerTurret, "b-volt", {});
 
 const blitz = extend(PowerTurret, "b-blitz", {});
 
 const blast = extend(PowerTurret, "b-blast", {});
+
+const volt = extend(PowerTurret, "b-volt", {});
 
 const power = extend(PowerTurret, "b-power", {});
 
 const burst = extend(ItemTurret, "p-burst", {});
 
 const gamma = extend(ItemTurret, "p-gamma", {});
+
+const reboot = extend(PowerTurret, "g-reboot", {});
