@@ -40,7 +40,12 @@ shootType: {
   trailColor: e56666
   trailWidth: 3.5
   trailLength: 13
-  trailEffect: disperseTrail
+  trailEffect: {
+    type: WrapEffect
+    effect: disperseTrail
+    color: e56666
+  }
+  trailRotation: true
   trailChance: 1
   lifetime: 60
   speed: 6
