@@ -21,7 +21,7 @@ drawer: {
         {
           type: RegionPart
           suffix: "-side-bar"
-          moveY: 1.12
+          moveY: 2.3
           progress: warmup
           heatProgress: warmup
           heatColor: 8aa3f4
@@ -50,8 +50,8 @@ shootType: {
   backColor: 8aa3f4
   frontColor: ffffff
   trailColor: 8aa3f4
-  speed: 6
-  lifetime: 40
+  speed: 7
+  lifetime: 60
   trailChance: 0
   trailWidth: 1
   trailLength: 9
