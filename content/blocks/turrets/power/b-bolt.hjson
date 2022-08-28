@@ -1,4 +1,3 @@
-type: PowerTurret
 health: 700
 shootY: 0
 range: 120
