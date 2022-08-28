@@ -1,6 +1,13 @@
 type: PowerTurret
 size: 2
 health: 1320
+range: 400
+shoot: {
+  type: ShootAlternate
+  barrels: 4
+  shots: 4
+  spread: 1
+}
 drawer: {
   type: DrawTurret
   parts: [
@@ -14,8 +21,8 @@ drawer: {
         {
           type: RegionPart
           suffix: "-side-bar"
-          moveY: 1.3
-          progresss: warmup
+          moveY: 1.12
+          progress: warmup
           heatProgress: warmup
           heatColor: 8aa3f4
           under: true
@@ -27,6 +34,7 @@ drawer: {
       suffix: "-mid"
       heatProgress: warmup
       heatColor: 8aa3f4
+      under: true
     }
   ]
 }
@@ -35,13 +43,16 @@ shootType: {
   damage: 45
   splashDamage: 65
   splashDamageRadius: 20
-  weaveScl: 4
+  weaveScale: 4
   weaveMag: 4
   width: 2
   height: 2
   backColor: 8aa3f4
-  frontColor: e56666
+  frontColor: ffffff
   trailColor: 8aa3f4
+  speed: 6
+  lifetime: 40
+  trailChance: 0
   trailWidth: 1
   trailLength: 9
   sprite: circle-bullet
