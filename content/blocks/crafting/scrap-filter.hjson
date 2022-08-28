@@ -1,0 +1,32 @@
+health: 1500
+consumes: {
+  liquid: water/0.03
+  power: 1.2
+  items: {
+    items: [
+      scrap/2
+    ]
+  }
+}
+outputItem: warp-alloy/1
+craftTime: 30
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.75
+      color: 83f793
+      glowIntensity: 0.3
+      glowScale: 5.5
+    }
+  ]
+}
+category: crafting
+research: graphite-press
+requirements: [
+  lead/35
+]
