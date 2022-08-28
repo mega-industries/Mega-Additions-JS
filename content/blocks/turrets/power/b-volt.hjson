@@ -4,15 +4,12 @@ health: 1320
 range: 400
 shoot: {
   type: ShootHelix
-  shots: 5
-  scl: 4
-  mag: 4
+  shots: 2
+  scl: 2
+  mag: 2
 }
 shootSound: blaster
 shootEffect: none
-chargeSound: none
-accurateDelay: true
-firstSShotDelay: 60
 smokeEffect: {
   type: ParticleEffect
   cone: 35
@@ -59,54 +56,6 @@ drawer: {
 }
 shootType: {
   type: MissileBulletType
-  chargeEffect: {
-  type: MultiEffect
-  effects: [
-    {
-      type: ParticleEffect
-      length: 0
-      particles: 1
-      colorFrom: 8aa3f4
-      colorTo: ffffff
-      lifetime: 60
-      sizeFrom: 0
-      sizeTo: 3
-    }
-    {
-      type: WaveEffect
-      sizeFrom: 7
-      sizeTo: 0
-      colorFrom: 8aa3f4
-      colorTo: ffffff
-      lifetime: 60
-      strokeFrom: 0
-      strokeTo: 1
-    }
-    {
-      type: ParticleEffect
-      sizeFrom: 0
-      sizeTo: 1.5
-      lifetime: 47
-      baseLength: -17
-      length: 17
-      colorFrom: 8aa3f4
-      colorTo: ffffff
-    }
-    {
-      type: ParticleEffect
-      line: true
-      lenFrom: 0
-      lenTo: 2
-      strokeFrom: 0
-      strokeTo: 0.7
-      lifetime: 47
-      baseLength: -21
-      length: 21
-      colorFrom: 8aa3f4
-      colorTo: ffffff
-    }
-  ]
-}
   damage: 20
   splashDamage: 35
   splashDamageRadius: 20
