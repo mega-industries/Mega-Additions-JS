@@ -7,6 +7,7 @@ consumes: {
   power: 1.2
 }
 category: production
+research: pneumatic-drill
 requirements: [
   graphite/20
   copper/30
