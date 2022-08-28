@@ -1,0 +1,14 @@
+size: 2
+health: 860
+tier: 4
+drillTime: 310
+hasPower: true
+consumes: {
+  power: 1.2
+}
+category: production
+requirements: [
+  graphite/20
+  copper/30
+  titanium/80
+]
