@@ -1,0 +1,66 @@
+type: PowerTurret
+size: 2
+health: 1320
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-side"
+      mirror: true
+      moveX: -1.8
+      progress: warmup
+      children: [
+        {
+          type: RegionPart
+          suffix: "-side-bar"
+          moveY: 1.3
+          progresss: warmup
+          heatProgress: warmup
+          heatColor: 8aa3f4
+          under: true
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: "-mid"
+      heatProgress: warmup
+      heatColor: 8aa3f4
+    }
+  ]
+}
+shootType: {
+  type: MissileBulletType
+  damage: 45
+  splashDamage: 65
+  splashDamageRadius: 20
+  weaveScl: 4
+  weaveMag: 4
+  width: 2
+  height: 2
+  backColor: 8aa3f4
+  frontColor: e56666
+  trailColor: 8aa3f4
+  trailWidth: 1
+  trailLength: 9
+  sprite: circle-bullet
+  hitEffect: {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 20
+    lifetime: 20
+    colorFrom: 8aa3f4
+    colorTo: 8aa3f4
+  }
+  despawnEffect: none
+  despawnHit: true
+}
+category: turret
+research: b-blitz
+requirements: [
+  titanium/120
+  copper/100
+  silicon/30
+  graphite/70
+]
