@@ -8,6 +8,9 @@ shoot: {
   shots: 8
   spread: 1
 }
+consumes: {
+  power: 3.5
+}
 drawer: {
   type: DrawTurret
   parts: [
