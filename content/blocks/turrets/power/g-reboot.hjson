@@ -1,7 +1,7 @@
 health: 320
 range: 180
 consumes: {
-  power: 0.1
+  power: 1
 }
 targetHealing: true
 shootSound: lasershoot
