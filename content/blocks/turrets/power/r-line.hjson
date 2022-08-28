@@ -46,7 +46,7 @@ shootType: {
     color: e56666
   }
   trailRotation: true
-  trailChance: 1
+  trailInterval: 3
   lifetime: 60
   speed: 6
   hitEffect: blastExplosion
