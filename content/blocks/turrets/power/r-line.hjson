@@ -7,6 +7,7 @@ consumes: {
 shootSound: pulseBlast
 reload: 95
 recoil: 1.2
+range: 200
 shoot: {
   type: ShootAlternate
   barrels: 2
@@ -40,6 +41,7 @@ shootType: {
   trailWidth: 3.5
   trailLength: 13
   trailEffect: disperseTrail
+  trailChance: 1
   lifetime: 60
   speed: 6
   hitEffect: blastExplosion
