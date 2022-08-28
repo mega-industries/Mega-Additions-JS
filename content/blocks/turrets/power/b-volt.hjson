@@ -21,10 +21,10 @@ drawer: {
         {
           type: RegionPart
           suffix: "-side-bar"
-          moveY: 2.3
+          moveY: 3.1
           progress: warmup
           heatProgress: warmup
-          heatColor: 8aa3f4
+          heatColor: 8aa3f4f0
           under: true
         }
       ]
@@ -33,7 +33,7 @@ drawer: {
       type: RegionPart
       suffix: "-mid"
       heatProgress: warmup
-      heatColor: 8aa3f4
+      heatColor: 8aa3f4f0
       under: true
     }
   ]
