@@ -43,6 +43,8 @@ const vector = extend(PowerTurret, "r-vector", {});
 
 const bolt = extend(PowerTurret, "b-bolt", {});
 
+const volt = extend(ItemTurret, "b-volt", {});
+
 const blitz = extend(PowerTurret, "b-blitz", {});
 
 const blast = extend(PowerTurret, "b-blast", {});
