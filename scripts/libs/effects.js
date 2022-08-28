@@ -61,3 +61,14 @@ const angleBlastSparks = extend(ParticleEffect, {
     particles: 12,
 });
 exports.angleBlast = new MultiEffect(angleBlastRing1, angleBlastRing2, angleBlastFlash, angleBlastMid, angleBlastSparks)
+
+exports.magneticDrillUpdate = extend(WaveEffect, {
+    sides: 0,
+    colorFrom: palette.blue,
+    colorTo: palette.blue,
+    sizeFrom: 7,
+    sizeTo: 0,
+    strokeFrom: 0,
+    strokeTo: 0.6,
+    lifetime: 30,
+});
