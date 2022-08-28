@@ -1,6 +1,10 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
 
+const point = extend(ItemTurret, "r-point", {});
+
+const line = extend(PowerTurret, "r-line", {});
+
 const angle = extend(PowerTurret, "r-angle", {
   shootSound: Sounds.malignShoot,
   shootType: extend(EmpBulletType, {
@@ -33,3 +37,16 @@ const angle = extend(PowerTurret, "r-angle", {
     trailRotation: true,
   }),
 });
+
+const vector = extend(PowerTurret, "r-vector", {});
+
+
+const bolt = extend(PowerTurret, "b-bolt", {});
+
+const blitz = extend(PowerTurret, "b-blitz", {});
+
+const blast = extend(PowerTurret, "b-blast", {});
+
+const burst = extend(ItemTurret, "p-burst", {});
+
+const gamma = extend(ItemTurret, "p-gamma", {});
