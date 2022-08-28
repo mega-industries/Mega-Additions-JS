@@ -1,5 +1,4 @@
 health: 320
-reloadTime: 15
 range: 180
 consumes: {
   power: 0.1
@@ -8,13 +7,15 @@ targetHealing: true
 shootSound: lasershoot
 shootType: {
   type: LaserBoltBulletType
-  damage: 18
+  damage: 3
   collidesTeam: true
   healPercent: 3
   speed: 6
   lifetime: 30
   frontColor: ffffff
   backColor: 83f793
+  pierce: true
+  pierceCap: 2
 }
 category: turret
 research: duo
