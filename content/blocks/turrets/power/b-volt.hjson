@@ -4,8 +4,8 @@ health: 1320
 range: 400
 shoot: {
   type: ShootAlternate
-  barrels: 4
-  shots: 4
+  barrels: 8
+  shots: 8
   spread: 1
 }
 drawer: {
@@ -40,8 +40,8 @@ drawer: {
 }
 shootType: {
   type: MissileBulletType
-  damage: 45
-  splashDamage: 65
+  damage: 20
+  splashDamage: 35
   splashDamageRadius: 20
   weaveScale: 4
   weaveMag: 4
