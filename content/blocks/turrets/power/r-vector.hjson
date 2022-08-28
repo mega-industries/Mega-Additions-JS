@@ -5,6 +5,9 @@ reload: 85
 recoil: 4.3
 shootSound: malignShoot
 cooldownTime: 30
+consumes: {
+  power: 4.2
+}
 drawer: {
   type: DrawTurret
   parts: [
