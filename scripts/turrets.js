@@ -55,3 +55,8 @@ const burst = extend(ItemTurret, "p-burst", {});
 const gamma = extend(ItemTurret, "p-gamma", {});
 
 const reboot = extend(PowerTurret, "g-reboot", {});
+
+const revamp = extend(PowerTurret, "g-revamp", {
+  shootEffect: effects.greenFlare,
+  smokeEffect: shootBigSmoke,
+});
