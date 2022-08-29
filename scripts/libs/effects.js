@@ -9,6 +9,15 @@ exports.redFlare = new Effect(16, 100, e => {
     }
 });
 
+exports.greenFlare = new Effect(16, 100, e => {
+    Lines.stroke(e.fout() * 2);
+
+    Draw.color(palette.green);
+    for(let i = 0; i < 2; i++){
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
+    }
+});
+
 const angleBlastRing1 = extend(WaveEffect, {
     sides: 0,
     colorFrom: palette.red,
