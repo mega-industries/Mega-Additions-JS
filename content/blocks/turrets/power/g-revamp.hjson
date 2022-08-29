@@ -1,0 +1,31 @@
+size: 2
+health: 1500
+consumes: {
+  power/3.7
+}
+range: 320
+shoot: {
+  type: ShootAlternate
+  shots: 3
+  barrels: 3
+  spread: 3.2
+}
+targetHealing: true
+shootType: {
+  type: LaserBoltBulletType
+  damage: 11
+  healPercent: 4
+  smokeEffect: none
+  collidesTeam: true
+  speed: 6
+  lifetime: 30
+  backColor: 83f793
+  frontColor: ffffff
+}
+research: g-reboot
+category: turrets
+requirements: [
+  copper/80
+  graphite/120
+  warp-alloy/30
+]
