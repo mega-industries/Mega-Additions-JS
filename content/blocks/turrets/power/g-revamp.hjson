@@ -1,7 +1,7 @@
 size: 2
 health: 1500
 consumes: {
-  power/3.7
+  power: 3.7
 }
 range: 320
 shoot: {
