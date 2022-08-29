@@ -11,6 +11,8 @@ shoot: {
   spread: 3.2
 }
 targetHealing: true
+reload: 35
+shootSound: bolt
 shootType: {
   type: LaserBoltBulletType
   damage: 11
