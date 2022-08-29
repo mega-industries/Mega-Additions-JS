@@ -23,7 +23,7 @@ shootType: {
   frontColor: ffffff
 }
 research: g-reboot
-category: turrets
+category: turret
 requirements: [
   copper/80
   graphite/120
