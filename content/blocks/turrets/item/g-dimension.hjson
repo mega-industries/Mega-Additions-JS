@@ -4,6 +4,8 @@ range: 180
 targetHealing: true
 shootSound: bolt
 targetAir: false
+reload: 20
+cooldownTime: 45
 drawer: {
   type: DrawTurret
   parts: [
@@ -12,10 +14,11 @@ drawer: {
       suffix: "-wing"
       moveX: -0.4
       moveY: -1.2
-      moveRot: -7
+      moveRot: -12
       progress: recoil
       heatProgress: recoil
       mirror: true
+      heatColor: ab3400
     }
   ]
 }
