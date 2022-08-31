@@ -9,7 +9,7 @@ drawer: {
       suffix: "-wing"
       moveX: -0.4
       moveY: -1.2
-      moveRot: -3
+      moveRot: -7
       progress: recoil
       heatProgress: recoil
       mirror: true
@@ -21,7 +21,7 @@ shoot: {
   shots: 6
 }
 inaccuracy: 6
-velocityInaccuracy: 0.2
+velocityRnd: 0.2
 ammoTypes: {
   warp-alloy: {
     type: BasicBulletType
