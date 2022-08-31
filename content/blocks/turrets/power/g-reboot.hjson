@@ -14,8 +14,6 @@ shootType: {
   lifetime: 30
   frontColor: ffffff
   backColor: 83f793
-  pierce: true
-  pierceCap: 2
 }
 category: turret
 research: duo
