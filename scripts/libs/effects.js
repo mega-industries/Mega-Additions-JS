@@ -91,4 +91,5 @@ exports.greenTurretSmoke = extend(ParticleEffect, {
     length: 30,
     particles: 17,
     interp: Interp.pow5Out,
+    cone: 23,
 });
