@@ -59,3 +59,8 @@ const reboot = extend(PowerTurret, "g-reboot", {});
 const revamp = extend(PowerTurret, "g-revamp", {
   shootEffect: effects.greenFlare,
 });
+
+const dimension = extend(PowerTurret, "g-dimension", {
+  shootEffect: effects.greenFlare,
+  smokeEffect: effects.greenTurretSmoke,
+});
