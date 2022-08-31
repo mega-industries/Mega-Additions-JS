@@ -1,6 +1,8 @@
 size: 2
 health: 1750
 range: 180
+targetHealing: true
+shootSound: bolt
 drawer: {
   type: DrawTurret
   parts: [
@@ -25,6 +27,8 @@ velocityRnd: 0.2
 ammoTypes: {
   warp-alloy: {
     type: BasicBulletType
+    collidesTeam: true
+    healPercent: 4
     sprite: large-bomb
     backColor: 83f793
     frontColor: ffffff
