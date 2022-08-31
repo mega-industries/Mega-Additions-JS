@@ -3,7 +3,7 @@ health: 1750
 range: 180
 targetHealing: true
 shootSound: bolt
-targetsAir: false
+targetAir: false
 drawer: {
   type: DrawTurret
   parts: [
