@@ -81,3 +81,14 @@ exports.magneticDrillUpdate = extend(WaveEffect, {
     strokeTo: 0.6,
     lifetime: 30,
 });
+
+exports.greenTurretSmoke = extend(ParticleEffect, {
+    colorFrom: palette.green,
+    colorTo: palette.greenClear,
+    sizeFrom: 4,
+    sizeTo: 0,
+    lifetime: 47,
+    length: 30,
+    particles: 17,
+    interp: Interp.pow5Out,
+});
