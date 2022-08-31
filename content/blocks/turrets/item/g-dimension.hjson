@@ -12,6 +12,7 @@ drawer: {
       moveRot: -3
       progress: recoil
       heatProgress: recoil
+      mirror: true
     }
   ]
 }
@@ -30,7 +31,7 @@ ammoTypes: {
     width: 5
     height: 11
     speed: 5
-    liftime: 40
+    lifetime: 40
     damage: 35
     splashDamage: 13
     splashDamageRadius: 20
