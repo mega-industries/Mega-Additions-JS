@@ -1,0 +1,57 @@
+size: 2
+health: 1750
+range: 180
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-wing"
+      moveX: -0.4
+      moveY: -1.2
+      moveRot: -3
+      progress: recoil
+      heatProgress: recoil
+    }
+  ]
+}
+shoot: {
+  type: ShootPattern
+  shots: 6
+}
+inaccuracy: 6
+velocityInaccuracy: 0.2
+ammoTypes: {
+  warp-alloy: {
+    type: BasicBulletType
+    sprite: large-bomb
+    backColor: 83f793
+    frontColor: ffffff
+    width: 5
+    height: 11
+    speed: 5
+    liftime: 40
+    damage: 35
+    splashDamage: 13
+    splashDamageRadius: 20
+    hitEffect: {
+      type: WaveEffect
+      sizeFrom: 0
+      sizeTo: 20
+      lifetime: 20
+      colorFrom: 83f793
+      colorTo: 83f793
+      strokeFrom: 1.5
+      strokeTo: 0
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+category: turret
+research: g-reboot
+requirements: [
+  graphite/30
+  lead/90
+  warp-alloy/50
+]
