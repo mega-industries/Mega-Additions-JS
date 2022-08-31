@@ -60,7 +60,7 @@ const revamp = extend(PowerTurret, "g-revamp", {
   shootEffect: effects.greenFlare,
 });
 
-const dimension = extend(PowerTurret, "g-dimension", {
+const dimension = extend(ItemTurret, "g-dimension", {
   shootEffect: effects.greenFlare,
   smokeEffect: effects.greenTurretSmoke,
 });
