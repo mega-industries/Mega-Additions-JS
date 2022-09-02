@@ -1,0 +1,56 @@
+size: 2
+health: 2700
+range: 90
+reloadTime: 35
+targetHealing: true
+ammoTypes: {
+  plastanium: {
+    type: ShrapnelBulletType
+    damage: 35
+    length: 100
+    width: 17
+    toColor: cbd97f
+    healPercent: 2
+    shootEffect: {
+      type: ParticleEffect
+      line: true
+      colorFrom: ffffff
+      colorTo: cbd97f
+      lenFrom: 5
+      lenTo: 0
+      strokeFrom: 1
+      strokeTo: 0
+      lifetime: 20
+      interp: pow5Out
+    }
+    smokeEffect: none
+  }
+  warp-alloy: {
+    type: ShrapnelBulletType
+    damage: 35
+    length: 100
+    width: 17
+    toColor: 83f793
+    healPercent: 3
+    shootEffect: {
+      type: ParticleEffect
+      line: true
+      colorFrom: ffffff
+      colorTo: 83f793
+      lenFrom: 5
+      lenTo: 0
+      strokeFrom: 1
+      strokeTo: 0
+      lifetime: 20
+      interp: pow5Out
+    }
+    smokeEffect: none
+  }
+}
+category: turret
+research: g-dimension
+requirements: [
+  plastanium/40
+  warp-alloy/60
+  silicon/100
+]
