@@ -64,3 +64,5 @@ const dimension = extend(ItemTurret, "g-dimension", {
   shootEffect: effects.greenFlare,
   smokeEffect: effects.greenTurretSmoke,
 });
+
+const sword = extend(ItemTurret, "g-sword", {});
