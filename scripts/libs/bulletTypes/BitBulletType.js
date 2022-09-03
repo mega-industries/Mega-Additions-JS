@@ -77,7 +77,8 @@ module.exports = {
         Fill.rect(b.x, b.y, size, size);
       },
       hitEffect: burst,
-      despawnEffect: burst,
+      despawnEffect: Fx.none,
+      despawnHit: true,
       trailEffect: trail,
       shootEffect: Fx.none,
       smokeEffect: Fx.none,
