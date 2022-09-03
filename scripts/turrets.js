@@ -92,11 +92,5 @@ const bitShoot = bitBLib.bitBullet(Color.valueOf("8aa3f4"), Color.valueOf("6974c
 });
 
 const bit = bitLib.new8BitTurret("b-bit", 8, PowerTurret, PowerTurret.PowerTurretBuild, false, {
-  reloadTime: 70,
-  recoilAmount: 4,
-  inaccuracy: 15,
-  range: 140,
-  powerUse: 1.35,
-  size: 2,
   shootType: bitShoot
 }, {});
