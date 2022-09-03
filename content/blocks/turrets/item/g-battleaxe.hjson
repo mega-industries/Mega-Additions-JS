@@ -19,13 +19,30 @@ ammoTypes: {
   plastanium: {
     type: LaserBulletType
     chargeEffect: {
-      lifetime: 100
-      colorFrom: cbd97f00
-      colorTo: cbd97f
-      sizeFrom: 0
-      sizeTo: 2
-      baseLength: -45
-      length: 45
+      type: MultiEffect
+      effects: [
+        {
+          lifetime: 100
+          colorFrom: cbd97f00
+          colorTo: cbd97f
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -45
+          length: 45
+          particles: 15
+        }
+        {
+          lifetime: 70
+          colorFrom: cbd97f00
+          colorTo: cbd97f
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -65
+          length: 65
+          offset: 30
+          particles: 10
+        }
+      ]
     }
     colors: [cbd97ff0, cbd97f, ffffff]
     length: 173
@@ -40,13 +57,30 @@ ammoTypes: {
   warp-alloy: {
     type: LaserBulletType
     chargeEffect: {
-      lifetime: 100
-      colorFrom: 83f79300
-      colorTo: 83f793
-      sizeFrom: 0
-      sizeTo: 2
-      baseLength: -45
-      length: 45
+      type: MultiEffect
+      effects: [
+        {
+          lifetime: 100
+          colorFrom: 83f79300
+          colorTo: 83f793
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -45
+          length: 45
+          particles: 15
+        }
+        {
+          lifetime: 70
+          colorFrom: 83f79300
+          colorTo: 83f793
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -65
+          length: 65
+          offset: 30
+          particles: 10
+        }
+      ]
     }
     colors: [83f793f0, 83f793, ffffff]
     length: 210
