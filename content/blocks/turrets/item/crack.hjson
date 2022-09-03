@@ -8,6 +8,7 @@ drawer: {
 reload: 45
 recoil: 2.2
 rotateSpeed: 2.1
+coolantMultiplier: 5
 ammoTypes: {
   beryllium: {
     type: BasicBulletType
