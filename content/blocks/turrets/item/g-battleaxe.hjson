@@ -21,8 +21,8 @@ ammoTypes: {
       colorTo: cbd97f
       sizeFrom: 0
       sizeTo: 4
-      lengthFrom: 23
-      length: -23
+      lengthFrom: -45
+      length: 45
     }
     colors: [cbd97ff0, cbd97f, ffffff]
     length: 173
@@ -42,8 +42,8 @@ ammoTypes: {
       colorTo: 83f793
       sizeFrom: 0
       sizeTo: 4
-      lengthFrom: 23
-      length: -23
+      baseLength: -45
+      length: 45
     }
     colors: [83f793f0, 83f793, ffffff]
     length: 210
