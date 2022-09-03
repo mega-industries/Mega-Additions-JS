@@ -83,7 +83,7 @@ module.exports = {
       smokeEffect: Fx.none,
       absorbable: false,
       hittable: false,
-      hitSound: Sounds: plasmaboom
+      hitSound: Sounds.plasmaboom,
     }, obj);
     
     const bit = extend(BulletType, obj);
