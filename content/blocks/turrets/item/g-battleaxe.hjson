@@ -2,6 +2,9 @@ health: 3780
 range: 165
 size: 3
 targetHealing: true
+reload: 100
+cooldownTime: 100
+recoil: 2
 ammoTypes: {
   plastanium: {
     type: LaserBulletType
