@@ -70,5 +70,3 @@ const sword = extend(ItemTurret, "g-sword", {});
 const battleaxe = extend(ItemTurret, "g-battleaxe", {});
 
 const crack = extend(ItemTurret, "crack", {});
-crack.coolant = new ConsumeLiquid(Liquids.water, 0.06)
-crack.acceptCoolant = true;
