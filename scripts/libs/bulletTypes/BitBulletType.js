@@ -1,3 +1,4 @@
+//stolen from MEEPofFaith/prog-mats-js
 module.exports = {
   bitBullet(color1, color2, fadeSpeed, size, hueShift, strokes, stroke, length, burstTime, burstSize, trailTime, trailDelay, obj){
     const burst = new Effect(burstTime, e => {
