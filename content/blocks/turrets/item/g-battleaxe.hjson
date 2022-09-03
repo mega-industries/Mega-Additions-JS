@@ -6,12 +6,24 @@ reload: 135
 cooldownTime: 55
 recoil: 2
 accurateDelay: true
+moveWhileCharging: false
+shootEffect: none
+smokeEffect: none
 shoot: {
   firstShotDelay: 100
 }
 ammoTypes: {
   plastanium: {
     type: LaserBulletType
+    chargeEffect: {
+      lifetime: 100
+      colorFrom: cbd97ff0
+      colorTo: cbd97f
+      sizeFrom: 0
+      sizeTo: 4
+      lengthFrom: -23
+      length: 23
+    }
     colors: [cbd97ff0, cbd97f, ffffff]
     length: 173
     sideAngle: 25
@@ -24,6 +36,15 @@ ammoTypes: {
   }
   warp-alloy: {
     type: LaserBulletType
+    chargeEffect: {
+      lifetime: 100
+      colorFrom: 83f793f0
+      colorTo: 83f793
+      sizeFrom: 0
+      sizeTo: 4
+      lengthFrom: -23
+      length: 23
+    }
     colors: [83f793f0, 83f793, ffffff]
     length: 210
     sideAngle: 25
