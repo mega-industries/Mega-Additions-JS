@@ -17,12 +17,12 @@ ammoTypes: {
     type: LaserBulletType
     chargeEffect: {
       lifetime: 100
-      colorFrom: cbd97ff0
+      colorFrom: cbd97f00
       colorTo: cbd97f
       sizeFrom: 0
       sizeTo: 4
-      lengthFrom: -23
-      length: 23
+      lengthFrom: 23
+      length: -23
     }
     colors: [cbd97ff0, cbd97f, ffffff]
     length: 173
@@ -38,12 +38,12 @@ ammoTypes: {
     type: LaserBulletType
     chargeEffect: {
       lifetime: 100
-      colorFrom: 83f793f0
+      colorFrom: 83f79300
       colorTo: 83f793
       sizeFrom: 0
       sizeTo: 4
-      lengthFrom: -23
-      length: 23
+      lengthFrom: 23
+      length: -23
     }
     colors: [83f793f0, 83f793, ffffff]
     length: 210
