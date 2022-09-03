@@ -1,8 +1,14 @@
 size: 2
 health: 2700
 range: 90
-reloadTime: 35
+reload: 18
 targetHealing: true
+ammoPerShot: 4
+shoot: {
+  type: ShootSpread
+  shots: 2
+  spread: 8
+}
 ammoTypes: {
   plastanium: {
     type: ShrapnelBulletType
@@ -11,6 +17,7 @@ ammoTypes: {
     width: 17
     toColor: cbd97f
     healPercent: 2
+    serrations: 0
     shootEffect: {
       type: ParticleEffect
       line: true
@@ -31,7 +38,8 @@ ammoTypes: {
     length: 100
     width: 17
     toColor: 83f793
-    healPercent: 3
+    healPercent: 5
+    serrations: 0
     shootEffect: {
       type: ParticleEffect
       line: true
