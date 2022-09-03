@@ -9,6 +9,15 @@ reload: 45
 recoil: 2.2
 rotateSpeed: 2.1
 coolantMultiplier: 5
+consumes: {
+liquid: {
+liquid: water
+amount: 0.1
+update: false
+booster: true
+optional: true
+}
+}
 ammoTypes: {
   beryllium: {
     type: BasicBulletType
