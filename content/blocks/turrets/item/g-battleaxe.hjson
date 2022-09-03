@@ -9,6 +9,8 @@ accurateDelay: true
 moveWhileCharging: false
 shootEffect: none
 smokeEffect: none
+chargeSound: lasercharge2
+shootSond: laser
 consumes: {
   power: 4.7
 }
