@@ -1,0 +1,57 @@
+health: 1200
+size: 2
+range: 110
+drawer: {
+  type: DrawTurret
+  basePrefix: "reinforced-"
+}
+reload: 45
+recoil: 2.2
+rotateSpeed: 2.1
+ammoTypes: {
+  beryllium: {
+    type: BasicBulletType
+    backColor: b1dd7e
+    frontColor: ffffff
+    lifetime: 60
+    damage: 42
+    width: 8
+    height: 16
+    hitEffect: {
+      type: ParticleEffect
+      colorFrom: b1dd7e
+      colorTo: b1dd7e00
+      lifetime: 45
+      length: 22
+      particles: 17
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+  graphite: {
+    type: BasicBulletType
+    backColor: 768a9a
+    frontColor: ffffff
+    lifetime: 60
+    damage: 67
+    width: 8
+    height: 16
+    reloadMultiplier: 0.63
+    hitEffect: {
+      type: ParticleEffect
+      colorFrom: 768a9a
+      colorTo: 768a9a00
+      lifetime: 45
+      length: 22
+      particles: 17
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+category: turret
+research: core-bastion
+requirements: [
+  beryllium/120
+  graphite/55
+]
