@@ -12,7 +12,7 @@ coolantMultiplier: 5
 ammoTypes: {
   beryllium: {
     type: BasicBulletType
-    speed: 3.5
+    speed: 2.5
     backColor: b1dd7e
     frontColor: ffffff
     lifetime: 60
@@ -32,7 +32,7 @@ ammoTypes: {
   }
   graphite: {
     type: BasicBulletType
-    speed: 3.5
+    speed: 2.5
     backColor: 768a9a
     frontColor: ffffff
     lifetime: 60
