@@ -1,0 +1,58 @@
+health: 3780
+range: 165
+size: 3
+targetHealing: true
+ammoTypes: {
+  plastanium: {
+    type: LaserBulletType
+    colors: [cbd97ff0, cbd97f, ffffff]
+    length: 173
+    sideAngle: 25
+    damage: 192
+    lifetime: 16
+    drawSize: 400
+    pierceCap: 3
+    buildingDamageMultiplier: 0.7
+    healPercent: 4
+  }
+  warp-alloy: {
+    type: LaserBulletType
+    colors: [83f793f0, 83f793, ffffff]
+    length: 210
+    sideAngle: 25
+    damage: 192
+    lifetime: 16
+    drawSize: 400
+    pierceCap: 3
+    buildingDamageMultiplier: 0.73
+    healPercent: 6
+  }
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-glow"
+      progress: reload
+      color: 83f79300
+      colorTo: 83f793
+      mirror: false
+    }
+    {
+      type: RegionPart
+      suffix: "-rod"
+      progress: reload
+      moveY: 3.5
+      mirror: false
+    }
+  ]
+}
+category: turret
+research: g-sword
+requirements: [
+  plastanium/120
+  thorium/30
+  silicon/80
+  warp-alloy/80
+]
