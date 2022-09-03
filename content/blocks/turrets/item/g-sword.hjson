@@ -4,6 +4,7 @@ range: 90
 reload: 18
 targetHealing: true
 ammoPerShot: 4
+shootSound: shootBig
 shoot: {
   type: ShootSpread
   shots: 2
@@ -34,7 +35,7 @@ ammoTypes: {
   }
   warp-alloy: {
     type: ShrapnelBulletType
-    damage: 35
+    damage: 52
     length: 100
     width: 17
     toColor: 83f793
