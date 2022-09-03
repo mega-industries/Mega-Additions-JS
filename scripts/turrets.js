@@ -66,3 +66,5 @@ const dimension = extend(ItemTurret, "g-dimension", {
 });
 
 const sword = extend(ItemTurret, "g-sword", {});
+
+const battleaxe = extend(ItemTurret, "g-battleaxe", {});
