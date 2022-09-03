@@ -9,6 +9,9 @@ accurateDelay: true
 moveWhileCharging: false
 shootEffect: none
 smokeEffect: none
+consumes: {
+  power: 4.7
+}
 shoot: {
   firstShotDelay: 100
 }
@@ -20,8 +23,8 @@ ammoTypes: {
       colorFrom: cbd97f00
       colorTo: cbd97f
       sizeFrom: 0
-      sizeTo: 4
-      lengthFrom: -45
+      sizeTo: 2
+      baseLength: -45
       length: 45
     }
     colors: [cbd97ff0, cbd97f, ffffff]
@@ -41,7 +44,7 @@ ammoTypes: {
       colorFrom: 83f79300
       colorTo: 83f793
       sizeFrom: 0
-      sizeTo: 4
+      sizeTo: 2
       baseLength: -45
       length: 45
     }
