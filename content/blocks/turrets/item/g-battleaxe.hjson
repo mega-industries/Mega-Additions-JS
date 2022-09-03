@@ -2,10 +2,13 @@ health: 3780
 range: 165
 size: 3
 targetHealing: true
-reload: 130
-cooldownTime: 100
+reload: 135
+cooldownTime: 55
 recoil: 2
-firstShotDelay: 100
+accurateDelay: true
+shoot: {
+  firstShotDelay: 100
+}
 ammoTypes: {
   plastanium: {
     type: LaserBulletType
@@ -39,6 +42,7 @@ drawer: {
       type: RegionPart
       suffix: "-glow"
       progress: charge
+      outline: false
       color: 83f79300
       colorTo: 83f793
       mirror: false
