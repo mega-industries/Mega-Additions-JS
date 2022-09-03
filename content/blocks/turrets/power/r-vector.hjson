@@ -14,8 +14,8 @@ drawer: {
     {
       type: RegionPart
       suffix: "-spikes"
-      moveX: -1.3
-      moveY: -1.3
+      moveX: -1.2
+      moveY: -1.2
       progress: recoil
       mirror: true
       under: true
@@ -61,7 +61,7 @@ shootType: {
     type: BasicBulletType
       sprite: circle-bullet
       damage: 7
-      lifetime: 17
+      lifetime: 26
       speed: 1
       drag: -0.1
       backColor: e56666
