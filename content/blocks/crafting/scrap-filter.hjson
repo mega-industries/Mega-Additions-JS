@@ -9,6 +9,7 @@ consumes: {
   }
 }
 outputItem: warp-alloy/1
+outputLiquid: laerite/0.12
 craftTime: 30
 drawer: {
   type: DrawMulti
