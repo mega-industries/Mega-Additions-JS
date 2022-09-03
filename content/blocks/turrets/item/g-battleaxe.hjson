@@ -15,6 +15,7 @@ consumes: {
 shoot: {
   firstShotDelay: 100
 }
+ammoPerShot: 5
 ammoTypes: {
   plastanium: {
     type: LaserBulletType
@@ -111,6 +112,7 @@ drawer: {
       progress: charge
       moveY: 3.5
       mirror: false
+      under: true
     }
   ]
 }
