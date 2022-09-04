@@ -1,5 +1,5 @@
 module.exports = {
-  strikeBullet(autoDropRad, stopRad, resumeSeek, startOnOwner, givenData, snapRot, obj){
+  strikeMissile(autoDropRad, stopRad, resumeSeek, startOnOwner, givenData, snapRot, obj){
     let autoDrop = autoDropRad > 0;
     let stop = stopRad > 0;
 
