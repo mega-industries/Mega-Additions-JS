@@ -23,10 +23,10 @@ smokeEffect: {
 shootEffect: shootBig
 ammoTypes: {
   graphite: {
-    type: BasicBulletType
-    damage: 23
-    splashDamage: 9
-    splashDamageRadius: 12
+    type: ArtilleryBulletType
+    damage: 47
+    splashDamage: 24
+    splashDamageRadius: 27
     width: 9
     height: 17
     speed: 3
@@ -37,11 +37,12 @@ ammoTypes: {
         blastExplosion
         {
           type: ParticleEffect
-          sizeFrom: 3
+          length: 27
+          sizeFrom: 7
           sizeTo: 0
-          lifetime: 84
-          colorFrom: ffffff
-          colorTo: 747484
+          lifetime: 113
+          colorFrom: ffffff88
+          colorTo: 74748466
           interp: pow5Out
         }
       ]
