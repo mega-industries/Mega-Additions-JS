@@ -1,9 +1,10 @@
 health: 200
 shoot: {
   type: ShootPattern
-  shots: 3
-  shotDelay: 3
+  shots: 4
+  shotDelay: 5
 }
+inaccuracy: 4
 reload: 70
 recoil: 1.7
 range: 200
@@ -27,8 +28,9 @@ ammoTypes: {
     damage: 47
     splashDamage: 24
     splashDamageRadius: 27
+    sprite: large-bomb
     width: 9
-    height: 17
+    height: 9
     speed: 3
     lifetime: 40
     hitEffect: {
