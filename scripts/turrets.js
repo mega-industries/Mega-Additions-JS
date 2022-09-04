@@ -109,7 +109,7 @@ const mirageLaser = extend(LaserBulletType, {
   drawSize: 400,
   lifetime: 16,
   sideAngle: 20,
-  width: 32,
+  width: 53,
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
@@ -125,7 +125,7 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
   draw() {
 	  Draw.rect(mirage.baseRegion, this.x, this.y, 0);
 	  Draw.rect(mirage.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
+	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 1.3));
           Draw.rect(mirage.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
