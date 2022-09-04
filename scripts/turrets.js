@@ -148,8 +148,8 @@ const prism = extend(PowerTurret, "w-prism", {
 	  this.region = Core.atlas.find(this.name);
           this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
-	  for(let i = 0; i < 6; i++){
-			this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + (i + 1));
+	  for(var i = 0; i < 6; i++){
+			this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-"/* + (i + 1)*/);
 	  }
   },
   shootType: prismLaser,
@@ -160,7 +160,7 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	  Draw.rect(prism.baseRegion, this.x, this.y, 0);
 	  Draw.rect(prism.region, this.x, this.y, this.rotation - 90);
 	  Draw.blend(Blending.additive);
-          for(let h = 0; h < 6; h++){
+          for(var h = 0; h < 6; h++){
 		  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
 		  Draw.rect(this.rainbowRegions[h], this.x, this.y, this.rotation - 90);
 	  }
