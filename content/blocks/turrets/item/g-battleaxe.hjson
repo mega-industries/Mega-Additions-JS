@@ -10,7 +10,7 @@ moveWhileCharging: false
 shootEffect: none
 smokeEffect: none
 chargeSound: lasercharge2
-shootSond: laser
+shootSound: laser
 consumes: {
   power: 4.7
 }
