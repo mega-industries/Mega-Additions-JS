@@ -4,6 +4,7 @@ category: turret
 reload: 280
 shootSound: laserblast
 chargeSound: lasercharge2
+moveWhileCharging: false
 shoot: {
   firstShotDelay: 39
 }
