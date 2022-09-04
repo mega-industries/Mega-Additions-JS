@@ -94,10 +94,10 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   draw() {
 	  tr2.trns(entity.rotation, -entity.recoil);
 	  
-	  Draw.rect(refract.baseRegion, this.x + tr2.x, this.y + tr2.y, -90);
-	  Draw.rect(refract.region, this.x + tr2.x, this.y + tr2.y, this.rotation - 90);
+	  Draw.rect(refract.baseRegion, this.x, this.y, -90);
+	  Draw.rect(refract.region, this.x, this.y, this.rotation - 90);
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
-          Draw.rect(refract.rainbowRegion, this.x + tr2.x, this.y + tr2.y, this.rotation - 90);
+          Draw.rect(refract.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
 });
