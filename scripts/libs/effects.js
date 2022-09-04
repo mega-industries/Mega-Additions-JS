@@ -104,14 +104,3 @@ exports.cannonShoot = new Effect(16, 100, e => {
     }
     Drawf.tri(e.x, e.y, 6, 40 * e.fout(), e.rotation);
 });
-
-exports.rainbowLaserCharge = new Effect(40, 100, e => {
-    Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
-    
-    Lines.stroke(e.fin() * 2);
-    Lines.circle(e.x, e.y, e.fout() * 50);
-    
-    for(let i = 0; i < 2; i++){
-        Drawf.tri(e.x, e.y, 6, 40 * e.fin(), i*180+90+e.rotation);
-    }
-});
