@@ -161,7 +161,7 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
   draw() {
 	  Draw.rect(prism.baseRegion, this.x, this.y, 0);
 	  Draw.rect(prism.region, this.x, this.y, this.rotation - 90);
-	  Draw.blend(Blending.additive);
+	  //Draw.blend(Blending.additive);
           for(var h = 0; h < 6; h++){
 		  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
 		  Draw.rect(prism.rainbowRegions[h], this.x, this.y, this.rotation - 90);
