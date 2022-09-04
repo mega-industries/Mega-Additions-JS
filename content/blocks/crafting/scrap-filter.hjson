@@ -27,7 +27,15 @@ drawer: {
   ]
 }
 category: crafting
-research: graphite-press
+research: {
+  parent: graphite-press
+  objectives: [
+    {
+      type: SectorComplete
+      preset: crystal-refining-site
+    }
+  ]
+}
 requirements: [
   lead/35
 ]
