@@ -149,7 +149,7 @@ const prism = extend(PowerTurret, "w-prism", {
           this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
 	  for(var i = 0; i < 6; i++){
-			this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-"/* + (i + 1)*/);
+			this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + i);
 	  }
   },
   shootType: prismLaser,
