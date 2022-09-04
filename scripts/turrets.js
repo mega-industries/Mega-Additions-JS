@@ -73,12 +73,13 @@ const crack = extend(ItemTurret, "crack", {});
 
 const refractLaser = extend(LaserBulletType, {
   length: 173,
-  colors: [Color.valueOf("ff000044"), Color.valueOf("ff000099"), Color.valueOf("ff3333"), Color.valueOf("ffffff")],
+  colors: [Color.valueOf("ff0000"), Color.valueOf("74ff60"), Color.valueOf("9cbfff"), Color.valueOf("ffffff")],
   damage: 175,
   hitSize: 4,
   drawSize: 400,
   lifetime: 16,
   sideAngle: 20,
+  width: 32,
 });
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
