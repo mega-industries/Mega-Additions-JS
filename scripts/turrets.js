@@ -92,8 +92,6 @@ const refract = extend(PowerTurret, "w-refraction", {
 });
 refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   draw() {
-	  tr2.trns(entity.rotation, -entity.recoil);
-	  
 	  Draw.rect(refract.baseRegion, this.x, this.y, -90);
 	  Draw.rect(refract.region, this.x, this.y, this.rotation - 90);
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
