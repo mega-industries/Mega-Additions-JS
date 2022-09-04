@@ -93,3 +93,14 @@ exports.greenTurretSmoke = extend(ParticleEffect, {
     interp: Interp.pow5Out,
     cone: 23,
 });
+
+exports.cannonShoot = new Effect(16, 100, e => {
+    Lines.stroke(e.fout() * 2);
+
+    Draw.color(Pal.engine);
+    for(let i = 0; i < 2; i++){
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+45+e.rotation);
+    }
+    Drawf.tri(e.x, e.y, 6, 40 * e.fout(), e.rotation);
+});
