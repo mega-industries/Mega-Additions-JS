@@ -82,16 +82,22 @@ const refractLaser = extend(LaserBulletType, {
 });
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
-    this.super$load()
-    this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+          this.super$load()
+	  this.region = Core.atlas.find(this.name);
+          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+	  this.baseRegion = Core.atlas.find("block-" + this.size);
   },
   shootType: refractLaser,
   range: 165,
 });
 refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   draw() {
-    Draw.color(Color.valueOf("ff0000").shiftHue(Time.time * 2));
-		Draw.rect(refract.rainbowRegion, this.x, this.y, this.rotation);
-		Draw.color();
+	  tr2.trns(entity.rotation, -entity.recoil);
+	  
+	  Draw.rect(refract.baseRegion, this.x + tr2.x, this.y + tr2.y, -90);
+	  Draw.rect(refract.region, this.x + tr2.x, this.y + tr2.y, this.rotation - 90);
+	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
+          Draw.rect(refract.rainbowRegion, this.x + tr2.x, this.y + tr2.y, this.rotation - 90);
+          Draw.color()
   }
 });
