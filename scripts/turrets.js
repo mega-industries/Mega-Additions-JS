@@ -176,12 +176,6 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	  }
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
           Draw.rect(prism.rainbowRegions[this.frame], this.x, this.y, this.rotation - 90);
-	  Draw.color(Color.valueOf("ff727255").shiftHue(Time.time * 2.4));
-          if(this.frame == 0){
-		  Draw.rect(prism.rainbowRegions[6], this.x, this.y, this.rotation - 90);
-	  }else{
-		  Draw.rect(prism.rainbowRegions[this.frame - 1], this.x, this.y, this.rotation - 90);
-	  }
 	  Draw.blend();
           Draw.color()
   }
