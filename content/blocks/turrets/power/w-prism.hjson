@@ -1,7 +1,7 @@
 size: 2
 health: 600
 category: turret
-reload: 140
+reload: 70
 shootSound: laser
 recoil: 2
 rotateSpeed: 2.1
