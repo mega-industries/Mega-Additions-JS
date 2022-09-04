@@ -84,7 +84,7 @@ exports.magneticDrillUpdate = extend(WaveEffect, {
 
 exports.greenTurretSmoke = extend(ParticleEffect, {
     colorFrom: palette.green,
-    colorTo: palette.greenClear,
+    colorTo: palette.green.cpy().a(0.13),
     sizeFrom: 4,
     sizeTo: 0,
     lifetime: 47,
