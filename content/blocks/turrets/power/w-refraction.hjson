@@ -1,0 +1,21 @@
+size: 2
+health: 600
+category: turret
+reload: 140
+shootSound: laser
+recoil: 2
+rotateSpeed: 2.1
+requirements: [
+  lead/120
+  metaglass/40
+  graphite/20
+]
+research: {
+  parent: lancer
+  objectives: [
+    {
+      type: SectorComplete
+      preset: craters
+    }
+  ]
+}
