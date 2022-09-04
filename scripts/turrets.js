@@ -130,3 +130,41 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
           Draw.color()
   }
 });
+
+//TODO change bullet type
+const prismLaser = extend(LaserBulletType, {
+  length: 173,
+  colors: [Color.valueOf("e5666666"), palette.red, Color.white],
+  damage: 372,
+  hitSize: 4,
+  drawSize: 400,
+  lifetime: 50,
+  sideAngle: 20,
+  width: 75,
+});
+const prism = extend(PowerTurret, "w-prism", {
+  load() {
+          this.super$load()
+	  this.region = Core.atlas.find(this.name);
+          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+	  this.baseRegion = Core.atlas.find("block-" + this.size);
+	  for(let i = 0; i < 6; i++){
+			this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + (i + 1));
+	  }
+  },
+  shootType: prismLaser,
+  range: 165,
+});
+prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
+  draw() {
+	  Draw.rect(prism.baseRegion, this.x, this.y, 0);
+	  Draw.rect(prism.region, this.x, this.y, this.rotation - 90);
+	  Draw.blend(Blending.additive);
+          for(let h = 0; h < 6; h++){
+		  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
+		  Draw.rect(this.rainbowRegions[h], this.x, this.y, this.rotation - 90);
+	  }
+	  Draw.blend();
+          Draw.color()
+  }
+});
