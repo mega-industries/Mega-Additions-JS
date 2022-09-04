@@ -110,7 +110,6 @@ const mirageLaser = extend(LaserBulletType, {
   lifetime: 16,
   sideAngle: 20,
   width: 32,
-  chargeEffect: effects.rainbowLaserCharge,
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
