@@ -296,13 +296,15 @@ criogen.arr = [
     [Blocks.darksandWater, Blocks.darksandWater, Blocks.darksand, Blocks.sand, Blocks.craters, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.darksandWater, Blocks.stone, Blocks.stone, Blocks.stone],
     [Blocks.darksandWater, Blocks.sandWater, Blocks.sand, Blocks.craters, Blocks.craters, Blocks.craters, Blocks.sand, Blocks.stone, Blocks.stone, Blocks.stone, Blocks.grass, Blocks.dacite, Blocks.grass]
 ];
-criogen.rid = new Packages.arc.util.noise.RidgedPerlin(1, 2);
 criogen.basegen = new BaseGenerator();
 criogen.scl = 5;
 criogen.waterOffset = 0.07;
 criogen.water = 2 / zuilagen.arr[0].length;
 
-const crio = new JavaAdapter(Planet, {}, "crio", Planets.serpulo, 3, 0.9);
+const crio = new JavaAdapter(Planet, {}, "crio", Planets.serpulo, 3, 1);
+crio.orbitRadius = 25;
+crio.orbitTime = 250;
+crio.rotateTime = 100;
 crio.generator = criogen;
 crio.startSector = 1;
 crio.alwaysUnlocked = true;
