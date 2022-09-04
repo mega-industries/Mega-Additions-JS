@@ -77,7 +77,6 @@ const refractLaser = extend(BasicBulletType, {
 		const trnsB = new Vec2();
 		const trnsC = new Vec2();
 		
-		Effects.shake(0.8, 0.8, b.x, b.y);
 		if(b.timer.get(1, 5)){
 			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 245.0, true);
 		};
