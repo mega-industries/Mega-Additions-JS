@@ -71,15 +71,54 @@ const battleaxe = extend(ItemTurret, "g-battleaxe", {});
 
 const crack = extend(ItemTurret, "crack", {});
 
-const refractLaser = extend(LaserBulletType, {
-  length: 173,
-  colors: [Color.valueOf("ff000044"), Color.valueOf("ff000099"), Color.valueOf("ff3333"), Color.valueOf("ffffff")],
-  damage: 175,
-  hitSize: 4,
-  drawSize: 400,
-  lifetime: 16,
-  sideAngle: 20,
+const refractLaser = extend(BasicBulletType, {
+	
+	update: function(b){
+		const trnsB = new Vec2();
+		const trnsC = new Vec2();
+		
+		Effects.shake(0.8, 0.8, b.x, b.y);
+		if(b.timer.get(1, 5)){
+			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 245.0, true);
+		};
+		if(Mathf.chance(0.9)){
+			trnsB.trns(b.rot(), Mathf.random(0.5, 240.0), Mathf.range(7.0));
+			//trnsC.trns(b.rot() + 90, Mathf.range(7.0));
+			Effects.effect(rainbowLaserEffect, b.x + trnsB.x, b.y + trnsB.y, b.rot());
+		}
+	},
+	
+	draw: function(b){
+		
+		const colors = [Color.valueOf("ff000044"), Color.valueOf("ff000099"), Color.valueOf("ff3333"), Color.valueOf("ffffff")];
+		const tscales = [1.4, 1.0, 0.9, 0.55];
+		const strokes = [1.8, 1.4, 1.04, 0.6];
+		const lenscales = [1.0, 1.16, 1.20, 1.23];
+		const tmpColor = new Color();
+
+		for(var s = 0; s < 4; s++){
+			
+			Draw.color(tmpColor.set(colors[s]).shiftHue((s * 45) + (Time.time() * 2.0)));
+			for(var i = 0; i < 4; i++){
+				Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 1.0) * 20.0);
+				Lines.stroke((9 + Mathf.absin(Time.time() + (15 * s), 1.9, 1.8)) * b.fout() * strokes[s] * tscales[i]);
+				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), 230.0 * b.fout() * lenscales[i], CapStyle.none);
+			}
+		};
+		Draw.reset();
+	}
 });
+
+refractLaser.speed = 0.001;
+refractLaser.damage = 49;
+refractLaser.lifetime = 13;
+refractLaser.hitEffect = Fx.hitLancer;
+refractLaser.despawnEffect = Fx.none;
+refractLaser.hitSize = 5;
+refractLaser.drawSize = 310;
+refractLaser.pierce = true;
+refractLaser.shootEffect = Fx.none;
+refractLaser.smokeEffect = Fx.none;
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
           this.super$load()
@@ -92,7 +131,7 @@ const refract = extend(PowerTurret, "w-refraction", {
 });
 refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   draw() {
-	  Draw.rect(refract.baseRegion, this.x, this.y, -90);
+	  Draw.rect(refract.baseRegion, this.x, this.y, 0);
 	  Draw.rect(refract.region, this.x, this.y, this.rotation - 90);
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
           Draw.rect(refract.rainbowRegion, this.x, this.y, this.rotation - 90);
