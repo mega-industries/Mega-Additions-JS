@@ -1,7 +1,3 @@
-captureWave: 10
-planet: serpulo
-sector: 172
-difficulty: 2
 research: {
 parent: craters
 objectives: [
