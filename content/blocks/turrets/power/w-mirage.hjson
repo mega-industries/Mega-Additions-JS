@@ -1,13 +1,16 @@
 size: 3
 health: 1230
 category: turret
-reload: 140
+reload: 280
 shootSound: laserblast
 chargeSound: lasercharge2
+shoot: {
+  firstShotDelay: 39
+}
 recoil: 2
 rotateSpeed: 2.1
 consumes: {
-  power: 5.3
+  power: 7.2
 }
 requirements: [
   silicon/200
