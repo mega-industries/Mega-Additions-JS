@@ -71,6 +71,8 @@ const battleaxe = extend(ItemTurret, "g-battleaxe", {});
 
 const crack = extend(ItemTurret, "crack", {});
 
+const hole = extend(ItemTurret, "w-hole", {});
+
 const refractLaser = extend(LaserBulletType, {
   length: 173,
   colors: [Color.valueOf("e5666633"), Color.valueOf("e5666677"), palette.red, Color.white],
@@ -101,37 +103,8 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   }
 });
 
-const mirageLaser = extend(LaserBulletType, {
-  length: 173,
-  colors: [Color.valueOf("e5666666"), palette.red, Color.white],
-  damage: 372,
-  hitSize: 4,
-  drawSize: 400,
-  lifetime: 50,
-  sideAngle: 20,
-  width: 75,
-});
-const mirage = extend(PowerTurret, "w-mirage", {
-  load() {
-          this.super$load()
-	  this.region = Core.atlas.find(this.name);
-          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
-	  this.baseRegion = Core.atlas.find("block-" + this.size);
-  },
-  shootType: refractLaser,
-  range: 165,
-});
-mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
-  draw() {
-	  Draw.rect(mirage.baseRegion, this.x, this.y, 0);
-	  Draw.rect(mirage.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 1.3));
-          Draw.rect(mirage.rainbowRegion, this.x, this.y, this.rotation - 90);
-          Draw.color()
-  }
-});
-
 const prismBolt = extend(BasicBulletType, {
+	sprite: "circle-bullet",
   	width: 6,
   	length: 6,
 	shrinkY: 0,
@@ -179,6 +152,36 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
           Draw.rect(prism.rainbowRegions[this.frame], this.x, this.y, this.rotation - 90);
 	  Draw.blend();
+          Draw.color()
+  }
+});
+
+const mirageLaser = extend(LaserBulletType, {
+  length: 173,
+  colors: [Color.valueOf("e5666666"), palette.red, Color.white],
+  damage: 372,
+  hitSize: 4,
+  drawSize: 400,
+  lifetime: 50,
+  sideAngle: 20,
+  width: 75,
+});
+const mirage = extend(PowerTurret, "w-mirage", {
+  load() {
+          this.super$load()
+	  this.region = Core.atlas.find(this.name);
+          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+	  this.baseRegion = Core.atlas.find("block-" + this.size);
+  },
+  shootType: refractLaser,
+  range: 165,
+});
+mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
+  draw() {
+	  Draw.rect(mirage.baseRegion, this.x, this.y, 0);
+	  Draw.rect(mirage.region, this.x, this.y, this.rotation - 90);
+	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 1.3));
+          Draw.rect(mirage.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
 });
