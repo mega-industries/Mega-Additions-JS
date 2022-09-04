@@ -70,3 +70,28 @@ const sword = extend(ItemTurret, "g-sword", {});
 const battleaxe = extend(ItemTurret, "g-battleaxe", {});
 
 const crack = extend(ItemTurret, "crack", {});
+
+const refractLaser = extend(LaserBulletType, {
+  length: 173,
+  colors: [Color.valueOf("ff000044"), Color.valueOf("ff000099"), Color.valueOf("ff3333"), Color.valueOf("ffffff")],
+  damage: 175,
+  hitSize: 4,
+  drawSize: 400,
+  lifetime: 16,
+  sideAngle: 20,
+});
+const refract = extend(PowerTurret, "w-refraction", {
+  load() {
+    this.super$load()
+    this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+  },
+  shootType: refractLaser,
+  range: 165,
+});
+refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
+  draw() {
+    Drawf.color(Color.valueOf("ff0000").shiftHue(Time.time() * 2.0));
+		Drawf.rect(refract.rainbowRegion, this.x, this.y, this.rotation );
+		Drawf.color();
+  }
+});
