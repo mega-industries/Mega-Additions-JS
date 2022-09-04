@@ -1,0 +1,58 @@
+health: 200
+shoot: {
+  type: ShootPattern
+  shots: 3
+  shotDelay: 3
+}
+reload: 70
+recoil: 1.7
+range: 200
+shootSound: artillery
+smokeEffect: {
+  type: ParticleEffect
+  cone: 30
+  particles: 12
+  colorFrom: 7a7a7a7a
+  colorTo: 4f4f5900
+  sizeFrom: 5
+  sizeTo: 0
+  length: 16
+  interp: pow5Out
+  lifetime: 45
+}
+shootEffect: shootBig
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    damage: 23
+    splashDamage: 9
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        blastExplosion
+        {
+          type: ParticleEffect
+          sizeFrom: 3
+          sizeTo: 0
+          lifetime: 84
+          colorFrom: ffffff
+          colorTo: 747484
+          interp: pow5Out
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+research: duo
+category: turret
+requirements: [
+  copper/60
+  lead/30
+]
