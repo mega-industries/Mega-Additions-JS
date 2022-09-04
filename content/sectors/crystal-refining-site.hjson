@@ -1,0 +1,16 @@
+captureWave: 10
+planet: serpulo
+sector: 38
+difficulty: 2
+research: {
+parent: craters
+objectives: [
+    {
+      type: SectorComplete
+      preset: craters
+    }
+    kiln
+    mechanical-pump
+    conduit
+  ]
+}
