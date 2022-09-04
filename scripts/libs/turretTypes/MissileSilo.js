@@ -11,7 +11,7 @@ const clone = obj => {
 }
 
 module.exports = {
-  missileTurret(drawBase, type, build, name, obj, objb){
+  missileSilo(drawBase, type, build, name, obj, objb){
     if(obj == undefined) obj = {};
     if(objb == undefined) objb = {};
     obj = Object.assign({
