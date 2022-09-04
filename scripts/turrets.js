@@ -158,16 +158,25 @@ const prism = extend(PowerTurret, "w-prism", {
   range: 165,
 });
 prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
+	frame: 0,
+	frameTimer: 10,
   draw() {
 	  Draw.rect(prism.baseRegion, this.x, this.y, 0);
 	  Draw.rect(prism.region, this.x, this.y, this.rotation - 90);
 	  //Draw.blend(Blending.additive);
-          for(var h = 0; h < 6; h++){
-		  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
-		  Draw.rect(prism.rainbowRegions[h], this.x, this.y, this.rotation - 90);
+          if(this.frameTimer >= 10){
+		  this.frame += 1
+		  this.frameTimer = 0
+		  
+		  if(this.frame == 6){
+			  this.frame = 0
+		  }
+	  }else{
+		  if(this.frameTimer < 10){this.frameTimer += 1} 
 	  }
+	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
+          Draw.rect(prism.rainbowRegions[this.frame], this.x, this.y, this.rotation - 90);
 	  Draw.blend();
           Draw.color()
-	  Draw.reset()
   }
 });
