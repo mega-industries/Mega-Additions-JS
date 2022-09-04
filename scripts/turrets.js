@@ -103,13 +103,13 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
 
 const mirageLaser = extend(LaserBulletType, {
   length: 173,
-  colors: [Color.valueOf("e5666633"), Color.valueOf("e5666677"), palette.red, Color.white],
+  colors: [Color.valueOf("e5666644"), palette.red, Color.white],
   damage: 372,
   hitSize: 4,
   drawSize: 400,
   lifetime: 16,
   sideAngle: 20,
-  width: 53,
+  width: 60,
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
