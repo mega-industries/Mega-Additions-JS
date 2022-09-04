@@ -100,3 +100,34 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
           Draw.color()
   }
 });
+
+const mirageLaser = extend(LaserBulletType, {
+  length: 173,
+  colors: [Color.valueOf("e5666633"), Color.valueOf("e5666677"), palette.red, Color.white],
+  damage: 372,
+  hitSize: 4,
+  drawSize: 400,
+  lifetime: 16,
+  sideAngle: 20,
+  width: 32,
+  chargeEffect: effects.rainbowLaserCharge,
+});
+const mirage = extend(PowerTurret, "w-mirage", {
+  load() {
+          this.super$load()
+	  this.region = Core.atlas.find(this.name);
+          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+	  this.baseRegion = Core.atlas.find("block-" + this.size);
+  },
+  shootType: refractLaser,
+  range: 165,
+});
+mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
+  draw() {
+	  Draw.rect(mirage.baseRegion, this.x, this.y, 0);
+	  Draw.rect(mirage.region, this.x, this.y, this.rotation - 90);
+	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
+          Draw.rect(mirage.rainbowRegion, this.x, this.y, this.rotation - 90);
+          Draw.color()
+  }
+});
