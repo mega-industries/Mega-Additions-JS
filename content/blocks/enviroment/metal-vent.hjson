@@ -1,3 +1,4 @@
+type: SteamVent
 parent: metal-floor
 blendGroup: metal-floor
 effectColor: cdd1e2
