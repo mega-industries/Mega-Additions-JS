@@ -113,7 +113,7 @@ const prismBolt = extend(BasicBulletType, {
 	lifetime: 40,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Fill.poly(b.x, b.y, 4, 20);
+		Fill.poly(b.x, b.y, 20, 6);
 		Draw.reset();
 	}
 });
@@ -130,7 +130,7 @@ const prism = extend(PowerTurret, "w-prism", {
     	}
   },
   shootType: prismBolt,
-  range: 165,
+  range: 190,
 });
 prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	frame: 0,
