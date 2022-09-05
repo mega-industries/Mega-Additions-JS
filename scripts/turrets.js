@@ -75,7 +75,7 @@ const hole = extend(ItemTurret, "w-hole", {});
 
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
-  	colors: [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.white],
+  	colors: [Color.valueOf("ff7272"), Color.valueOf("ff7272"), Color.white],
   	damage: 175,
   	hitSize: 4,
   	drawSize: 400,
@@ -108,9 +108,9 @@ const prismBolt = extend(BasicBulletType, {
   	width: 6,
   	length: 6,
 	shrinkY: 0,
-  	backColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
-  	frontColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
-  	trailColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
+  	backColor: Color.valueOf("ff7272"),
+  	frontColor: Color.valueOf("ff7272"),
+  	trailColor: Color.valueOf("ff7272"),
   	damage: 80,
 	trailWidth: 3,
 	trailLength: 10,
@@ -156,13 +156,13 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
   }
 });
 
-const mirageLaser = extend(LaserBulletType, {
+const refractLaser = extend(LaserBulletType, {
   	length: 173,
-  	colors: [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.white],
-  	damage: 372,
+  	colors: [Color.valueOf("ff7272"), Color.valueOf("ff7272"), Color.white],
+  	damage: 175,
   	hitSize: 4,
   	drawSize: 400,
-  	lifetime: 50,
+  	lifetime: 45,
   	sideAngle: 20,
   	width: 55,
 });
