@@ -109,13 +109,11 @@ const prismBolt = extend(BasicBulletType, {
   	length: 1,
 	shrinkY: 0,
   	damage: 80,
-	trailWidth: 3,
-	trailLength: 10,
 	speed: 5,
 	lifetime: 40,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Fill.poly(b.x, b.y, 11, 20);
+		Fill.poly(b.x, b.y, 4, 20);
 		Draw.reset();
 	}
 });
