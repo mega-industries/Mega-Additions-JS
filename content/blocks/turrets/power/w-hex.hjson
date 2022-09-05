@@ -1,0 +1,24 @@
+size: 3
+health: 800
+category: turret
+reload: 140
+shootSound: laser
+recoil: 2
+rotateSpeed: 2.1
+consumes: {
+  power: 5.3
+}
+requirements: [
+  silicon/120
+  metaglass/70
+  titanium/40
+]
+research: {
+  parent: w-refraction
+  objectives: [
+    {
+      type: SectorComplete
+      preset: craters
+    }
+  ]
+}
