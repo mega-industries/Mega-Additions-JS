@@ -188,14 +188,7 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
 
 const hexBullet = extend(BasicBulletType, {
 	update(b){
-		if(Mathf.chance(0.73)){
-			extend(LightningBulletType, {
-				lightningLength: 4,
-				lightningColor: palette.lightRed.shiftHue(Time.time * 2.3),
-				damage: 3,
-				lightningLengthRand: 1,
-			}).create(b, b.team, b.x, b.y, Mathf.range(-180, 180));
-		};
+		
 	},
 	
 	draw: function(b){
@@ -216,6 +209,7 @@ hexBullet.pierce = true;
 const hex = extend(PowerTurret, "w-hex", {
   load() {
           this.super$load()
+	  this.c = palette.lightRed.cpy()
 	  this.region = Core.atlas.find(this.name);
           this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
@@ -225,9 +219,9 @@ const hex = extend(PowerTurret, "w-hex", {
 });
 hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
   draw() {
-	  //Draw.rect(hex.baseRegion, this.x, this.y, 0);
+	  Draw.rect(hex.baseRegion, this.x, this.y, 0);
 	  Draw.rect(hex.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
+	  Draw.color(hex.c.shiftHue(Time.time * 2.3));
           Draw.rect(hex.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
