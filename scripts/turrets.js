@@ -227,7 +227,7 @@ hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
   draw() {
 	  //Draw.rect(hex.baseRegion, this.x, this.y, 0);
 	  Draw.rect(hex.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(hex.lightRed.shiftHue(Time.time * 2.3));
+	  Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
           Draw.rect(hex.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
