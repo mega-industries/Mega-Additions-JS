@@ -105,17 +105,19 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
 
 const prismBolt = extend(BasicBulletType, {
 	sprite: "circle-bullet",
-  	width: 6,
-  	length: 6,
+  	width: 1,
+  	length: 1,
 	shrinkY: 0,
-  	backColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
-  	frontColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
-  	trailColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
   	damage: 80,
 	trailWidth: 3,
 	trailLength: 10,
 	speed: 5,
 	lifetime: 40,
+	draw(b){
+		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
+		Fill.poly(b.x, b.y, 11, 20);
+		Draw.reset();
+	}
 });
 const prism = extend(PowerTurret, "w-prism", {
   load() {
@@ -191,7 +193,7 @@ const hexBullet = extend(BasicBulletType, {
 		
 	},
 	
-	draw: function(b){
+	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
 		Fill.poly(b.x, b.y, 6, 6);
 		Draw.reset();
