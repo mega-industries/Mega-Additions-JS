@@ -158,16 +158,13 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 
 const mirageLaser = extend(LaserBulletType, {
   	length: 173,
-  	colors: [Color.valueOf("e5666666"), palette.red, Color.white],
+  	colors: [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.white],
   	damage: 372,
   	hitSize: 4,
   	drawSize: 400,
   	lifetime: 50,
   	sideAngle: 20,
   	width: 55,
-	update(b){
-		b.colors = [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ffffff")];
-	}
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
