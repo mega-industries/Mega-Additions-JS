@@ -97,7 +97,7 @@ refract.buildType = () => extend(PowerTurret.PowerTurretBuild, refract,  {
   draw() {
 	  Draw.rect(refract.baseRegion, this.x, this.y, 0);
 	  Draw.rect(refract.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2));
+	  Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
           Draw.rect(refract.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
@@ -149,7 +149,7 @@ prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	  }else{
 		  if(this.frameTimer < 20){this.frameTimer += 1} 
 	  }
-	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.4));
+	  Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
           Draw.rect(prism.rainbowRegions[this.frame], this.x, this.y, this.rotation - 90);
 	  Draw.blend();
           Draw.color()
@@ -180,8 +180,55 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
   draw() {
 	  Draw.rect(mirage.baseRegion, this.x, this.y, 0);
 	  Draw.rect(mirage.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 1.3));
+	  Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
           Draw.rect(mirage.rainbowRegion, this.x, this.y, this.rotation - 90);
+          Draw.color()
+  }
+});
+
+const hexBullet = extend(BasicBulletType, {
+	update(b){
+		if(Mathf.chance(0.73)){
+			extend(LightningBulletType, {
+				lightningLength: 4,
+				lightningColor: palette.lightRed.shiftHue(Time.time * 2.3),
+				damage: 3,
+				lightningLengthRand: 1,
+			}).create(b, b.team, b.x, b.y, Mathf.range(-180, 180));
+		};
+	},
+	
+	draw: function(b){
+		Draw.color(palette.lightRed.shiftHue(Time.time * 2.3));
+		Fill.poly(b.x, b.y, 6, 6);
+		Draw.reset();
+	}
+});
+hexBullet.speed = 4.6;
+hexBullet.damage = 9;
+hexBullet.lifetime = 43;
+hexBullet.hitSize = 21;
+hexBullet.despawnEffect = Fx.none;
+hexBullet.shootEffect = Fx.none;
+hexBullet.collides = true;
+hexBullet.collidesTiles = false;
+hexBullet.pierce = true;
+const hex = extend(PowerTurret, "w-hex", {
+  load() {
+          this.super$load()
+	  this.region = Core.atlas.find(this.name);
+          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
+	  this.baseRegion = Core.atlas.find("block-" + this.size);
+  },
+  shootType: hexBullet,
+  range: 190,
+});
+hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
+  draw() {
+	  //Draw.rect(hex.baseRegion, this.x, this.y, 0);
+	  Draw.rect(hex.region, this.x, this.y, this.rotation - 90);
+	  Draw.color(hex.lightRed.shiftHue(Time.time * 2.3));
+          Draw.rect(hex.rainbowRegion, this.x, this.y, this.rotation - 90);
           Draw.color()
   }
 });
