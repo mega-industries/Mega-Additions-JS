@@ -75,16 +75,13 @@ const hole = extend(ItemTurret, "w-hole", {});
 
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
-  	colors: [Color.valueOf("e5666633"), Color.valueOf("e5666677"), palette.red, Color.white],
+  	colors: [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.white],
   	damage: 175,
   	hitSize: 4,
   	drawSize: 400,
   	lifetime: 25,
   	sideAngle: 20,
   	width: 32,
-	update(b){
-		b.colors = [Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ff7272").shiftHue(Time.time * 2.3), Color.valueOf("ffffff")];
-	}
 });
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
@@ -111,19 +108,14 @@ const prismBolt = extend(BasicBulletType, {
   	width: 6,
   	length: 6,
 	shrinkY: 0,
-  	backColor: palette.red,
-  	frontColor: palette.red,
-  	trailColor: palette.red,
+  	backColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
+  	frontColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
+  	trailColor: Color.valueOf("ff7272").shiftHue(Time.time * 2.3),
   	damage: 80,
 	trailWidth: 3,
 	trailLength: 10,
 	speed: 5,
 	lifetime: 40,
-	update(b){
-		b.backColor = Color.valueOf("ff7272").shiftHue(Time.time * 2.3);
-		b.frontColor = Color.valueOf("ff7272").shiftHue(Time.time * 2.3);
-		b.trailColor = Color.valueOf("ff7272").shiftHue(Time.time * 2.3);
-	}
 });
 const prism = extend(PowerTurret, "w-prism", {
   load() {
