@@ -82,11 +82,6 @@ const refractLaser = extend(LaserBulletType, {
   	lifetime: 25,
   	sideAngle: 20,
   	width: 32,
-	draw(b){
-		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Drawf.tri(b.x, b.y, 32, 173 * b.fout(), b.rotation);
-		Draw.reset();
-	},
 });
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
@@ -170,11 +165,6 @@ const mirageLaser = extend(LaserBulletType, {
   	lifetime: 45,
   	sideAngle: 20,
   	width: 55,
-	draw(b){
-		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Drawf.tri(b.x, b.y, 55, 173 * b.fout(), b.rotation);
-		Draw.reset();
-	},
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
@@ -198,7 +188,10 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
 
 const hexBullet = extend(BasicBulletType, {
 	update(b){
-		
+		if(Mathf.chance(0.77)){
+			Sounds.spark.at(b);
+			Lightning.create(b, Color.valueOf("ff7272").shiftHue(Time.time * 2.3), 12, b.x, b.y, Mathf.random(360), 4);
+		}
 	},
 	
 	draw(b){
