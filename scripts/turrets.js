@@ -84,7 +84,7 @@ const refractLaser = extend(LaserBulletType, {
   	width: 32,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Drawf.tri(b.x, b.y, 32 * b.fout(), 173, b.rotation);
+		Drawf.tri(b.x, b.y, 32, 173 * b.fout(), b.rotation);
 		Draw.reset();
 	},
 });
@@ -172,7 +172,7 @@ const mirageLaser = extend(LaserBulletType, {
   	width: 55,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Drawf.tri(b.x, b.y, 55 * b.fout(), 173, b.rotation);
+		Drawf.tri(b.x, b.y, 55, 173 * b.fout(), b.rotation);
 		Draw.reset();
 	},
 });
