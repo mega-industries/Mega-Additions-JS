@@ -85,7 +85,8 @@ const refractLaser = extend(LaserBulletType, {
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
 		Drawf.tri(b.x, b.y, 32 * b.fout(), 173, b.rotation);
-	};
+		Draw.reset();
+	},
 });
 const refract = extend(PowerTurret, "w-refraction", {
   load() {
@@ -171,8 +172,9 @@ const mirageLaser = extend(LaserBulletType, {
   	width: 55,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-            	Drawf.tri(b.x, b.y, 55 * b.fout(), 173, b.rotation());
-	};
+		Drawf.tri(b.x, b.y, 55 * b.fout(), 173, b.rotation);
+		Draw.reset();
+	},
 });
 const mirage = extend(PowerTurret, "w-mirage", {
   load() {
