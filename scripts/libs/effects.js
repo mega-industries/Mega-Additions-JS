@@ -120,8 +120,8 @@ exports.blackCloudIn = extend(ParticleEffect, {
     sizeFrom: 0,
     sizeTo: 3,
     lifetime: 40,
-    length: 12,
-    baseLength: -12,
+    length: 4,
+    baseLength: -4,
     particles: 7,
 });
 
@@ -131,7 +131,6 @@ exports.blackCloudOut = extend(ParticleEffect, {
     sizeFrom: 0,
     sizeTo: 3,
     lifetime: 40,
-    length: 12,
-    baseLength: -12,
+    length: 4,
     particles: 7,
 });
