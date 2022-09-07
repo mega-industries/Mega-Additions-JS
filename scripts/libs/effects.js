@@ -18,6 +18,15 @@ exports.greenFlare = new Effect(16, 100, e => {
     }
 });
 
+exports.blackFlare = new Effect(16, 100, e => {
+    Lines.stroke(e.fout() * 2);
+
+    Draw.color(palette.black);
+    for(let i = 0; i < 2; i++){
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
+    }
+});
+
 const angleBlastRing1 = extend(WaveEffect, {
     sides: 0,
     colorFrom: palette.red,
@@ -103,4 +112,26 @@ exports.cannonShoot = new Effect(16, 100, e => {
         Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+45+e.rotation);
     }
     Drawf.tri(e.x, e.y, 6, 40 * e.fout(), e.rotation);
+});
+
+exports.blackCloudIn = extend(ParticleEffect, {
+    colorFrom: palette.darkGray,
+    colorTo: palette.black,
+    sizeFrom: 0,
+    sizeTo: 3,
+    lifetime: 40,
+    length: 12,
+    baseLength: -12,
+    particles: 7,
+});
+
+exports.blackCloudOut = extend(ParticleEffect, {
+    colorFrom: palette.black,
+    colorTo: palette.darkGray,
+    sizeFrom: 0,
+    sizeTo: 3,
+    lifetime: 40,
+    length: 12,
+    baseLength: -12,
+    particles: 7,
 });
