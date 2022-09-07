@@ -229,7 +229,7 @@ hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
 });
 const blank = extend(PowerTurret, "w-blank", {
 	//TODO temporary bullet
-  	shootType: angleBullet,
+  	shootType: angle.shootType,
   	range: 190,
 });
 blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
