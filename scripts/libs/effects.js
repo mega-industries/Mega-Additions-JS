@@ -114,23 +114,12 @@ exports.cannonShoot = new Effect(16, 100, e => {
     Drawf.tri(e.x, e.y, 6, 40 * e.fout(), e.rotation);
 });
 
-exports.blackCloudIn = extend(ParticleEffect, {
-    colorFrom: palette.darkGray,
-    colorTo: palette.black,
-    sizeFrom: 0,
-    sizeTo: 3,
-    lifetime: 40,
-    length: 4,
-    baseLength: -4,
-    particles: 7,
-});
-
 exports.blackCloudOut = extend(ParticleEffect, {
     colorFrom: palette.black,
     colorTo: palette.darkGray,
     sizeFrom: 0,
     sizeTo: 3,
-    lifetime: 40,
+    lifetime: 25,
     length: 4,
-    particles: 7,
+    particles: 6,
 });
