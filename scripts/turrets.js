@@ -236,7 +236,7 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
   updateTile() {
 	  if(Mathf.chance(0.65)){
 		  effects.blackCloudIn.at(this.x, this.y);
-	  },
+	  };
 	  if(Mathf.chance(0.65)){
 		  effects.blackCloudOut.at(this.x, this.y);
 	  }
