@@ -233,9 +233,10 @@ const blank = extend(PowerTurret, "w-blank", {
   	range: 190,
 });
 blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
-  /*updateTile() {
+  updateTile() {
+  	  this.super$updateTile();
 	  if(Mathf.chance(0.12)){
 		  effects.blackCloudOut.at(this.x, this.y);
 	  }
-  }*/
+  }
 });
