@@ -2,11 +2,11 @@ size: 3
 health: 800
 category: turret
 reload: 140
-shootSound: laser
+shootSound: flame
 recoil: 2
 rotateSpeed: 2.1
 consumes: {
-  power: 5.3
+  power: 3.4
 }
 requirements: [
   silicon/120
