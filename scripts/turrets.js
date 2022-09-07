@@ -188,8 +188,7 @@ mirage.buildType = () => extend(PowerTurret.PowerTurretBuild, mirage,  {
 
 const hexBullet = extend(BasicBulletType, {
 	update(b){
-		if(Mathf.chance(0.12)){
-			Sounds.spark.at(b);
+		if(Mathf.chance(0.8)){
 			Lightning.create(b, Color.valueOf("ff7272").shiftHue(Time.time * 2.3), 12, b.x, b.y, Mathf.random(360), 4);
 		}
 	},
