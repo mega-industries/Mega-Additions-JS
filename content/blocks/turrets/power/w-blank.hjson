@@ -1,0 +1,24 @@
+size: 2
+health: 600
+category: turret
+reload: 140
+shootSound: spark
+recoil: 2
+rotateSpeed: 2.1
+consumes: {
+  power: 2.1
+}
+requirements: [
+  lead/30
+  silicon/50
+  graphite/60
+]
+research: {
+  parent: w-hole
+  objectives: [
+    {
+      type: SectorComplete
+      preset: frozenForest
+    }
+  ]
+}
