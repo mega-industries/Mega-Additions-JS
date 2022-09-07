@@ -229,13 +229,13 @@ hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
 });
 const blank = extend(PowerTurret, "w-blank", {
 	//TODO temporary bullet
-  	shootType: hexBullet,
+  	shootType: angleBullet,
   	range: 190,
 });
 blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
-  updateTile() {
-	  if(Mathf.chance(0.35)){
+  /*updateTile() {
+	  if(Mathf.chance(0.12)){
 		  effects.blackCloudOut.at(this.x, this.y);
 	  }
-  }
+  }*/
 });
