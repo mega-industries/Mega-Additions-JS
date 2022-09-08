@@ -302,6 +302,6 @@ direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
 		Draw.color();
 	},
     	baseReloadSpeed() {
-        	return this.efficiency() * this.a;
+        	return this.efficiency * this.a;
     	},
 });
