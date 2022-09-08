@@ -4,8 +4,9 @@ recoil: 1.7
 range: 200
 shootSound: pew
 smokeEffect: shootBigSmoke
-shootEffect: shootSmallFlame
-inaccuracy: 2
+shootEffect: shootBig
+inaccuracy: 4
+size: 2
 ammoTypes: {
   copper: {
     type: BasicBulletType
@@ -16,23 +17,7 @@ ammoTypes: {
     height: 17
     speed: 3
     lifetime: 40
-    hitEffect: {
-      type: MultiEffect
-      effects: [
-        smokeCloud
-        hitMeltdown
-        {
-          type: WaveEffect
-          sizeFrom: 0
-          sizeTo: 12
-          lifetime: 20
-          strokeFrom: 1
-          strokeTo: 0
-          colorFrom: ffffff
-          colorTo: 747484
-        }
-      ]
-    }
+    hitEffect: blastExplosion
     despawnEffect: none
     despawnHit: true
   }
@@ -45,23 +30,7 @@ ammoTypes: {
     height: 17
     speed: 3
     lifetime: 40
-    hitEffect: {
-      type: MultiEffect
-      effects: [
-        smokeCloud
-        hitMeltdown
-        {
-          type: WaveEffect
-          sizeFrom: 0
-          sizeTo: 12
-          lifetime: 20
-          strokeFrom: 1
-          strokeTo: 0
-          colorFrom: ffffff
-          colorTo: 747484
-        }
-      ]
-    }
+    hitEffect: blastExplosion
     despawnEffect: none
     despawnHit: true
   }
