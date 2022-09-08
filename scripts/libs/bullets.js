@@ -39,19 +39,13 @@ exports.blankBullet = extend(BasicBulletType, {
     speed: 2.5,
     sprite: "circle-bullet",
     hitSound: Sounds.dullExplosion,
-    trailWidth: 3,
-    trailLength: 15,
-    trailColor: palette.darkGray,
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     despawnHit: true,
     lightColor: palette.darkGray,
-    trailEffect: effects.blackFlare,
-    trailInterval: 5,
-    trailRotation: true,
     draw(b){
         Draw.color(palette.darkGray)
-        Draw.rect(Core.atlas.find("circle-bullet-back"), b.x, b.y, 6, 6, 0);
+        Draw.rect(Core.atlas.find("circle-bullet-back"), b.x, b.y, 0);
         for(let i = 0; i < 5; i++){
 		  Lines.arc(this.x, this.y, 7, 0.14, i * 360/5 + Time.time * 1.3);
 	  };
