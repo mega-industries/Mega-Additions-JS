@@ -221,6 +221,7 @@ const blank = extend(PowerTurret, "w-blank", {
 	//TODO temporary bullet
   	shootType: angle.shootType,
   	range: 190,
+	shootEffect: effects.blackFlare,
 	load() {
 		this.super$load();
 		this.region = Core.atlas.find(this.name);
