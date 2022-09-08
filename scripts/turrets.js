@@ -260,7 +260,7 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 	  if(Mathf.chance(0.22)){
             effects.blackCloudOut.at(this.x, this.y);
         };
-  }
+  },
 	draw() {
 	Draw.rect(blank.baseRegion, this.x, this.y, 0);
 	  Draw.rect(blank.region, this.x, this.y, this.rotation - 90);
@@ -269,5 +269,5 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/8 + Time.time * 0.5);
 	  };
 	Draw.color()
-}
+},
 });
