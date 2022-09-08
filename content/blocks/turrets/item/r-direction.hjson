@@ -1,0 +1,75 @@
+health: 500
+reload: 45
+recoil: 1.7
+range: 200
+shootSound: pew
+smokeEffect: shootBigSmoke
+shootEffect: shootSmallFlame
+inaccuracy: 2
+ammoTypes: {
+  copper: {
+    type: BasicBulletType
+    damage: 30
+    splashDamage: 21
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        smokeCloud
+        hitMeltdown
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 12
+          lifetime: 20
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: ffffff
+          colorTo: 747484
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+  graphite: {
+    type: BasicBulletType
+    damage: 40
+    splashDamage: 34
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        smokeCloud
+        hitMeltdown
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 12
+          lifetime: 20
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: ffffff
+          colorTo: 747484
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+research: r-point
+category: turret
+requirements: [
+  copper/100
+  lead/30
+  graphite/50
+]
