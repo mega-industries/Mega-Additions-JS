@@ -271,3 +271,37 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 	Draw.color()
 },
 });
+
+const direction = extend(ItemTurret, "r-direction", {
+	load(){
+		this.super$load();
+		this.region = Core.atlas.find(this.name);
+	  	this.baseRegion = Core.atlas.find("block-" + this.size);
+	}
+});
+direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
+    	a: 0.0,
+	lineRad: 0.0,
+	lineStroke: 0.0,
+    updateTile(){
+        	this.super$update();
+        	if(this.isShooting() && this.hasAmmo()){
+            		this.a = Mathf.clamp(this.a + 0.007, 0.1, 3)
+        	}else{
+            		this.a = Mathf.clamp(this.a - 0.015, 0.1, 3)
+        	};
+	    this.lineRad = this.a % 360;
+	    this.lineStroke = this.a % 1.2;
+    	},
+	draw(){
+		Draw.rect(direction.baseRegion, this.x, this.y, 0);
+	  	Draw.rect(direction.region, this.x, this.y, this.rotation - 90);
+		Lines.stroke(this.lineStroke);
+		Draw.color(Pal.engine);
+		Lines.arc(this.x, this.y, 12, this.lineRad, 0);
+		Draw.color();
+	},
+    	baseReloadSpeed() {
+        	return this.efficiency() * this.a;
+    	},
+});
