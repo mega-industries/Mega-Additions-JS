@@ -4,6 +4,7 @@ category: turret
 reload: 140
 shootSound: spark
 recoil: 2
+shootY: 0
 consumes: {
   power: 2.1
 }
