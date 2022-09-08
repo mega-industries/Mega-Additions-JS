@@ -211,6 +211,7 @@ hexBullet.pierce = true;
 const hex = extend(PowerTurret, "w-hex", {
   load() {
           this.super$load()
+	  this.rainbowRegions = [];
 	  this.region = Core.atlas.find(this.name);
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
 	  for(var i = 0; i < 11; i++){
