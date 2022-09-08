@@ -248,16 +248,26 @@ const blank = extend(PowerTurret, "w-blank", {
 	//TODO temporary bullet
   	shootType: angle.shootType,
   	range: 190,
+	load() {
+		this.super$load();
+		this.region = Core.atlas.find(this.name);
+	  	this.baseRegion = Core.atlas.find("block-" + this.size);
+	},
 });
 blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
   updateTile() {
   	  this.super$updateTile();
-	  Draw.color(palette.black);
-	  for(let i = 0; i < 5; i++){
-		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/5 + Time.time * 0.5);
-	  };
-	  if(this.isShooting() && this.power.status > 0.5 && this.hasAmmo() && Mathf.chance(0.22)){
+	  if(Mathf.chance(0.22)){
             effects.blackCloudOut.at(this.x, this.y);
         };
   }
+	draw() {
+	Draw.rect(blank.baseRegion, this.x, this.y, 0);
+	  Draw.rect(blank.region, this.x, this.y, this.rotation - 90);
+	Draw.color(palette.black);
+	  for(let i = 0; i < 8; i++){
+		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/8 + Time.time * 0.5);
+	  };
+	Draw.color()
+}
 });
