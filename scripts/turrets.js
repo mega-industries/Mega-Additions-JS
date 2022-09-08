@@ -134,7 +134,7 @@ const prism = extend(PowerTurret, "w-prism", {
 });
 prism.buildType = () => extend(PowerTurret.PowerTurretBuild, prism,  {
 	frame: 0,
-	frameTimer: 10,
+	frameTimer: 0,
   draw() {
 	  Draw.rect(prism.baseRegion, this.x, this.y, 0);
 	  Draw.rect(prism.region, this.x, this.y, this.rotation - 90);
@@ -212,18 +212,34 @@ const hex = extend(PowerTurret, "w-hex", {
   load() {
           this.super$load()
 	  this.region = Core.atlas.find(this.name);
-          this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
+	  for(var i = 0; i < 11; i++){
+      		this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + i);
+    	}
   },
   shootType: hexBullet,
   range: 190,
 });
 hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
+	frame: 0,
+	frameTimer: 0,
   draw() {
 	  Draw.rect(hex.baseRegion, this.x, this.y, 0);
 	  Draw.rect(hex.region, this.x, this.y, this.rotation - 90);
+	  Draw.blend(Blending.additive);
+          if(this.frameTimer >= 20){
+		  this.frame += 1
+		  this.frameTimer = 0
+		  
+		  if(this.frame == 11){
+			  this.frame = 0
+		  }
+	  }else{
+		  if(this.frameTimer < 20){this.frameTimer += 1} 
+	  }
 	  Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-          Draw.rect(hex.rainbowRegion, this.x, this.y, this.rotation - 90);
+          Draw.rect(hex.rainbowRegions[this.frame], this.x, this.y, this.rotation - 90);
+	  Draw.blend();
           Draw.color()
   }
 });
