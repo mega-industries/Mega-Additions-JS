@@ -125,7 +125,7 @@ const prism = extend(PowerTurret, "w-prism", {
 	  this.region = Core.atlas.find(this.name);
           this.rainbowRegion = Core.atlas.find(this.name + "-rainbow");
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
-	  for(var i = 0; i < 6; i++){
+	  for(let i = 0; i < 6; i++){
       		this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + i);
     	}
   },
@@ -214,7 +214,7 @@ const hex = extend(PowerTurret, "w-hex", {
 	  this.rainbowRegions = [];
 	  this.region = Core.atlas.find(this.name);
 	  this.baseRegion = Core.atlas.find("block-" + this.size);
-	  for(var i = 0; i < 11; i++){
+	  for(let i = 0; i < 11; i++){
       		this.rainbowRegions[i] = Core.atlas.find(this.name + "-rainbow-" + i);
     	}
   },
@@ -252,8 +252,12 @@ const blank = extend(PowerTurret, "w-blank", {
 blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
   updateTile() {
   	  this.super$updateTile();
+	  Draw.color(palette.black);
+	  for(let i=0, i<5, i++){
+		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/5 + Time.time * 0.5);
+	  };
 	  if(this.isShooting() && this.power.status > 0.5 && this.hasAmmo() && Mathf.chance(0.22)){
             effects.blackCloudOut.at(this.x, this.y);
-        }
+        };
   }
 });
