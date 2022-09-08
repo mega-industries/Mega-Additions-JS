@@ -284,7 +284,7 @@ direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
 	lineRad: 0.0,
 	lineStroke: 0.0,
     updateTile(){
-        	this.super$update();
+        	this.super$updateTile();
         	if(this.isShooting() && this.hasAmmo()){
             		this.a = Mathf.clamp(this.a + 0.007, 0.1, 3)
         	}else{
