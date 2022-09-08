@@ -253,7 +253,7 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
   updateTile() {
   	  this.super$updateTile();
 	  Draw.color(palette.black);
-	  for(let i=0, i<5, i++){
+	  for(let i = 0; i < 5; i++){
 		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/5 + Time.time * 0.5);
 	  };
 	  if(this.isShooting() && this.power.status > 0.5 && this.hasAmmo() && Mathf.chance(0.22)){
