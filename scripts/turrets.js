@@ -266,7 +266,7 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 	  Draw.rect(blank.region, this.x, this.y, this.rotation - 90);
 	Draw.color(palette.black);
 	  for(let i = 0; i < 8; i++){
-		  Lines.arc(this.x, this.y, 4, 0.14, i * 360/8 + Time.time * 0.5);
+		  Lines.arc(this.x, this.y, 7, 0.14, i * 360/8 + Time.time * 0.5);
 	  };
 	Draw.color()
 },
