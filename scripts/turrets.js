@@ -86,7 +86,7 @@ const prismBolt = extend(BasicBulletType, {
 	lifetime: 43,
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Fill.poly(b.x, b.y, 20, 3);
+		Fill.poly(b.x, b.y, 6);
 		Draw.reset();
 	}
 });
@@ -168,7 +168,7 @@ const hexBullet = extend(BasicBulletType, {
 	
 	draw(b){
 		Draw.color(Color.valueOf("ff7272").shiftHue(Time.time * 2.3));
-		Fill.poly(b.x, b.y, 6, 6);
+		Fill.circle(b.x, b.y, 6, 6);
 		Draw.reset();
 	}
 });
@@ -218,7 +218,6 @@ hex.buildType = () => extend(PowerTurret.PowerTurretBuild, hex,  {
   }
 });
 const blank = extend(PowerTurret, "w-blank", {
-	//TODO temporary bullet
   	shootType: bullets.blankBullet,
   	range: 190,
 	shootEffect: effects.blackFlare,
