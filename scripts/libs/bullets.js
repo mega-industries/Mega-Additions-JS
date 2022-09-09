@@ -45,9 +45,9 @@ exports.blankBullet = extend(BasicBulletType, {
     lightColor: palette.darkGray,
     draw(b){
         Draw.color(palette.darkGray)
-        Draw.rect(Core.atlas.find("circle-bullet-back"), b.x, b.y, 0);
+        Fill.circle(b.x, b.y, 3.5)
         for(let i = 0; i < 5; i++){
-		  Lines.arc(this.x, this.y, 7, 0.14, i * 360/5 + Time.time * 1.3);
+		  Lines.arc(b.x, b.y, 7, 0.14, i * 360/5 + Time.time * 1.3);
 	  };
     }
   });
