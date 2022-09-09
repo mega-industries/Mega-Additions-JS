@@ -116,7 +116,7 @@ exports.cannonShoot = new Effect(16, 100, e => {
 
 exports.blackCloudOut = extend(ParticleEffect, {
     colorFrom: palette.black,
-    colorTo: palette.black,
+    colorTo: palette.darkGray,
     sizeFrom: 4,
     sizeTo: 0,
     lifetime: 25,
