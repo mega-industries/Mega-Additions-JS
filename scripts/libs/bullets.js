@@ -51,3 +51,15 @@ exports.blankBullet = extend(BasicBulletType, {
 	  };
     }
   });
+
+exports.pulsarBullet = extend(ContinuousLaserBulletType, {
+	damage: 120,
+	length: 200,
+	width: 8,
+	drawSize: 8,
+	lifetime: 40,
+	lightColor: Pal.lancerLaser,
+	hitColor: Pal.lancerLaser,
+	hitEffect: Fx.hitLancer,
+	colors: [Pal.lancerLaser, Pal.lancerLaser, Color.white],
+  });
