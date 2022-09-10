@@ -40,6 +40,29 @@ const volt = extend(PowerTurret, "b-volt", {});
 
 const power = extend(PowerTurret, "b-power", {});
 
+const pulsar = extend(PowerTurret, "b-pulsar", {
+  	shootType: bullets.pulsarBullet,
+	shootEffect: effects.largeCannonShoot,
+	range: 200,
+	load() {
+		this.super$load();
+		this.region = Core.atlas.find(this.name);
+	  	this.baseRegion = Core.atlas.find("block-" + this.size);
+	},
+});
+pulsar.buildType = () => extend(PowerTurret.PowerTurretBuild, pulsar,  {
+	draw() {
+	Draw.rect(pulsar.baseRegion, this.x, this.y, 0);
+	  Draw.rect(pulsar.region, this.x, this.y, this.rotation - 90);
+	Draw.color(Pal.lancerLaser);
+		Fill.circle(this.x, this.y, 1.5);
+	  for(let i = 0; i < 5; i++){
+		  Lines.arc(this.x, this.y, 12, 0.14, i * 360/5 + Time.time * 1.3);
+	  };
+	Draw.color()
+},
+});
+
 const burst = extend(ItemTurret, "p-burst", {});
 
 const gamma = extend(ItemTurret, "p-gamma", {});
@@ -265,28 +288,4 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 
 const surge = extend(ItemTurret, "y-surge", {
 	shootEffect: effects.cannonShoot,
-});
-
-const pulsar = extend(PowerTurret, "b-pulsar", {
-  	shootType: bullets.pulsarBullet,
-  	range: 190,
-	shootEffect: effects.largeCannonShoot,
-	range: 200,
-	load() {
-		this.super$load();
-		this.region = Core.atlas.find(this.name);
-	  	this.baseRegion = Core.atlas.find("block-" + this.size);
-	},
-});
-pulsar.buildType = () => extend(PowerTurret.PowerTurretBuild, pulsar,  {
-	draw() {
-	Draw.rect(pulsar.baseRegion, this.x, this.y, 0);
-	  Draw.rect(pulsar.region, this.x, this.y, this.rotation - 90);
-	Draw.color(Pal.lancerLaser);
-		Fill.circle(this.x, this.y, 1.5);
-	  for(let i = 0; i < 5; i++){
-		  Lines.arc(this.x, this.y, 12, 0.14, i * 360/5 + Time.time * 1.3);
-	  };
-	Draw.color()
-},
 });
