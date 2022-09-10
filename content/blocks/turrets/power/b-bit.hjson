@@ -2,7 +2,6 @@ size: 2
 health: 800
 reload: 70
 cooldownTime: 60
-rotateSpeed: 3
 consumes: {
   power: 5.3
 }
