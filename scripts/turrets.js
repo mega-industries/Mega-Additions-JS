@@ -40,18 +40,16 @@ const volt = extend(PowerTurret, "b-volt", {});
 
 const power = extend(PowerTurret, "b-power", {});
 
-const pulsar = extend(LaserTurret, "b-pulsar", {
+const pulsar = extend(ContinuousTurret, "b-pulsar", {
   	shootType: bullets.pulsarLaser,
-	shootEffect: effects.largeCannonShoot,
 	range: 200,
-	shootDuration: 230,
 	load() {
 		this.super$load();
 		this.region = Core.atlas.find(this.name);
 	  	this.baseRegion = Core.atlas.find("block-" + this.size);
 	},
 });
-pulsar.buildType = () => extend(LaserTurret.LaserTurretBuild, pulsar,  {
+pulsar.buildType = () => extend(ContinuousTurret.ContinuousTurretBuild, pulsar,  {
 	draw() {
 	Draw.rect(pulsar.baseRegion, this.x, this.y, 0);
 	  Draw.rect(pulsar.region, this.x, this.y, this.rotation - 90);
