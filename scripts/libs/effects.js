@@ -160,3 +160,26 @@ exports.photonTrail = new Effect(20, e => {
 	Draw.color(Color.white, palette.yellow, e.fin());
 	Drawf.tri(e.x, e.y, 6 * e.fout(), 6 * e.fout(), e.rotation);
 });
+
+exports.bitBurst = new Effect(30, e => {
+	let size = 21;
+	Draw.color = Pal.lancerLaser;
+	Lines.stroke(2.5);
+	
+	Lines.line(e.x, e.y, e.x - size, e.y);
+	Lines.line(e.x, e.y, e.x + size, e.y);
+	
+	Lines.line(e.x, e.y, e.x, e.y - size);
+	Lines.line(e.x, e.y, e.x, e.y + size);
+	
+	Lines.line(e.x, e.y, e.x - size, e.y - size);
+	Lines.line(e.x, e.y, e.x + size, e.y + size);
+	
+	Lines.line(e.x, e.y, e.x - size, e.y + size);
+	Lines.line(e.x, e.y, e.x + size, e.y - size);
+});
+
+exports.bitTrail = new Effect(75, e => {
+	Draw.color(Pal.lancerLaser);
+	Fill.rect(e.x, e.y, 5 * e.fout(), 5 * e.fout());
+});
