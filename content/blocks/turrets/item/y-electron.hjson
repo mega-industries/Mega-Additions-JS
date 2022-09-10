@@ -7,10 +7,8 @@ shootSound: bigshot
 ammoTypes: {
   graphite: {
     type: BasicBulletType
-    trailEffect: absorb
-    trailInterval: 2
-    width: 20
-    height: 20
+    width: 13
+    height: 13
     damage: 20
     shrinkY: 0
     sprite: large-bomb
