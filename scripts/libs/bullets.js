@@ -29,7 +29,7 @@ exports.angleBullet = extend(EmpBulletType, {
     trailEffect: effects.redFlare,
     trailInterval: 3,
     trailRotation: true,
-  });
+});
 
 exports.blankBullet = extend(BasicBulletType, {
     lifetime: 70,
@@ -50,7 +50,7 @@ exports.blankBullet = extend(BasicBulletType, {
 		  Lines.arc(b.x, b.y, 7, 0.14, i * 360/5 + Time.time * 1.3);
 	  };
     }
-  });
+});
 
 exports.pulsarLaser = extend(PointLaserBulletType, {
 	drawSize: 1500,
@@ -59,7 +59,7 @@ exports.pulsarLaser = extend(PointLaserBulletType, {
 	beamEffect: new MultiEffect(effects.blueCloud, new WrapEffect(Fx.colorTrail, Pal.lancerLaser)),
 	status: StatusEffects.shocked,
 	statusDuration: 100,
-  });
+});
 
 exports.photonOrb = extend(MissileBulletType, {
 	weaveScl: 0,
@@ -81,4 +81,22 @@ exports.photonOrb = extend(MissileBulletType, {
         Draw.color(Color.white)
         Drawf.tri(b.x, b.y, 6, 6, b.rotation);
     }
-  });
+});
+
+exports.bitBullet = extend(BasicBulletType, {
+	homingPower: 0.13,
+	lifetime: 90,
+	speed: 2,
+	damage: 15,
+	splashDamage: 35,
+	splashDamageRadius: 40,
+	hitSize: 8,
+	trailEffect: effects.bitTrail,
+	hitEffect: effects.bitBurst,
+	despawnEffect: Fx.none,
+	trailInterval: 3.5,
+	draw(b){
+		Draw.color(Pal.lancerLaser);
+		Fill.rect(b.x, b.y, 5, 5);
+	},
+});
