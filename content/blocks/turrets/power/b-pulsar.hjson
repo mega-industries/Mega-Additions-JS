@@ -1,9 +1,10 @@
 size: 4
 health: 3600
 reload: 75
-rotateSpeed: 3
-shootWarmupSpeed: 0.2
-minWarmup: 0.65
+rotateSpeed: 2.1
+shootCone: 360
+shootWarmupSpeed: 0.07
+minWarmup: 0.85
 cooldownTime: 40
 consumes: {
   power: 7.2
