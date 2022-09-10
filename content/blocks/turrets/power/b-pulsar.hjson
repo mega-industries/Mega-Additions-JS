@@ -1,0 +1,19 @@
+size: 4
+health: 3600
+reload: 60
+cooldownTime: 45
+rotateSpeed: 3
+consumes: {
+  power: 5.3
+}
+shootY: 0
+shootSound: plasmaboom
+smokeEffect: smokeCloud
+research: b-volt
+category: turret
+requirements: [
+  thorium/300
+  phase-fabric/80
+  titanium/200
+  silicon/120
+]
