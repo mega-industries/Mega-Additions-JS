@@ -11,7 +11,7 @@ consumes: {
   }
 }
 //todo
-outputItem: copper/1
+outputItem: metaglass/1
 updateEffect: smeltsmoke
 updateEfectChance: 0.1
 craftEffect: placeBlock
@@ -24,12 +24,12 @@ drawer: {
   ]
 }
 category: crafting
-research: {
+/*research: {
   parent: graphite-press
   objectives: [
     silicon-smelter
   ]
-}
+}*/
 requirements: [
   lead/50
   titanium/75
