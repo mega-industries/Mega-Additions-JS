@@ -62,8 +62,8 @@ exports.pulsarLaser = extend(PointLaserBulletType, {
   });
 
 exports.photonOrb = extend(MissileBulletType, {
-	weaveScl: 5,
-	weaveMag: 2,
+	weaveScl: 0,
+	weaveMag: 0,
 	homingPower: 0.08,
     lifetime: 45,
     damage: 75,
