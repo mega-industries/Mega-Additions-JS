@@ -9,9 +9,9 @@ ammoTypes: {
     type: BasicBulletType
     trailEffect: absorb
     trailInterval: 2
-    width: 7
-    height: 12
-    damage: 12
+    width: 20
+    height: 20
+    damage: 20
     shrinkY: 0
     sprite: large-bomb
     spin: 2
