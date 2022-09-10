@@ -120,11 +120,11 @@ exports.largeCannonShoot = new Effect(16, 100, e => {
 
     Draw.color(Pal.lancerLaser);
     for(let i = 0; i < 2; i++){
-        Drawf.tri(e.x, e.y, 6, 70 * e.fout(), i*180+90+e.rotation);
+        Drawf.tri(e.x, e.y, 6, 90 * e.fout(), i*180+90+e.rotation);
     }
-    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation-30);
-    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation+30);
-    Drawf.tri(e.x, e.y, 6, 85 * e.fout(), e.rotation);
+    Drawf.tri(e.x, e.y, 6, 80 * e.fout(), e.rotation-30);
+    Drawf.tri(e.x, e.y, 6, 80 * e.fout(), e.rotation+30);
+    Drawf.tri(e.x, e.y, 6, 105 * e.fout(), e.rotation);
 });
 
 exports.blackCloudOut = extend(ParticleEffect, {
