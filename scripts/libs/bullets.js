@@ -74,9 +74,9 @@ exports.photonOrb = extend(BasicBulletType, {
 	spin: 3,
 	trailRotation: true,
 	trailEffect: effects.photonTrail,
-	trailInterval: 1,
+	trailInterval: 0.2,
     draw(b){
         Draw.color(Color.white)
-        Drawf.tri(b.x, b.y, 4, 4, b.rotation);
+        Drawf.tri(b.x, b.y, 6, 6, b.rotation);
     }
   });
