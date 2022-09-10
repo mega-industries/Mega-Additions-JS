@@ -14,9 +14,7 @@ craftTime: 30
 drawer: {
   type: DrawMulti
   drawers: [
-    {
-      type: DrawDefault
-    }
+    DrawDefault
     {
       type: DrawGlowRegion
       alpha: 0.75
