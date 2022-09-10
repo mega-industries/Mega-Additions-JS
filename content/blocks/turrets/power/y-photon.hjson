@@ -2,6 +2,9 @@ health: 600
 consumes: {
   power: 1.3
 }
+reload: 60
+recoil: 1.7
+cooldownTime: 45
 shootSound: spark
 category: turret
 research: y-electron
