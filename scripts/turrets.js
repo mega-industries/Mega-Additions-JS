@@ -4,7 +4,6 @@ const bullets = require("libs/bullets");
 
 const point = extend(ItemTurret, "r-point", {});
 
-
 const direction = extend(ItemTurret, "r-direction", {});
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     	a: 0.0,
@@ -267,6 +266,9 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 },
 });
 
+const electron = extend(ItemTurret, "y-electron", {
+	shootEffect: effects.electronShoot,
+});
 
 const surge = extend(ItemTurret, "y-surge", {
 	shootEffect: effects.cannonShoot,
