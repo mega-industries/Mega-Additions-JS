@@ -103,6 +103,7 @@ shootType: {
   intervalBullets: 4
   intervalRandomSpread: 360
 }
+research: b-blitz
 category: turret
 requirements: [
   lead/300
