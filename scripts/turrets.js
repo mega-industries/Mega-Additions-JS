@@ -39,7 +39,7 @@ const volt = extend(PowerTurret, "b-volt", {});
 
 const bit = extend(PowerTurret, "b-bit", {
 	//TODO temporary bullet
-	shootType: refractLaser,
+	shootType: bullets.photonOrb,
 	range: 165,
 });
 bit.buildType = () => extend(PowerTurret.PowerTurretBuild, bit,  {
