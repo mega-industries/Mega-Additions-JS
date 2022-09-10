@@ -41,6 +41,7 @@ const bit = extend(PowerTurret, "b-bit", {
 	//TODO temporary bullet
 	shootType: bullets.photonOrb,
 	range: 165,
+	rotateSpeed: Float.POSITIVE_INFINITY,
 });
 bit.buildType = () => extend(PowerTurret.PowerTurretBuild, bit,  {
 	previousRot: 90,
