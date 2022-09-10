@@ -146,3 +146,12 @@ exports.blueCloud = extend(ParticleEffect, {
     length: 7,
     particles: 6,
 });
+
+exports.electronShoot = new Effect(27, e => {
+	Draw.color(Color.valueOf("6c8fc7"), Color.valueOf("606571"), e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.poly(e.x + x, e.y + y, 6, e.fout() * 9, e.rotation);
+	}});
+	
+	Angles.randLenVectors(e.id, 3, e.finpow() * 20.0, e.rotation, 180.0, hl);
+});
