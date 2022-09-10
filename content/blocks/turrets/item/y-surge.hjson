@@ -1,0 +1,23 @@
+health: 2300
+size: 2
+range: 190
+reload: 35
+recoil: 2
+cooldownTime: 40
+shootSound: dullExplosion
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    trailEffect: disperseTrail
+    trailInterval: 1
+    width: 7
+    height: 16
+    damage: 37
+    hitEffect: hitLancer
+    despawnEffect: blastExplosion
+    pierce: true
+    pierceCap: 3
+    speed: 4.6
+    lifetime: 43
+  }
+}
