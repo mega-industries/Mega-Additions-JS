@@ -5,7 +5,7 @@ exports.redFlare = new Effect(16, 100, e => {
 
     Draw.color(palette.red);
     for(let i = 0; i < 2; i++){
-        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*90+e.rotation);
+        Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
     }
 });
 
@@ -109,7 +109,7 @@ exports.cannonShoot = new Effect(16, 100, e => {
     Draw.color(Pal.engine);
     for(let i = 0; i < 2; i++){
         Drawf.tri(e.x, e.y, 6, 60 * e.fout(), i*180+90+e.rotation);
-        Drawf.tri(e.x, e.y, 6, 45 * e.fout(), i*180+45+e.rotation);
+        Drawf.tri(e.x, e.y, 6, 45 * e.fout(), i*45+e.rotation);
     }
     Drawf.tri(e.x, e.y, 6, 55 * e.fout(), e.rotation);
 });
