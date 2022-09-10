@@ -1,6 +1,7 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
 const bullets = require("libs/bullets");
+const sfx = require("libs/sounds");
 
 const point = extend(ItemTurret, "r-point", {});
 
@@ -39,6 +40,7 @@ const volt = extend(PowerTurret, "b-volt", {});
 
 const bit = extend(PowerTurret, "b-bit", {
 	shootType: bullets.bitBullet,
+	shootSound: sfx.bitShoot,
 	range: 140,
 	rotateSpeed: Infinity,
 });
