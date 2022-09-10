@@ -45,7 +45,7 @@ const bit = extend(PowerTurret, "b-bit", {
 bit.buildType = () => extend(PowerTurret.PowerTurretBuild, bit,  {
   updateTile() {
 	  this.super$updateTile();
-	  this.rotation = round(this.rotation / 45.0) * 45;
+	  this.rotation = Mathf.round(this.rotation / 45.0) * 45;
   }
 });
 
