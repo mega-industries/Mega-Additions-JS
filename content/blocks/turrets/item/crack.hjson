@@ -12,7 +12,7 @@ coolantMultiplier: 5
 consumes: {
 liquid: {
 liquid: water
-amount: 0.1
+amount: 0.2
 update: true
 booster: true
 optional: true
