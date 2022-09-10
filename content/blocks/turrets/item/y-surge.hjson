@@ -10,6 +10,7 @@ ammoTypes: {
     type: BasicBulletType
     trailEffect: disperseTrail
     trailInterval: 1
+    trailRotation: true
     width: 7
     height: 16
     damage: 37
