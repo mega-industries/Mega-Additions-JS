@@ -2,11 +2,13 @@ size: 4
 health: 3600
 reload: 75
 rotateSpeed: 3
+firingMoveFract: 0.35
 consumes: {
   power: 7.2
 }
 shootY: 0
 shootSound: plasmaboom
+loopSound: pulse
 smokeEffect: smokeCloud
 research: b-volt
 category: turret
