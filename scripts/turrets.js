@@ -4,6 +4,23 @@ const bullets = require("libs/bullets");
 
 const point = extend(ItemTurret, "r-point", {});
 
+
+const direction = extend(ItemTurret, "r-direction", {});
+direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
+    	a: 0.0,
+    updateTile(){
+        	this.super$updateTile();
+        	if(this.isShooting() && this.hasAmmo()){
+            		this.a = Mathf.clamp(this.a + 0.007, 0.1, 3)
+        	}else{
+            		this.a = Mathf.clamp(this.a - 0.015, 0.1, 4)
+        	};
+    	},
+    	baseReloadSpeed() {
+        	return this.efficiency * this.a;
+    	},
+});
+
 const line = extend(PowerTurret, "r-line", {});
 
 const angle = extend(PowerTurret, "r-angle", {
@@ -243,20 +260,4 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 	  };
 	Draw.color()
 },
-});
-
-const direction = extend(ItemTurret, "r-direction", {});
-direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
-    	a: 0.0,
-    updateTile(){
-        	this.super$updateTile();
-        	if(this.isShooting() && this.hasAmmo()){
-            		this.a = Mathf.clamp(this.a + 0.007, 0.1, 3)
-        	}else{
-            		this.a = Mathf.clamp(this.a - 0.015, 0.1, 4)
-        	};
-    	},
-    	baseReloadSpeed() {
-        	return this.efficiency * this.a;
-    	},
 });
