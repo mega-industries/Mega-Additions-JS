@@ -183,3 +183,4 @@ exports.bitTrail = new Effect(75, e => {
 	Draw.color(Pal.lancerLaser);
 	Fill.rect(e.x, e.y, 5 * e.fout(), 5 * e.fout());
 });
+exports.bitTrail.layer = Layer.bullet;
