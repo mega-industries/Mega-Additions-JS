@@ -136,3 +136,13 @@ exports.blackCloudOut = extend(ParticleEffect, {
     length: 7,
     particles: 6,
 });
+
+exports.blueCloud = extend(ParticleEffect, {
+    colorFrom: Pal.lancerLaser,
+    colorTo: Pal.lancerLaser,
+    sizeFrom: 4,
+    sizeTo: 0,
+    lifetime: 37,
+    length: 7,
+    particles: 6,
+});
