@@ -1,0 +1,37 @@
+health: 1500
+size: 3
+consumes: {
+  liquid: water/0.05
+  power: 2.2
+  items: {
+    items: [
+      lead/2
+      copper/4
+    ]
+  }
+}
+//todo
+outputItem: copper/1
+updateEffect: smeltsmoke
+updateEfectChance: 0.1
+craftEffect: placeBlock
+craftTime: 85
+drawer: {
+  type: DrawMulti
+  drawers: [
+    DrawDefault
+    DrawFlame
+  ]
+}
+category: crafting
+research: {
+  parent: graphite-press
+  objectives: [
+    silicon-smelter
+  ]
+}
+requirements: [
+  lead/50
+  titanium/75
+  silicon/20
+]
