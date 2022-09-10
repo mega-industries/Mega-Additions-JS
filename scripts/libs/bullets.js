@@ -52,20 +52,12 @@ exports.blankBullet = extend(BasicBulletType, {
     }
   });
 
-exports.pulsarLaser = extend(ContinuousLaserBulletType, {
+exports.pulsarLaser = extend(PointLaserBulletType, {
 	damage: 120,
-	length: 200,
-	width: 8,
-	drawSize: 8,
-	lifetime: 34,
-	fadeTime: 0,
-	lightColor: Pal.lancerLaser,
-	hitColor: Pal.lancerLaser,
-	hitEffect: Fx.hitLancer,
+	drawSize: 1500,
+	sprite: "paralax-laser",
+	damage: 700,
+	beamEffect: new MultiEffect(effects.blueCloud, new WrapEffect(Fx.colorTrail, Pal.lancerLaser)),
 	status: StatusEffects.shocked,
-	statusDuration: 120,
-	incendChance: 0,
-	incendSpread: 0,
-	incendAmount: 0,
-	colors: [Pal.lancerLaser, Pal.lancerLaser, Color.white],
+	statusDuration: 100,
   });
