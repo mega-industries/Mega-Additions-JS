@@ -7,16 +7,6 @@ consumes: {
 }
 shootCone: 45
 shootSound: blastShoot
-shootEffect: shootBig
-smokeEffect: {
-  type: ParticleEffect
-  lifetime: 120
-  length: 45
-  cone: 20
-  interp: pow5Out
-  colorFrom: 7382f0
-  colorTo: 7382f0
- }
 research: b-volt
 category: turret
 requirements: [
