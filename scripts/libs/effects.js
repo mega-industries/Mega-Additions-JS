@@ -148,10 +148,10 @@ exports.blueCloud = extend(ParticleEffect, {
 });
 
 exports.electronShoot = new Effect(27, e => {
-	Draw.color(Color.valueOf("6c8fc7"), Color.valueOf("606571"), e.fin());
+	Draw.color(Color.white, palette.yellow, e.fin());
 	const hl = new Floatc2({get: function(x, y){
-		Fill.poly(e.x + x, e.y + y, 6, e.fout() * 9, e.rotation);
+		Fill.poly(e.x + x, e.y + y, 3, e.fout() * 9, e.rotation);
 	}});
 	
-	Angles.randLenVectors(e.id, 3, e.finpow() * 20.0, e.rotation, 180.0, hl);
+	Angles.randLenVectors(e.id, 4, e.finpow() * 20.0, e.rotation, 180.0, hl);
 });
