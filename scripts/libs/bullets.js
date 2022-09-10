@@ -64,11 +64,9 @@ exports.pulsarLaser = extend(PointLaserBulletType, {
 exports.photonOrb = extend(MissileBulletType, {
 	weaveScl: 0,
 	weaveMag: 0,
-	homingPower: 0.08,
+	homingPower: 0.09,
     lifetime: 45,
-    damage: 75,
-    areaDamage: 45,
-    areaDamageRadius: 30,
+    damage: 55,
     speed: 4.5,
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
@@ -78,6 +76,7 @@ exports.photonOrb = extend(MissileBulletType, {
 	trailRotation: true,
 	trailEffect: effects.photonTrail,
 	trailInterval: 0.5,
+	hitSound: Sounds.none,
     draw(b){
         Draw.color(Color.white)
         Drawf.tri(b.x, b.y, 6, 6, b.rotation);
