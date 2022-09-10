@@ -155,3 +155,8 @@ exports.electronShoot = new Effect(27, e => {
 	
 	Angles.randLenVectors(e.id, 4, e.finpow() * 20.0, e.rotation, 180.0, hl);
 });
+
+exports.photonTrail = new Effect(20, e => {
+	Draw.color(Color.white, palette.yellow, e.fin());
+	Drawf.tri(e.x, e.y, 4 * e.fout(), 4 * e.fout(), e.rotation);
+});
