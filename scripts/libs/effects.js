@@ -147,7 +147,7 @@ exports.blueCloud = extend(ParticleEffect, {
     particles: 6,
 });
 
-exports.electronShoot = new Effect(27, e => {
+exports.electronShoot = new Effect(17, e => {
 	Draw.color(Color.white, palette.yellow, e.fin());
 	const hl = new Floatc2({get: function(x, y){
 		Fill.poly(e.x + x, e.y + y, 3, e.fout() * 9, e.rotation);
@@ -158,5 +158,5 @@ exports.electronShoot = new Effect(27, e => {
 
 exports.photonTrail = new Effect(20, e => {
 	Draw.color(Color.white, palette.yellow, e.fin());
-	Drawf.tri(e.x, e.y, 4 * e.fout(), 4 * e.fout(), e.rotation);
+	Drawf.tri(e.x, e.y, 6 * e.fout(), 6 * e.fout(), e.rotation);
 });
