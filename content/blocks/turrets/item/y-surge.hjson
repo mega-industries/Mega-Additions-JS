@@ -23,7 +23,7 @@ ammoTypes: {
   }
 }
 category: turret
-research: lancer
+research: y-electron
 requirements: [
   graphite/50
   silicon/75
