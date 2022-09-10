@@ -6,7 +6,6 @@ consumes: {
   power: 3.1
 }
 shootCone: 45
-shootSound: blastShoot
 research: b-volt
 category: turret
 requirements: [
