@@ -2,13 +2,7 @@ const effects = require("libs/effects");
 const palette = require("libs/palette");
 const bullets = require("libs/bullets");
 
-const point = extend(ItemTurret, "r-point", {
-	load() {
-          this.super$load()
-	  this.region = Core.atlas.find(this.name);
-	  this.baseRegion = Core.atlas.find("block-" + this.size);
-  },
-});
+const point = extend(ItemTurret, "r-point", {});
 
 const direction = extend(ItemTurret, "r-direction", {});
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
@@ -24,13 +18,6 @@ direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     	baseReloadSpeed() {
         	return this.efficiency * this.a;
     	},
-	draw() {
-	  Draw.rect(direction.baseRegion, this.x, this.y, 0);
-	  Draw.rect(direction.region, this.x, this.y, this.rotation - 90);
-	  Draw.color(Pal.engine);
-          Lines.arc(this.x, this.y, 15, this.a, 0);
-          Draw.color()
-  },
 });
 
 const line = extend(PowerTurret, "r-line", {});
