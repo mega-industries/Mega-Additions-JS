@@ -270,6 +270,12 @@ const electron = extend(ItemTurret, "y-electron", {
 	shootEffect: effects.electronShoot,
 });
 
+const photon = extend(PowerTurret, "y-photon", {
+	shootEffect: effects.electronShoot,
+	shootType: bullets.photonOrb,
+	range: 190,
+});
+
 const surge = extend(ItemTurret, "y-surge", {
 	shootEffect: effects.cannonShoot,
 });
