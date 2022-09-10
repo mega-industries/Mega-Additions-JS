@@ -279,3 +279,15 @@ const photon = extend(PowerTurret, "y-photon", {
 const surge = extend(ItemTurret, "y-surge", {
 	shootEffect: effects.cannonShoot,
 });
+
+const bit = extend(PowerTurret, "b-bit", {
+	//TODO temporary bullet
+	shootType: refractLaser,
+	range: 165,
+});
+bit.buildType = () => extend(PowerTurret.PowerTurretBuild, bit,  {
+  updateTile() {
+	  this.super$updateTile();
+	  this.rotation = round(this.rotation / 45.0) * 45;
+  }
+});
