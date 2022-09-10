@@ -261,3 +261,8 @@ blank.buildType = () => extend(PowerTurret.PowerTurretBuild, blank,  {
 	Draw.color()
 },
 });
+
+
+const surge = extend(ItemTurret, "y-surge", {
+	shootEffect: effects.cannonShoot,
+});
