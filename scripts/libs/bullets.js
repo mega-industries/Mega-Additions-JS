@@ -57,7 +57,7 @@ exports.pulsarLaser = extend(ContinuousLaserBulletType, {
 	length: 200,
 	width: 8,
 	drawSize: 8,
-	lifetime: 40,
+	lifetime: 78,
 	fadeTime: 0,
 	lightColor: Pal.lancerLaser,
 	hitColor: Pal.lancerLaser,
