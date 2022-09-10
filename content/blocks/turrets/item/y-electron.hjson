@@ -3,7 +3,7 @@ range: 190
 reload: 35
 recoil: 2
 cooldownTime: 40
-shootSound: pew
+shootSound: bigshot
 ammoTypes: {
   graphite: {
     type: BasicBulletType
@@ -14,6 +14,7 @@ ammoTypes: {
     damage: 12
     shrinkY: 0
     sprite: large-bomb
+    spin: 2
     despawnHit: true
     hitEffect: flakExplosion
     despawnEffect: none
