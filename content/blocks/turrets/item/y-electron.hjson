@@ -10,12 +10,13 @@ ammoTypes: {
     trailEffect: absorb
     trailInterval: 2
     width: 7
-    height: 16
-    damage: 13
-    hitEffect: hitLancer
-    despawnEffect: flakExplosion
-    pierce: true
-    pierceCap: 2
+    height: 12
+    damage: 12
+    shrinkY: 0
+    sprite: large-bomb
+    despawnHit: true
+    hitEffect: flakExplosion
+    despawnEffect: none
     speed: 4.6
     lifetime: 43
   }
