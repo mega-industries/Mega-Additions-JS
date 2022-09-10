@@ -38,9 +38,8 @@ const blast = extend(PowerTurret, "b-blast", {});
 const volt = extend(PowerTurret, "b-volt", {});
 
 const bit = extend(PowerTurret, "b-bit", {
-	//TODO temporary bullet
-	shootType: bullets.photonOrb,
-	range: 165,
+	shootType: bullets.bitBullet,
+	range: 140,
 	rotateSpeed: Infinity,
 });
 bit.buildType = () => extend(PowerTurret.PowerTurretBuild, bit,  {
