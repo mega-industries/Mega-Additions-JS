@@ -108,11 +108,23 @@ exports.cannonShoot = new Effect(16, 100, e => {
 
     Draw.color(Pal.engine);
     for(let i = 0; i < 2; i++){
-        Drawf.tri(e.x, e.y, 6, 60 * e.fout(), i*180+90+e.rotation);
+        Drawf.tri(e.x, e.y, 6, 70 * e.fout(), i*180+90+e.rotation);
     }
-    Drawf.tri(e.x, e.y, 6, 45 * e.fout(), e.rotation-30);
-    Drawf.tri(e.x, e.y, 6, 45 * e.fout(), e.rotation+30);
-    Drawf.tri(e.x, e.y, 6, 55 * e.fout(), e.rotation);
+    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation-30);
+    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation+30);
+    Drawf.tri(e.x, e.y, 6, 85 * e.fout(), e.rotation);
+});
+
+exports.largeCannonShoot = new Effect(16, 100, e => {
+    Lines.stroke(e.fout() * 2);
+
+    Draw.color(Pal.lancerLaser);
+    for(let i = 0; i < 2; i++){
+        Drawf.tri(e.x, e.y, 6, 70 * e.fout(), i*180+90+e.rotation);
+    }
+    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation-30);
+    Drawf.tri(e.x, e.y, 6, 60 * e.fout(), e.rotation+30);
+    Drawf.tri(e.x, e.y, 6, 85 * e.fout(), e.rotation);
 });
 
 exports.blackCloudOut = extend(ParticleEffect, {
