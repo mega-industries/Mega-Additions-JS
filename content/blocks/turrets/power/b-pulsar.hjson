@@ -2,10 +2,24 @@ size: 4
 health: 3600
 reload: 75
 rotateSpeed: 3
-firingMoveFract: 0.35
 consumes: {
   power: 7.2
 }
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: FlarePart
+      color1: a9d8ff
+      color2: ffffff
+      radius: 0,
+      stroke: 2
+      radiusTo: 4
+      y: 0
+    }
+  ]
+}
+recoil: 0
 shootY: 0
 shootSound: plasmaboom
 loopSound: pulse
