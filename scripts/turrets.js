@@ -41,7 +41,7 @@ const volt = extend(PowerTurret, "b-volt", {});
 const power = extend(PowerTurret, "b-power", {});
 
 const pulsar = extend(PowerTurret, "b-pulsar", {
-  	shootType: bullets.pulsarBullet,
+  	shootType: bullets.pulsarLaser,
 	shootEffect: effects.largeCannonShoot,
 	range: 200,
 	load() {
@@ -55,7 +55,7 @@ pulsar.buildType = () => extend(PowerTurret.PowerTurretBuild, pulsar,  {
 	Draw.rect(pulsar.baseRegion, this.x, this.y, 0);
 	  Draw.rect(pulsar.region, this.x, this.y, this.rotation - 90);
 	Draw.color(Pal.lancerLaser);
-		Fill.circle(this.x, this.y, 1.5);
+		Fill.circle(this.x, this.y, 3.2);
 	  for(let i = 0; i < 5; i++){
 		  Lines.arc(this.x, this.y, 12, 0.14, i * 360/5 + Time.time * 1.3);
 	  };
