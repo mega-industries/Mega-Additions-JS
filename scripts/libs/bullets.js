@@ -53,7 +53,6 @@ exports.blankBullet = extend(BasicBulletType, {
   });
 
 exports.pulsarLaser = extend(PointLaserBulletType, {
-	damage: 120,
 	drawSize: 1500,
 	sprite: "paralax-laser",
 	damage: 700,
