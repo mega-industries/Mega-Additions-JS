@@ -60,3 +60,23 @@ exports.pulsarLaser = extend(PointLaserBulletType, {
 	status: StatusEffects.shocked,
 	statusDuration: 100,
   });
+
+exports.photonOrb = extend(BasicBulletType, {
+    lifetime: 45,
+    damage: 75,
+    areaDamage: 45,
+    areaDamageRadius: 30,
+    speed: 4.5,
+    hitEffect: Fx.none,
+    despawnEffect: Fx.none,
+    despawnHit: true,
+    lightColor: palette.yellow,
+	spin: 3,
+	trailRotation: true,
+	trailEffect: effects.photonTrail,
+	trailInterval: 1,
+    draw(b){
+        Draw.color(Color.white)
+        Drawf.tri(b.x, b.y, 4, 4, b.rotation);
+    }
+  });
