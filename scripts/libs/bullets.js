@@ -1,5 +1,6 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
+const sfx = require("libs/sounds");
 
 exports.angleBullet = extend(EmpBulletType, {
     scaleLife: true,
@@ -94,6 +95,7 @@ exports.bitBullet = extend(BasicBulletType, {
 	trailEffect: effects.bitTrail,
 	hitEffect: effects.bitBurst,
 	despawnEffect: Fx.none,
+	hitSound: sfx.bitHit,
 	trailInterval: 3.5,
 	draw(b){
 		Draw.color(Pal.lancerLaser);
