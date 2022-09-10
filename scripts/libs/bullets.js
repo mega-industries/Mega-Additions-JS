@@ -97,6 +97,6 @@ exports.bitBullet = extend(BasicBulletType, {
 	trailInterval: 3.5,
 	draw(b){
 		Draw.color(Pal.lancerLaser);
-		Fill.rect(b.x, b.y, 5, 5);
+		Fill.rect(b.x, b.y, 8, 8);
 	},
 });
