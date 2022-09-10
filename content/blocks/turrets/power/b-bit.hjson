@@ -1,0 +1,26 @@
+size: 2
+health: 800
+reload: 70
+cooldownTime: 60
+rotateSpeed: 3
+consumes: {
+  power: 5.3
+}
+shootSound: blastShoot
+shootEffect: shootBig
+smokeEffect: {
+  type: ParticleEffect
+  lifetime: 120
+  length: 45
+  cone: 20
+  interp: pow5Out
+  colorFrom: 7382f0
+  colorTo: 7382f0
+ }
+research: b-volt
+category: turret
+requirements: [
+  graphite/70
+  titanium/120
+  silicon/90
+]
