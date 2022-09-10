@@ -3,8 +3,9 @@ health: 800
 reload: 70
 cooldownTime: 60
 consumes: {
-  power: 5.3
+  power: 3.1
 }
+shootCone: 45
 shootSound: blastShoot
 shootEffect: shootBig
 smokeEffect: {
