@@ -32,6 +32,7 @@ ammoTypes: {
     width: 12
     height: 12
     shrinkY: 0
+    shrinkX: 0
     spin: 3
     speed: 3
     lifetime: 40
