@@ -1,0 +1,29 @@
+health: 350
+size: 2
+range: 190
+reload: 35
+recoil: 2
+cooldownTime: 40
+shootSound: pew
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    trailEffect: absorb
+    trailInterval: 2
+    width: 7
+    height: 16
+    damage: 13
+    hitEffect: hitLancer
+    despawnEffect: flakExplosion
+    pierce: true
+    pierceCap: 2
+    speed: 4.6
+    lifetime: 43
+  }
+}
+category: turret
+research: lancer
+requirements: [
+  graphite/10
+  lead/20
+]
