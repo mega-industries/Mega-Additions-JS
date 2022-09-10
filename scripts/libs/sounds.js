@@ -1,4 +1,4 @@
-exports.blastCharge = loadSound("blastCharge");
-exports.blastShoot = loadSound("blastShoot");
-exports.bitHit = loadSound("bitHit");
-exports.bitShoot = loadSound("bitShoot");
+exports.blastCharge = Sounds.getSound("blastCharge");
+exports.blastShoot = Sounds.getSound("blastShoot");
+exports.bitHit = Sounds.getSound("bitHit");
+exports.bitShoot = Sounds.getSound("bitShoot");
