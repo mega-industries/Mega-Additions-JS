@@ -166,17 +166,17 @@ exports.bitBurst = new Effect(30, e => {
 	Draw.color(Pal.lancerLaser);
 	Lines.stroke(2.5);
 	
-	Lines.line(e.x, e.y, e.x - size, e.y);
-	Lines.line(e.x, e.y, e.x + size, e.y);
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y);
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y);
 	
-	Lines.line(e.x, e.y, e.x, e.y - size);
-	Lines.line(e.x, e.y, e.x, e.y + size);
+	Lines.line(e.x, e.y, e.x, e.y - size * e.fout());
+	Lines.line(e.x, e.y, e.x, e.y + size * e.fout());
 	
-	Lines.line(e.x, e.y, e.x - size, e.y - size);
-	Lines.line(e.x, e.y, e.x + size, e.y + size);
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y - size * e.fout());
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y + size * e.fout());
 	
-	Lines.line(e.x, e.y, e.x - size, e.y + size);
-	Lines.line(e.x, e.y, e.x + size, e.y - size);
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y + size * e.fout());
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y - size * e.fout());
 });
 
 exports.bitTrail = new Effect(75, e => {
