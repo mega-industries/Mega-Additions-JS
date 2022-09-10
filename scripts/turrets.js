@@ -44,7 +44,7 @@ const pulsar = extend(LaserTurret, "b-pulsar", {
   	shootType: bullets.pulsarLaser,
 	shootEffect: effects.largeCannonShoot,
 	range: 200,
-	shootDuration: 40,
+	shootDuration: 230,
 	load() {
 		this.super$load();
 		this.region = Core.atlas.find(this.name);
