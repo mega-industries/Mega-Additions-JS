@@ -11,3 +11,5 @@ const scrapFilter = extend(GenericCrafter, "scrap-filter", {
   updateEffect: Fx.hitLaser,
   updateEffectChance: 0.04,
 });
+
+const elecSmelter = extend(GenericCrafter, "y-electro-smelter", {});
