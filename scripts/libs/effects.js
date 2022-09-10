@@ -163,7 +163,7 @@ exports.photonTrail = new Effect(20, e => {
 
 exports.bitBurst = new Effect(30, e => {
 	let size = 21;
-	Draw.color = Pal.lancerLaser;
+	Draw.color(Pal.lancerLaser);
 	Lines.stroke(2.5);
 	
 	Lines.line(e.x, e.y, e.x - size, e.y);
@@ -181,6 +181,6 @@ exports.bitBurst = new Effect(30, e => {
 
 exports.bitTrail = new Effect(75, e => {
 	Draw.color(Pal.lancerLaser);
-	Fill.rect(e.x, e.y, 5 * e.fout(), 5 * e.fout());
+	Fill.rect(e.x, e.y, 8 * e.fout(), 8 * e.fout());
 });
 exports.bitTrail.layer = Layer.bullet;
