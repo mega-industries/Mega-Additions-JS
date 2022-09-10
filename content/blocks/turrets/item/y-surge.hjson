@@ -21,3 +21,10 @@ ammoTypes: {
     lifetime: 43
   }
 }
+category: turret
+research: lancer
+requirements: [
+  graphite/50
+  silicon/75
+  lead/30
+]
