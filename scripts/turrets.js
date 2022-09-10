@@ -271,6 +271,7 @@ const pulsar = extend(PowerTurret, "b-pulsar", {
   	shootType: bullets.pulsarBullet,
   	range: 190,
 	shootEffect: effects.largeCannonShoot,
+	range: 200,
 	load() {
 		this.super$load();
 		this.region = Core.atlas.find(this.name);
