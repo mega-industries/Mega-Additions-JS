@@ -211,3 +211,8 @@ exports.whiteCharge = new Effect(44, e => {
 	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y + size * e.fin());
 	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y - size * e.fin());
 });
+
+exports.spaceTrail = new Effect(20, e => {
+	Draw.color(Color.white, palette.yellow, e.fin());
+	Drawf.tri(e.x, e.y, 8 * e.fout(), 8 * e.fout(), e.rotation);
+});
