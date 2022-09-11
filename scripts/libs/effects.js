@@ -218,13 +218,13 @@ exports.spaceTrail = new Effect(20, e => {
 });
 
 exports.smallImplode = new Effect(35, e => {
-	Draw.color(Color.white, palette.black, e.fin());
+	Draw.color(Color.white, palette.black, e.fout());
 	Lines.stroke(2 * e.fin());
 	Lines.circle(e.x, e.y, 4 + e.fout() * 10);
 });
 
 exports.largeImplode = new Effect(55, e => {
-	Draw.color(Color.white, palette.black, e.fin());
+	Draw.color(Color.white, palette.black, e.fout());
 	Lines.stroke(3 * e.fin());
 	Lines.circle(e.x, e.y, 4 + e.fout() * 25);
 	
@@ -232,5 +232,5 @@ exports.largeImplode = new Effect(55, e => {
 		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 9, e.rotation);
 	}});
 	
-	Angles.randLenVectors(e.id, 5, e.finpow() * -20.0, e.rotation, 180.0, hl);
+	Angles.randLenVectors(e.id, 5, e.fin() * 20.0, e.rotation, 180.0, hl);
 });
