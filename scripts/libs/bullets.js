@@ -55,8 +55,8 @@ exports.blankBullet = extend(BasicBulletType, {
 exports.pulsarLaser = extend(PointLaserBulletType, {
 	drawSize: 1500,
 	sprite: "parallax-laser",
-	damage: 700,
-	beamEffect: new MultiEffect(effects.blueCloud, new WrapEffect(Fx.colorTrail, Pal.lancerLaser)),
+	damage: 375,
+	beamEffect: effects.blueCloud,
 	status: StatusEffects.shocked,
 	statusDuration: 100,
 });
