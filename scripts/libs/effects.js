@@ -232,5 +232,5 @@ exports.largeImplode = new Effect(55, e => {
 		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 9, e.rotation);
 	}});
 	
-	Angles.randLenVectors(e.id, 5, e.fin() * 20.0, e.rotation, 180.0, hl);
+	Angles.randLenVectors(e.id, 2, e.fout() * 40.0, e.rotation, 135.0, hl);
 });
