@@ -102,6 +102,18 @@ exports.bitBullet = extend(BasicBulletType, {
 	},
 });
 
+const spaceFrag = extend(MissileBulletType, {
+	weaveScl: 0,
+	weaveMag: 0,
+	homingPower: 0.08,
+	speed: 6,
+	lifetime: 20,
+	damage: 45,
+	hitEffect: effects.smallImplode,
+	despawnEffect: Fx.none,
+	despawnHit: true,
+});
+
 exports.spaceBolt = extend(MissileBulletType, {
 	weaveScl: 0,
 	weaveMag: 0,
@@ -109,7 +121,7 @@ exports.spaceBolt = extend(MissileBulletType, {
     lifetime: 45,
     damage: 135,
     speed: 4.5,
-    hitEffect: Fx.none,
+    hitEffect: effects.largeImplode,
     despawnEffect: Fx.none,
     despawnHit: true,
     lightColor: palette.yellow,
