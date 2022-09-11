@@ -4,8 +4,8 @@ consumes: {
 }
 plans: [
   {
-    unit: y-disagreement
-    time: 365
+    unit: y01-disagreement
+    time: 600
     requirements: [
       silicon/10
       graphite/25
