@@ -1,9 +1,5 @@
 size: 3
 health: 1200
-shoot: {
-  type: ShootPattern
-  firstShotDelay: 44
-}
 consumes: {
   power: 4.2
 }
