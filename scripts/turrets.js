@@ -91,6 +91,7 @@ const space = extend(PowerTurret, "w-space", {
 	shootType: bullets.spaceBolt,
 	range: 190,
 });
+space.shoot.firstShotDelay = effects.whiteCharge.lifetime;
 
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
