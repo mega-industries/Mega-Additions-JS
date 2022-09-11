@@ -193,3 +193,21 @@ exports.whiteShoot = new Effect(37, e => {
 	
 	Angles.randLenVectors(e.id, 5, e.finpow() * 20.0, e.rotation, 180.0, hl);
 });
+
+exports.whiteCharge = new Effect(44, e => {
+	let size = 39;
+	Draw.color(palette.darkGray, Color.white, e.fin());
+	Lines.stroke(2.5);
+	
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y);
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y);
+	
+	Lines.line(e.x, e.y, e.x, e.y - size * e.fin());
+	Lines.line(e.x, e.y, e.x, e.y + size * e.fin());
+	
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y - size * e.fin());
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y + size * e.fin());
+	
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y + size * e.fin());
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y - size * e.fin());
+});
