@@ -13,7 +13,7 @@ weapons: [
     x: 0
     y: 0
     shootY: 1
-    reload: 25
+    reload: 14
     shootSound: lasershoot
     rotate: false
     mirror: false
@@ -36,8 +36,9 @@ weapons: [
         sizeTo: 3.3
         strokeFrom: 1
         strokeTo: 0
+        lifetime: 15
       }
-      despawnEffect: {
+      hitEffect: {
         type: WaveEffect
         colorFrom: f3e979
         colorTo: f3e979
@@ -45,8 +46,10 @@ weapons: [
         sizeTo: 3.3
         strokeFrom: 1
         strokeTo: 0
+        lifetime: 15
       }
-      hitEfect: none
+      despawnEffect: none
+      despawnHit: true
     }
   }
 ]
