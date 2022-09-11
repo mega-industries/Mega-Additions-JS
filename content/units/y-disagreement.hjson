@@ -1,4 +1,6 @@
+type: Flying
 flying: true
+itemCapacity: 10
 engineOffset: 5.7
 engineSize: 1.8
 speed: 2.5
@@ -17,12 +19,13 @@ weapons: [
     mirror: false
     bullet: {
       type: LaserBoltBulletType
+      damage: 9
       backColor: f3e979
       lightColor: f3e979
       frontColor: ffffff
       width: 2
       height: 6
-      recoil: 0.4
+      recoil: 0.2
       lifetime: 30
       speed: 5
       smokeEffect: {
@@ -34,7 +37,7 @@ weapons: [
         strokeFrom: 1
         strokeTo: 0
       }
-      hitEffect: {
+      despawnEffect: {
         type: WaveEffect
         colorFrom: f3e979
         colorTo: f3e979
@@ -43,8 +46,7 @@ weapons: [
         strokeFrom: 1
         strokeTo: 0
       }
-      despawnEffect: none
-      despawnHit: true
+      hitEfect: none
     }
   }
 ]
