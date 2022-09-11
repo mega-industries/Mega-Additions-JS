@@ -164,19 +164,19 @@ exports.photonTrail = new Effect(20, e => {
 exports.bitBurst = new Effect(30, e => {
 	let size = 21;
 	Draw.color(Pal.lancerLaser);
-	Lines.stroke(2.5);
+	Lines.stroke(2.5 * e.fout());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y);
-	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y);
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y);
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y);
 	
-	Lines.line(e.x, e.y, e.x, e.y - size * e.fout());
-	Lines.line(e.x, e.y, e.x, e.y + size * e.fout());
+	Lines.line(e.x, e.y, e.x, e.y - size * e.fin());
+	Lines.line(e.x, e.y, e.x, e.y + size * e.fin());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y - size * e.fout());
-	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y + size * e.fout());
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y - size * e.fin());
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y + size * e.fin());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y + size * e.fout());
-	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y - size * e.fout());
+	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y + size * e.fin());
+	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y - size * e.fin());
 });
 
 exports.bitTrail = new Effect(75, e => {
@@ -197,22 +197,22 @@ exports.whiteShoot = new Effect(37, e => {
 exports.whiteCharge = new Effect(44, e => {
 	let size = 39;
 	Draw.color(palette.darkGray, Color.white, e.fin());
-	Lines.stroke(2.5);
+	Lines.stroke(2.5 * e.fin());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y);
-	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y);
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y);
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y);
 	
-	Lines.line(e.x, e.y, e.x, e.y - size * e.fin());
-	Lines.line(e.x, e.y, e.x, e.y + size * e.fin());
+	Lines.line(e.x, e.y, e.x, e.y - size * e.fout());
+	Lines.line(e.x, e.y, e.x, e.y + size * e.fout());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y - size * e.fin());
-	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y + size * e.fin());
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y - size * e.fout());
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y + size * e.fout());
 	
-	Lines.line(e.x, e.y, e.x - size * e.fin(), e.y + size * e.fin());
-	Lines.line(e.x, e.y, e.x + size * e.fin(), e.y - size * e.fin());
+	Lines.line(e.x, e.y, e.x - size * e.fout(), e.y + size * e.fout());
+	Lines.line(e.x, e.y, e.x + size * e.fout(), e.y - size * e.fout());
 });
 
 exports.spaceTrail = new Effect(20, e => {
-	Draw.color(Color.white, palette.yellow, e.fin());
+	Draw.color(Color.white, palette.darkGray, e.fin());
 	Drawf.tri(e.x, e.y, 8 * e.fout(), 8 * e.fout(), e.rotation);
 });
