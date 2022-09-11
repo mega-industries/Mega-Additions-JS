@@ -22,7 +22,6 @@ cooldownTime: 45
 recoil: 3.1
 range: 200
 shootSound: artillery
-shootEffect: shootBig
 smokeEffect: shootBigSmoke2
 ammoTypes: {
   graphite: {
