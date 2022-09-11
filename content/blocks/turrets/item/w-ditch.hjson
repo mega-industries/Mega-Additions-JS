@@ -16,6 +16,7 @@ shoot: {
     }
   ]
 }
+ammoUseEffect: casing2Double
 inaccuracy: 2
 reload: 85
 cooldownTime: 45
