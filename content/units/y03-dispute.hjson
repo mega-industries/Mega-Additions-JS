@@ -24,8 +24,8 @@ weapons: [
       type: MissileBulletType
       trailChance: 0
       homingPower: 0.07
-      weaveScale: 1
-      weaveMag: 3
+      weaveScale: 2.5
+      weaveMag: 2.5
       damage: 10
       splashDamage: 14
       splashDamageRadius: 20
