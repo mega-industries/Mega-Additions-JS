@@ -21,7 +21,7 @@ exports.greenFlare = new Effect(16, 100, e => {
 exports.blackFlare = new Effect(16, 100, e => {
     Lines.stroke(e.fout() * 2);
 
-    Draw.color(palette.black);
+    Draw.color(palette.darkGray);
     for(let i = 0; i < 2; i++){
         Drawf.tri(e.x, e.y, 6, 40 * e.fout(), i*180+90+e.rotation);
     }
@@ -184,3 +184,12 @@ exports.bitTrail = new Effect(75, e => {
 	Fill.rect(e.x, e.y, 8 * e.fout(), 8 * e.fout());
 });
 exports.bitTrail.layer = Layer.bullet;
+
+exports.whiteShoot = new Effect(37, e => {
+	Draw.color(Color.white, palette.yellow, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 9, e.rotation);
+	}});
+	
+	Angles.randLenVectors(e.id, 5, e.finpow() * 20.0, e.rotation, 180.0, hl);
+});
