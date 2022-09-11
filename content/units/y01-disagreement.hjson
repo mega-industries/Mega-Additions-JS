@@ -10,6 +10,7 @@ health: 125
 weapons: [
   {
     name: disagreement-bolts
+    top: true
     x: 0
     y: 0
     shootY: 1
