@@ -25,10 +25,9 @@ weapons: [
     bullet: {
       type: MissileBulletType
       trailChance: 1
-      trailInterval: 2
-      trailEffect: disperseTrail
+      trailInterval: 5
       trailRotation: true
-      homingPower: 0.12
+      homingPower: 0.07
       weaveScl: 1
       weaveMag: 3
       damage: 20
