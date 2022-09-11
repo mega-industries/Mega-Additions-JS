@@ -1,0 +1,111 @@
+health: 685
+size: 2
+shoot: {
+  type: ShootMulti
+  source: {
+    type: ShootPattern
+    shots: 4
+    shotDelay: 2
+  }
+  dest: [
+    {
+      type: ShootAlternate
+      shots: 2
+      barrels: 2
+      spread: 3.2
+    }
+  ]
+}
+inaccuracy: 6
+reload: 85
+cooldownTime: 45
+recoil: 3.1
+range: 200
+shootSound: artillery
+smokeEffect: {
+  type: ParticleEffect
+  cone: 30
+  particles: 12
+  colorFrom: 7a7a7a7a
+  colorTo: 4f4f5900
+  sizeFrom: 5
+  sizeTo: 0
+  length: 16
+  interp: pow5Out
+  lifetime: 45
+}
+shootEffect: shootBig
+ammoTypes: {
+  graphite: {
+    type: ArtilleryBulletType
+    damage: 85
+    splashDamage: 53
+    splashDamageRadius: 27
+    sprite: large-bomb
+    width: 12
+    height: 12
+    shrinkY: 0
+    shrinkX: 0
+    spin: 3
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        blastExplosion
+        {
+          type: ParticleEffect
+          length: 27
+          sizeFrom: 7
+          sizeTo: 0
+          lifetime: 113
+          colorFrom: ffffff88
+          colorTo: 74748466
+          interp: pow5Out
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+  silicon: {
+    type: ArtilleryBulletType
+    damage: 62
+    splashDamage: 30
+    splashDamageRadius: 27
+    sprite: large-bomb
+    homingPower: 0.11
+    homingRange: 35
+    width: 12
+    height: 12
+    shrinkY: 0
+    shrinkX: 0
+    spin: 3
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        blastExplosion
+        {
+          type: ParticleEffect
+          length: 27
+          sizeFrom: 7
+          sizeTo: 0
+          lifetime: 113
+          colorFrom: ffffff88
+          colorTo: 74748466
+          interp: pow5Out
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+research: w-hole
+category: turret
+requirements: [
+  graphite/90
+  silicon/60
+]
