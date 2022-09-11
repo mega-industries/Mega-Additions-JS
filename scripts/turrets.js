@@ -81,6 +81,11 @@ const crack = extend(ItemTurret, "crack", {});
 
 const hole = extend(ItemTurret, "w-hole", {});
 
+const space = extend(ItemTurret, "w-space", {
+	shootEffect: effects.whiteShoot,
+	heatColor: palette.red,
+});
+
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
   	colors: [Color.valueOf("ff7272"), Color.valueOf("ff7272"), Color.white],
