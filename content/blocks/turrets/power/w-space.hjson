@@ -1,6 +1,9 @@
 size: 3
 health: 1200
-firstShotDelay: 34
+shoot: {
+  type: ShootPattern
+  firstShotDelay: 34
+}
 chargeSound: blastCharge
 shootSound: blastShoot
 recoil: 2
