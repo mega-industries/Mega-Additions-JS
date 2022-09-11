@@ -11,8 +11,8 @@ chargeSound: blastCharge
 shootSound: blastShoot
 shootY: 0
 recoil: 2
-cooldownTime: 130
-reload: 240
+cooldownTime: 250
+reload: 330
 drawer: {
   type: DrawTurret
   parts: [
