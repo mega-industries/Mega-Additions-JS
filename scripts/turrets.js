@@ -81,7 +81,7 @@ const crack = extend(ItemTurret, "crack", {});
 
 const hole = extend(ItemTurret, "w-hole", {});
 
-const space = extend(ItemTurret, "w-space", {
+const ditch = extend(ItemTurret, "w-ditch", {
 	shootEffect: effects.whiteShoot,
 	heatColor: palette.red,
 });
