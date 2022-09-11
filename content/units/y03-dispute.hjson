@@ -24,10 +24,10 @@ weapons: [
       type: MissileBulletType
       trailChance: 0
       homingPower: 0.07
-      weaveScl: 1
+      weaveScale: 1
       weaveMag: 3
-      damage: 20
-      splashDamage: 13
+      damage: 10
+      splashDamage: 14
       splashDamageRadius: 20
       backColor: f3e979
       lightColor: f3e979
@@ -38,7 +38,7 @@ weapons: [
       sprite: circle-bullet
       width: 4
       height: 4
-      lifetime: 57
+      lifetime: 33
       speed: 3
       smokeEffect: {
         type: WaveEffect
@@ -71,7 +71,7 @@ weapons: [
     y: 0
     recoil: 1.86
     shootY: 2.1
-    shootX: 2
+    shootX: 2.12
     reload: 55
     shootSound: laser
     rotate: false
@@ -81,8 +81,8 @@ weapons: [
       type: MissileBulletType
       trailChance: 0
       homingPower: 0.07
-      weaveScl: 1
-      weaveMag: 3
+      weaveScale: 0
+      weaveMag: 0
       damage: 30
       splashDamage: 43
       splashDamageRadius: 35
@@ -95,8 +95,8 @@ weapons: [
       sprite: circle-bullet
       width: 4
       height: 4
-      lifetime: 57
-      speed: 3
+      lifetime: 70
+      speed: 5
       smokeEffect: {
         type: WaveEffect
         colorFrom: f3e979
