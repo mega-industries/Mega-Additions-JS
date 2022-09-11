@@ -115,6 +115,7 @@ const spaceFrag = extend(MissileBulletType, {
 	trailEffect: effects.spaceTrail,
 	trailInterval: 0.5,
 	lightColor: palette.black,
+	hitSound: Sounds.lasercharge2,
 	draw(b){
         Draw.color(Color.white);
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
@@ -139,7 +140,7 @@ exports.spaceBolt = extend(MissileBulletType, {
 	trailRotation: true,
 	trailEffect: effects.spaceTrail,
 	trailInterval: 0.5,
-	hitSound: Sounds.none,
+	hitSound: Sounds.lasercharge2,
 	chargeEffect: effects.whiteCharge,
     draw(b){
         Draw.color(Color.white);
