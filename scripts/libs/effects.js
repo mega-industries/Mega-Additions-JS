@@ -220,17 +220,17 @@ exports.spaceTrail = new Effect(20, e => {
 exports.smallImplode = new Effect(35, e => {
 	Draw.color(Color.white, palette.black, e.fin());
 	Lines.stroke(2 * e.fin());
-	Lines.circle(e.x, e.y, 15 - e.finpow() * 4);
+	Lines.circle(e.x, e.y, 4 + e.fout() * 10);
 });
 
 exports.largeImplode = new Effect(55, e => {
 	Draw.color(Color.white, palette.black, e.fin());
 	Lines.stroke(3 * e.fin());
-	Lines.circle(e.x, e.y, 45 - e.finpow() * 4);
+	Lines.circle(e.x, e.y, 4 + e.fout() * 25);
 	
 	const hl = new Floatc2({get: function(x, y){
-		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 4, e.rotation);
+		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 9, e.rotation);
 	}});
 	
-	Angles.randLenVectors(e.id, 5, 0 - e.finpow() * 20.0, e.rotation, 180.0, hl);
+	Angles.randLenVectors(e.id, 5, e.finpow() * -20.0, e.rotation, 180.0, hl);
 });
