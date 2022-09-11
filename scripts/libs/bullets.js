@@ -72,7 +72,6 @@ exports.photonOrb = extend(MissileBulletType, {
     despawnEffect: Fx.none,
     despawnHit: true,
     lightColor: palette.yellow,
-	spin: 3,
 	trailRotation: true,
 	trailEffect: effects.photonTrail,
 	trailInterval: 0.5,
@@ -112,6 +111,14 @@ const spaceFrag = extend(MissileBulletType, {
 	hitEffect: effects.smallImplode,
 	despawnEffect: Fx.none,
 	despawnHit: true,
+	trailRotation: true,
+	trailEffect: effects.spaceTrail,
+	trailInterval: 0.5,
+	lightColor: palette.black,
+	draw(b){
+        Draw.color(Color.white);
+        Drawf.tri(b.x, b.y, 8, 8, b.rotation);
+    }
 });
 
 exports.spaceBolt = extend(MissileBulletType, {
@@ -128,15 +135,14 @@ exports.spaceBolt = extend(MissileBulletType, {
     hitEffect: effects.smallImplode,
     despawnEffect: effects.largeImplode,
     despawnHit: false,
-    lightColor: palette.yellow,
-	spin: 3,
+    lightColor: palette.black,
 	trailRotation: true,
 	trailEffect: effects.spaceTrail,
 	trailInterval: 0.5,
 	hitSound: Sounds.none,
 	chargeEffect: effects.whiteCharge,
     draw(b){
-        Draw.color(Color.white)
+        Draw.color(Color.white);
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
