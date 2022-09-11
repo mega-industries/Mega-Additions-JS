@@ -4,15 +4,15 @@ shoot: {
   type: ShootMulti
   source: {
     type: ShootPattern
-    shots: 4
-    shotDelay: 2
+    shots: 3
+    shotDelay: 6
   }
   dest: [
     {
       type: ShootAlternate
       shots: 2
       barrels: 2
-      spread: 3.2
+      spread: 3.3
     }
   ]
 }
@@ -22,19 +22,8 @@ cooldownTime: 45
 recoil: 3.1
 range: 200
 shootSound: artillery
-smokeEffect: {
-  type: ParticleEffect
-  cone: 30
-  particles: 12
-  colorFrom: 7a7a7a7a
-  colorTo: 4f4f5900
-  sizeFrom: 5
-  sizeTo: 0
-  length: 16
-  interp: pow5Out
-  lifetime: 45
-}
 shootEffect: shootBig
+smokeEffect: shootBigSmoke2
 ammoTypes: {
   graphite: {
     type: ArtilleryBulletType
