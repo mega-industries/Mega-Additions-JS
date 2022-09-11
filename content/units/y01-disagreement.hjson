@@ -1,4 +1,4 @@
-type: Flying
+type: flying
 flying: true
 itemCapacity: 10
 engineOffset: 5.7
