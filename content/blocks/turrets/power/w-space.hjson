@@ -4,8 +4,12 @@ shoot: {
   type: ShootPattern
   firstShotDelay: 44
 }
+consumes: {
+  power: 4.2
+}
 chargeSound: blastCharge
 shootSound: blastShoot
+shootY: 0
 recoil: 2
 cooldownTime: 165
 reload: 200
@@ -22,7 +26,7 @@ drawer: {
         {
           progress: recoil
           x: -2.2
-          y: -2
+          y: -3.2
         }
       ]
     }
