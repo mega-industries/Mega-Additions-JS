@@ -86,6 +86,13 @@ const ditch = extend(ItemTurret, "w-ditch", {
 	heatColor: palette.red,
 });
 
+const space = extend(PowerTurret, "w-space", {
+	shootEffect: effects.whiteShoot,
+	//TODO temp bullet
+	shootType: bullets.photonOrb,
+	range: 190,
+});
+
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
   	colors: [Color.valueOf("ff7272"), Color.valueOf("ff7272"), Color.white],
