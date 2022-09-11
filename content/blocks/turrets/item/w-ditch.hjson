@@ -5,18 +5,18 @@ shoot: {
   source: {
     type: ShootPattern
     shots: 3
-    shotDelay: 6
+    shotDelay: 7
   }
   dest: [
     {
       type: ShootAlternate
       shots: 2
       barrels: 2
-      spread: 3.3
+      spread: 3.4
     }
   ]
 }
-inaccuracy: 6
+inaccuracy: 2
 reload: 85
 cooldownTime: 45
 recoil: 3.1
@@ -65,6 +65,7 @@ ammoTypes: {
     sprite: large-bomb
     homingPower: 0.11
     homingRange: 35
+    reloadMultiplier: 1.35
     width: 12
     height: 12
     shrinkY: 0
