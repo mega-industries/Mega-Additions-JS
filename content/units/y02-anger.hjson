@@ -6,6 +6,9 @@ engineSize: 1.8
 speed: 3.6
 accel: 0.26
 drag: 0.04
+rotateSpeed: 6
+rotateShooting: false
+faceTarget: false
 health: 125
 weapons: [
   {
@@ -13,7 +16,7 @@ weapons: [
     top: true
     x: 0
     y: 0
-    recoil: 0.47
+    recoil: 1.86
     shootY: 1.2
     reload: 30
     shootSound: bolt
@@ -21,8 +24,12 @@ weapons: [
     mirror: false
     bullet: {
       type: MissileBulletType
+      trailChance: 1
+      trailInterval: 2
+      trailEffect: disperseTrail
+      trailRotation: true
       homingPower: 0.12
-      weaaveScl: 1
+      weaveScl: 1
       weaveMag: 3
       damage: 20
       splashDamage: 13
