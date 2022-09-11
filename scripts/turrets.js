@@ -88,8 +88,7 @@ const ditch = extend(ItemTurret, "w-ditch", {
 
 const space = extend(PowerTurret, "w-space", {
 	shootEffect: effects.whiteShoot,
-	//TODO temp bullet
-	shootType: bullets.photonOrb,
+	shootType: bullets.spaceBolt,
 	range: 190,
 });
 
