@@ -107,7 +107,7 @@ exports.spaceBolt = extend(MissileBulletType, {
 	weaveMag: 0,
 	homingPower: 0.011,
     lifetime: 45,
-    damage: 55,
+    damage: 135,
     speed: 4.5,
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
