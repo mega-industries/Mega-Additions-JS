@@ -2,6 +2,7 @@ size: 2
 health: 800
 reload: 70
 cooldownTime: 60
+shootSound: bitShoot
 consumes: {
   power: 3.1
 }
