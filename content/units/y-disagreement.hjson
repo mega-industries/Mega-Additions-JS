@@ -1,0 +1,57 @@
+flying: true
+engineOffset: 5.7
+engineSize: 1.8
+speed: 2.5
+accel: 0.12
+drag: 0.06
+health: 125
+weapons: [
+  {
+    x: 0
+    y: 0
+    shootY: 1
+    reload: 25
+    shootSound: lasershoot
+    rotate: false
+    mirror: false
+    bullet: {
+      type: LaserBoltBulletType
+      backColor: f3e979
+      lightColor: f3e979
+      frontColor: ffffff
+      width: 2
+      height: 6
+      recoil: 0.4
+      lifetime: 30
+      speed: 5
+      smokeEffect: {
+        type: WaveEffect
+        colorFrom: f3e979
+        colorTo: f3e979
+        sizeFrom: 0
+        sizeTo: 3.3
+        strokeFrom: 1
+        strokeTo: 0
+      }
+      hitEffect: {
+        type: WaveEffect
+        colorFrom: f3e979
+        colorTo: f3e979
+        sizeFrom: 0
+        sizeTo: 3.3
+        strokeFrom: 1
+        strokeTo: 0
+      }
+      despawnEffect: none
+      despawnHit: true
+    }
+  }
+]
+deathExplosionEffect: {
+  type: MultiEffect
+  effects: [
+    instBomb
+    smokeCloud
+    hitMeltdown
+  ]
+}
