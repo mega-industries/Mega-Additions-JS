@@ -2,13 +2,13 @@ size: 3
 health: 1200
 shoot: {
   type: ShootPattern
-  firstShotDelay: 34
+  firstShotDelay: 44
 }
 chargeSound: blastCharge
 shootSound: blastShoot
 recoil: 2
-cooldownTime: 75
-reload: 120
+cooldownTime: 165
+reload: 200
 drawer: {
   type: DrawTurret
   parts: [
@@ -22,7 +22,7 @@ drawer: {
         {
           progress: recoil
           x: -2.2
-          y: -1.2
+          y: -2
         }
       ]
     }
