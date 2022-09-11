@@ -24,9 +24,7 @@ weapons: [
     mirror: false
     bullet: {
       type: MissileBulletType
-      trailChance: 1
-      trailInterval: 5
-      trailRotation: true
+      trailChance: 0
       homingPower: 0.07
       weaveScl: 1
       weaveMag: 3
