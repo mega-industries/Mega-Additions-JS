@@ -101,3 +101,26 @@ exports.bitBullet = extend(BasicBulletType, {
 		Fill.rect(b.x, b.y, 8, 8);
 	},
 });
+
+exports.spaceBolt = extend(MissileBulletType, {
+	weaveScl: 0,
+	weaveMag: 0,
+	homingPower: 0.011,
+    lifetime: 45,
+    damage: 55,
+    speed: 4.5,
+    hitEffect: Fx.none,
+    despawnEffect: Fx.none,
+    despawnHit: true,
+    lightColor: palette.yellow,
+	spin: 3,
+	trailRotation: true,
+	trailEffect: effects.spaceTrail,
+	trailInterval: 0.5,
+	hitSound: Sounds.none,
+	chargeEffect: effects.whiteCharge,
+    draw(b){
+        Draw.color(Color.white)
+        Drawf.tri(b.x, b.y, 8, 8, b.rotation);
+    }
+});
