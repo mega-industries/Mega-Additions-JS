@@ -186,7 +186,7 @@ exports.bitTrail = new Effect(75, e => {
 exports.bitTrail.layer = Layer.bullet;
 
 exports.whiteShoot = new Effect(37, e => {
-	Draw.color(Color.white, palette.yellow, e.fin());
+	Draw.color(Color.white, palette.darkGray, e.fin());
 	const hl = new Floatc2({get: function(x, y){
 		Fill.poly(e.x + x, e.y + y, 4, e.fout() * 9, e.rotation);
 	}});
