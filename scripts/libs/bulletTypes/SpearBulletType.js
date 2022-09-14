@@ -22,9 +22,9 @@ module.exports = {
       Draw.color(color);
       Draw.z(Layer.bullet);
       
-      Drawf.tri(b.x, b.y, width, height, b.rotation)
-      Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation - sideAngle)
-      Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation + sideAngle)
+      Drawf.tri(b.x, b.y, width, height, b.rotation);
+      Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation - sideAngle);
+      Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation + sideAngle);
     },
     hittable: false,
     absorbable: false,
