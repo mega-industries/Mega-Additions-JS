@@ -1,5 +1,4 @@
-module.exports = {
-  spearBullet(color, width, height, sideWidth, sideLength, sideAngle, obj){
+newSpearBullet(color, width, height, sideWidth, sideLength, sideAngle, obj){
     const shoot = extend(ParticleEffect, {
     line: true,
     lenFrom: 4,
@@ -36,4 +35,5 @@ module.exports = {
   const spear = extend(BasicBulletType, obj);
   return spear;
   };
-};
+
+exports.newSpearBullet = newSpearBullet
