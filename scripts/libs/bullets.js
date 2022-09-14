@@ -162,7 +162,7 @@ exports.polarisSpear = extend(BasicBulletType, {
 	lifetime: 60,
 	damage: 65,
 	pierce: true,
-	pierceCap: 3
+	pierceCap: 3,
 	draw(b){
       		Draw.color(palette.yellow);
       		Draw.z(Layer.bullet);
