@@ -1,5 +1,6 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
+const spearBLib = require("libs/bulletTypes/SpearBulletType");
 
 exports.angleBullet = extend(EmpBulletType, {
     scaleLife: true,
