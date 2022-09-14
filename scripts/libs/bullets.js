@@ -167,8 +167,8 @@ exports.polarisSpear = extend(BasicBulletType, {
       		Draw.color(palette.yellow);
       		Draw.z(Layer.bullet);
       
-     		 Drawf.tri(b.x, b.y, 4, 12, b.rotation);
-      		Drawf.tri(b.x, b.y, 2, 6, b.rotation - 13);
-      		Drawf.tri(b.x, b.y, 2, 6, b.rotation + 13);
+     		 Drawf.tri(b.x, b.y, 4, 12, b.rotation - 180);
+      		Drawf.tri(b.x, b.y, 2, 6, b.rotation - 180 - 13);
+      		Drawf.tri(b.x, b.y, 2, 6, b.rotation - 180 + 13);
     	},
 });
