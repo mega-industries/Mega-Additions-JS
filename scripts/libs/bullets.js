@@ -157,19 +157,20 @@ exports.spaceBolt = extend(MissileBulletType, {
     }
 });
 
-exports.polarisSpear = extend(BasicBulletType, {
-	speed: 3,
-	lifetime: 60,
-	damage: 65,
+
+exports.polarisArrow = extend(BasicBulletType, {
+    lifetime: 30,
+    damage: 65,
+    speed: 3,
 	pierce: true,
 	pierceCap: 3,
-	draw(b){
-        Draw.color(palette.yellow);
-		Draw.color(palette.yellow);
-      		Draw.z(Layer.bullet);
-      
-     		 Drawf.tri(b.x, b.y, 4, 12, b.rotation - 180);
-      		Drawf.tri(b.x, b.y, 2, 6, b.rotation - 180 - 13);
-      		Drawf.tri(b.x, b.y, 2, 6, b.rotation - 180 + 13);
+    lightColor: palette.yellow,
+    draw(b){
+        Draw.color(Color.white);
+	    Draw.z(Layer.bullet);
+	    
+        Drawf.tri(b.x, b.y, 3, 10, b.rotation - 180);
+	    Drawf.tri(b.x, b.y, 3, 5, b.rotation - 180 - 10);
+	    Drawf.tri(b.x, b.y, 3, 5, b.rotation - 180 + 10);
     }
 });
