@@ -1,6 +1,5 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
-const spearBLib = require("libs/bulletTypes/SpearBulletType");
 
 exports.angleBullet = extend(EmpBulletType, {
     scaleLife: true,
@@ -155,10 +154,4 @@ exports.spaceBolt = extend(MissileBulletType, {
 	    
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
-});
-
-exports.polarisSpear = spearBLib.newSpearBullet(palette.yellow, 3, 12, 3, 7, {
-	damage: 65,
-	lifetime: 40,
-	speed: 3,
 });
