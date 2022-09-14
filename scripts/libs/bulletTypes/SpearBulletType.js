@@ -1,6 +1,6 @@
 module.exports = {
   spearBullet(color, width, height, sideWidth, sideLength, sideAngle, obj){
-  const shoot = extend(ParticleEffect, {
+    const shoot = extend(ParticleEffect, {
     line: true,
     lenFrom: 4,
     lenTo: 0,
