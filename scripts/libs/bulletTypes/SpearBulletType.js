@@ -35,5 +35,5 @@ module.exports = {
   
   const spear = extend(BasicBulletType, obj);
   return spear;
-});
+  };
 };
