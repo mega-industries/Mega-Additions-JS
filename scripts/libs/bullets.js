@@ -1,6 +1,6 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
-const spearBLib = require("libs/bulletTypes/SpearBulletType");
+//const spearBLib = require("libs/bulletTypes/SpearBulletType");
 
 exports.angleBullet = extend(EmpBulletType, {
     scaleLife: true,
@@ -79,6 +79,8 @@ exports.photonOrb = extend(MissileBulletType, {
 	hitSound: Sounds.none,
     draw(b){
         Draw.color(Color.white)
+	    Draw.z(Layer.bullet);
+	    
         Drawf.tri(b.x, b.y, 6, 6, b.rotation);
     }
 });
@@ -98,6 +100,8 @@ exports.bitBullet = extend(BasicBulletType, {
 	trailInterval: 3.5,
 	draw(b){
 		Draw.color(Pal.lancerLaser);
+		Draw.z(Layer.bullet);
+		
 		Fill.rect(b.x, b.y, 8, 8);
 	},
 });
@@ -119,6 +123,8 @@ const spaceFrag = extend(MissileBulletType, {
 	hitSound: Sounds.lasercharge2,
 	draw(b){
         Draw.color(Color.white);
+		Draw.z(Layer.bullet);
+		
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
@@ -145,13 +151,24 @@ exports.spaceBolt = extend(MissileBulletType, {
 	chargeEffect: effects.whiteCharge,
     draw(b){
         Draw.color(Color.white);
+	    Draw.z(Layer.bullet);
+	    
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
 
-exports.polarisSpear = spearBLib.spearBullet(palette.yellow, 4, 12, 3, 7, {
-	damage: 57,
+exports.polarisSpear = extend(BasicBulletType, {
 	speed: 3,
-	lifetime: 70,
-	hitEffect: Fx.hitLancer,
+	lifetime: 60,
+	damage: 65,
+	pierce: true,
+	pierceCap: 3
+	draw(b){
+      		Draw.color(palette.yellow);
+      		Draw.z(Layer.bullet);
+      
+     		 Drawf.tri(b.x, b.y, width, height, b.rotation);
+      		Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation - sideAngle);
+      		Drawf.tri(b.x, b.y, sideWidth, sideLength, b.rotation + sideAngle);
+    	},
 });
