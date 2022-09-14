@@ -148,3 +148,10 @@ exports.spaceBolt = extend(MissileBulletType, {
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
+
+exports.polarisSpear = spearBLib.SpearBulletType(palette.yellow, 4, 12, 3, 7, {
+	damage: 57,
+	speed: 3,
+	lifetime: 70,
+	hitEffect: Fx.hitLancer,
+});
