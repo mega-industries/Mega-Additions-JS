@@ -149,7 +149,7 @@ exports.spaceBolt = extend(MissileBulletType, {
     }
 });
 
-exports.polarisSpear = spearBLib.SpearBulletType(palette.yellow, 4, 12, 3, 7, {
+exports.polarisSpear = spearBLib.spearBullet(palette.yellow, 4, 12, 3, 7, {
 	damage: 57,
 	speed: 3,
 	lifetime: 70,
