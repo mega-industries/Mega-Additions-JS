@@ -165,6 +165,7 @@ exports.polarisSpear = extend(BasicBulletType, {
 	pierceCap: 3,
 	draw(b){
         Draw.color(palette.yellow);
+		Draw.color(palette.yellow);
       		Draw.z(Layer.bullet);
       
      		 Drawf.tri(b.x, b.y, 4, 12, b.rotation - 180);
