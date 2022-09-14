@@ -28,6 +28,8 @@ exports.SpearBulletType(color, width, height, sideWidth, sideLength sideAngle, o
     hittable: false,
     absorbable: false,
     shootEffect: shoot,
+    pierce: true,
+    pierceCap: 3,
   }, obj);
   
   const spear = extend(BasicBulletType, obj);
