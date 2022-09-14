@@ -156,21 +156,3 @@ exports.spaceBolt = extend(MissileBulletType, {
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
-
-
-exports.polarisArrow = extend(BasicBulletType, {
-    lifetime: 30,
-    damage: 65,
-    speed: 3,
-	pierce: true,
-	pierceCap: 3,
-    lightColor: palette.yellow,
-    draw(b){
-        Draw.color(Color.white);
-	    Draw.z(Layer.bullet);
-	    
-        Drawf.tri(b.x, b.y, 3, 10, b.rotation - 180);
-	    Drawf.tri(b.x, b.y, 3, 5, b.rotation - 180 - 10);
-	    Drawf.tri(b.x, b.y, 3, 5, b.rotation - 180 + 10);
-    }
-});
