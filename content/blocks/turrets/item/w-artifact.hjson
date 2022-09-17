@@ -1,0 +1,91 @@
+size: 5
+health: 3560
+recoil: 2
+cooldownTime: 80
+reload: 110
+shootWarmupSpeed: 0.05
+minWarmup: 0.85
+shootCone: 25
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-mid"
+      heatColor: e56666
+      heatProgress: warmup
+      mirror: false
+    }
+    {
+      type: RegionPart
+      suffix: "-side"
+      heatColor: e56666
+      heatProgress: warmup
+      mirror: true
+      progress: warmup
+      moveX: -1
+      moveY: -1.7
+      moveRot: 6
+    }
+    {
+      type: RegionPart
+      suffix: "-side"
+      heatColor: e56666
+      heatProgress: warmup
+      mirror: true
+      progress: warmup
+      moveY: -1.2
+      moveRot: 4
+    }
+    {
+      type: RegionPart
+      suffix: "-barrel"
+      heatProgress: recoil
+      mirror: false
+      progress: recoil
+      movey: -1.1
+    }
+  ]
+}
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    sprite: circle-bullet
+    width: 6
+    height: 6
+    shrinkY: 0
+    trailWidth: 3
+    trailLength: 12
+    frontColor: e8b0b0
+    backColor: e8b0b0
+    trailColor: e8b0b0
+    speed: 5
+    lifetime: 45
+    damage: 175
+    splashDamage: 65
+    splashDamageRadius: 30
+    despawnEffect: blastExplosion
+    hitEFfect: {
+      type: ParticleEffect
+      colorFrom: e8b0b0
+      colorTo: e8b0b0
+      sizeFrom: 5
+      sizeTo: 0
+      lifetime: 35
+      length: 12
+      particles: 9
+    }
+    pierce: true
+    pierceCap: 4
+    despawnHit: false
+  }
+}
+category: turret
+research: fuse
+requirements: [
+  metaglass/100
+  copper/120
+  thorium/70
+  lead/40
+  
+]
