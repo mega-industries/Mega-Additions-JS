@@ -27,10 +27,12 @@ drawer: {
       colorTo: e56666
       outline: false
       blending: additive
+      layerOffset: 0.03
     }
     {
       type: RegionPart
       suffix: "-top"
+      layerOffset: 0.06
       outline: false
     }
   ]
