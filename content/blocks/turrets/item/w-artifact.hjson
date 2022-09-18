@@ -1,11 +1,13 @@
 size: 5
 health: 3560
-recoil: 2
+recoil: 4
+shootSound: bang
 cooldownTime: 80
 reload: 110
 shootWarmupSpeed: 0.05
 minWarmup: 0.85
 shootCone: 25
+range: 110
 drawer: {
   type: DrawTurret
   parts: [
@@ -18,7 +20,7 @@ drawer: {
     }
     {
       type: RegionPart
-      suffix: "-side"
+      suffix: "-wing"
       heatColor: e56666
       heatProgress: warmup
       mirror: true
@@ -43,7 +45,7 @@ drawer: {
       heatProgress: recoil
       mirror: false
       progress: recoil
-      movey: -1.1
+      moveY: -1.1
     }
   ]
 }
@@ -80,6 +82,7 @@ ammoTypes: {
     despawnHit: false
   }
 }
+ammoPerShot: 6
 category: turret
 research: fuse
 requirements: [
