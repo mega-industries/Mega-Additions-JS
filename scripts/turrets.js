@@ -93,6 +93,15 @@ const space = extend(PowerTurret, "w-space", {
 });
 space.shoot.firstShotDelay = effects.whiteCharge.lifetime;
 
+const ditch = extend(ItemTurret, "w-ditch", {
+	shootEffect: effects.whiteShoot,
+	heatColor: palette.red,
+});
+
+const artifact = extend(ItemTurret, "w-artifact", {
+	shootEffect: effects.whiteShoot,
+});
+
 const refractLaser = extend(LaserBulletType, {
   	length: 173,
   	colors: [Color.valueOf("ff7272"), Color.valueOf("ff7272"), Color.white],
