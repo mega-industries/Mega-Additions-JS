@@ -1,7 +1,7 @@
 size: 5
 health: 3560
 recoil: 4
-shootSound: bang
+shootSound: smallCannon
 cooldownTime: 80
 reload: 110
 shootWarmupSpeed: 0.05
@@ -28,6 +28,7 @@ drawer: {
       moveX: -1
       moveY: -1.7
       moveRot: 6
+      layerOffset: -0.03
     }
     {
       type: RegionPart
@@ -38,6 +39,7 @@ drawer: {
       progress: warmup
       moveY: -1.2
       moveRot: 4
+      layerOffset: -0.09
     }
     {
       type: RegionPart
@@ -46,6 +48,7 @@ drawer: {
       mirror: false
       progress: recoil
       moveY: -1.1
+      layerOffset: -0.06
     }
   ]
 }
