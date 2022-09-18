@@ -1,7 +1,7 @@
 size: 5
 health: 3560
 recoil: 4
-shootSound: smallCannon
+shootSound: shockBlast
 cooldownTime: 80
 reload: 110
 shootWarmupSpeed: 0.05
