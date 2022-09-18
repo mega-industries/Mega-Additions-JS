@@ -93,11 +93,6 @@ const space = extend(PowerTurret, "w-space", {
 });
 space.shoot.firstShotDelay = effects.whiteCharge.lifetime;
 
-const ditch = extend(ItemTurret, "w-ditch", {
-	shootEffect: effects.whiteShoot,
-	heatColor: palette.red,
-});
-
 const artifact = extend(ItemTurret, "w-artifact", {
 	shootEffect: effects.whiteShoot,
 });
