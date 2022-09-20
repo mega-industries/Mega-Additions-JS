@@ -26,6 +26,9 @@ direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
         	}else{
             		direction.a = Mathf.clamp(direction.a - 0.015, 0.1, 5)
         	};
+	    if(!this.hasAmmo()){
+		    direction.a = 0.1
+	    };
     	},
     	baseReloadSpeed() {
         	return this.efficiency * direction.a;
