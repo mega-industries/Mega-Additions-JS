@@ -5,14 +5,6 @@ const bullets = require("libs/bullets");
 const point = extend(ItemTurret, "r-point", {});
 
 const direction = extend(ItemTurret, "r-direction", {
-	setBars(){
-		this.super$setBars();
-		this.addBar("shootSpeed", entity => new Bar(
-	    () => Core.bundle.get("stat.mega-adds.shootspeed") + " " + (this.a * 100) + "%", 
-	    () => Pal.powerBar, 
-	    () => 1
-	));
-		},
 });
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     	a: 0.0,
@@ -27,6 +19,14 @@ direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     	baseReloadSpeed() {
         	return this.efficiency * this.a;
     	},
+	setBars(){
+		this.super$setBars();
+		this.addBar("shootSpeed", entity => new Bar(
+			() => Core.bundle.get("stat.mega-adds.shootspeed") + " " + (this.a * 100) + "%", 
+			() => Pal.powerBar, 
+			() => 1
+		));
+	},
 });
 
 const line = extend(PowerTurret, "r-line", {});
