@@ -12,7 +12,7 @@ const direction = extend(ItemTurret, "r-direction", {
 	setBars(){
 		this.super$setBars();
 		this.addBar("shootSpeed", entity => new Bar(
-			() => Core.bundle.get("stat.mega-adds.shootspeed") + " " + (this.a * 100) + "%", 
+			() => Core.bundle.get("stat.mega-adds.shootspeed") + " " + Mathf.round(this.a * 100) + "%", 
 			() => Pal.powerBar, 
 			() => 1
 		));
