@@ -22,7 +22,7 @@ const direction = extend(ItemTurret, "r-direction", {
 	setStats(){
 		this.super$setStats();
 		this.stats.remove(Stat.reload);
-		this.stats.add(stats.maxShootSpeed, this.maxA, StatUnit.perSecond);
+		this.stats.add(stats.maxShootSpeed, this.maxA * 100, stats.percent);
 	}
 });
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
