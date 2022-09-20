@@ -4,15 +4,24 @@ const bullets = require("libs/bullets");
 
 const point = extend(ItemTurret, "r-point", {});
 
-const direction = extend(ItemTurret, "r-direction", {});
+const direction = extend(ItemTurret, "r-direction", {
+	setBars(){
+		this.super$setBars();
+		this.addBar("shootSpeed", entity => new Bar(
+	    () => Core.bundle.get("stat.mega-adds.shootspeed") + " " + (this.a * 100) + "%", 
+	    () => Pal.powerBar, 
+	    () => 1
+	));
+		},
+});
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     	a: 0.0,
     updateTile(){
         	this.super$updateTile();
         	if(this.isShooting() && this.hasAmmo()){
-            		this.a = Mathf.clamp(this.a + 0.007, 0.1, 3.6)
+            		this.a = Mathf.clamp(this.a + 0.007, 0.1, 5)
         	}else{
-            		this.a = Mathf.clamp(this.a - 0.015, 0.1, 3.6)
+            		this.a = Mathf.clamp(this.a - 0.015, 0.1, 5)
         	};
     	},
     	baseReloadSpeed() {
