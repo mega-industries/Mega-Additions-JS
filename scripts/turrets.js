@@ -5,9 +5,9 @@ const bullets = require("libs/bullets");
 const point = extend(ItemTurret, "r-point", {});
 
 const direction = extend(ItemTurret, "r-direction", {
-	load(){
-		this.super$load();
-		this.a = 0.0;
+	load() {
+          this.super$load()
+	  this.a = 0.0
 	},
 	setBars(){
 		this.super$setBars();
