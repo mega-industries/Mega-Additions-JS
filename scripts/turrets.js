@@ -1,6 +1,7 @@
 const effects = require("libs/effects");
 const palette = require("libs/palette");
 const bullets = require("libs/bullets");
+const stats = require("libs/stats");
 
 const point = extend(ItemTurret, "r-point", {});
 
@@ -8,6 +9,7 @@ const direction = extend(ItemTurret, "r-direction", {
 	load() {
           this.super$load()
 	  this.a = 0.0
+		this.maxA = 5.0
 	},
 	setBars(){
 		this.super$setBars();
@@ -17,14 +19,19 @@ const direction = extend(ItemTurret, "r-direction", {
 			() => 1
 		));
 	},
+	setStats(){
+		this.super$setStats();
+		this.stats.remove(Stat.reload);
+		this.stats.add(stats.maxShootSpeed, this.maxA, StatUnit.perSecond);
+	}
 });
 direction.buildType = () => extend(ItemTurret.ItemTurretBuild, direction, {
     updateTile(){
         	this.super$updateTile();
         	if(this.isShooting() && this.hasAmmo()){
-            		direction.a = Mathf.clamp(direction.a + 0.007, 0.1, 5)
+            		direction.a = Mathf.clamp(direction.a + 0.007, 0.1, direction.maxA)
         	}else{
-            		direction.a = Mathf.clamp(direction.a - 0.015, 0.1, 5)
+            		direction.a = Mathf.clamp(direction.a - 0.015, 0.1, direction.maxA)
         	};
 	    if(!this.hasAmmo()){
 		    direction.a = 0.1
