@@ -75,6 +75,11 @@ barrels: [36, -35, 0]
 type: ShootBarrel
 barrels: [-36, -35, 0]
 }
+{
+type: ShootHelix
+scl: 4
+mag: 1
+}
 ]
 }
 consumes: {
