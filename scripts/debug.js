@@ -8,7 +8,7 @@ const testBlock = extend(PowerTurret, "test", {
 const anuken = extend(PowerTurret, "op-anuken", {
   setStats(){
     this.super$setStats()
-    this.stats.add(stats.whatTheFork)
+    this.stats.add(Stat.ammo, stats.whatTheFork)
   },
   shootType: bullets.FORK_YOU,
   health: 999999999,
