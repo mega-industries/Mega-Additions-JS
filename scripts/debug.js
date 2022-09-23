@@ -15,7 +15,7 @@ const anuken = extend(PowerTurret, "op-anuken", {
   setBars(){
 		this.super$setBars();
 		this.addBar("shootSpeed", entity => new Bar(
-			() => Core.bundle.get("stat.mega-adds.ohno") + " " + this.power.status, 
+			() => Core.bundle.get("stat.mega-adds.ohno") + " " + this.power, 
 			() => palette.rainbow,
 			() => 1
 		));
