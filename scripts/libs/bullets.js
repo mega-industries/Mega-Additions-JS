@@ -162,9 +162,9 @@ exports.FORK_YOU = extend(BasicBulletType, {
 	damage: Infinity,
 	splashDamage: Infinity,
 	splashDamageRadius: Infinity,
-	hitEffect: Fx.flakExplosion,
+	hitEffect: Fx.none,
 	despawnEffect: Fx.none,
-	hitSound: Sounds.laserblast,
-	trailInterval: 3.5,
+	hitSound: Sounds.explosionbig,
+	trailInterval: 0.5,
 	sprite: "ohno"
 });
