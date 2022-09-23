@@ -11,5 +11,5 @@ const anuken = extend(PowerTurret, "op-anuken", {
     this.stats.add(stats.whatTheFork)
   },
   shootType: bullets.FORK_YOU,
-  health: Number.MAX_VALUE,
+  health: 999999999,
 });
