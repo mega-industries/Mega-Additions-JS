@@ -1,5 +1,6 @@
 const bullets = require("libs/bullets");
 const stats = require("libs/stats");
+const palette = require("libs/palette");
 
 const testBlock = extend(PowerTurret, "test", {
   shootType: Bullets.placeholder,
@@ -15,7 +16,7 @@ const anuken = extend(PowerTurret, "op-anuken", {
 		this.super$setBars();
 		this.addBar("shootSpeed", entity => new Bar(
 			() => Core.bundle.get("stat.mega-adds.ohno") + " " + this.power.status, 
-			() => Color.valueOf("ff7272").shiftHue(Time.time * 2.2), 
+			() => palette.rainbow
 			() => 1
 		));
 	},
