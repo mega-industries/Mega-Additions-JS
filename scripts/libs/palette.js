@@ -5,3 +5,4 @@ exports.lightRed = Color.valueOf("ff7272");
 exports.black = Color.valueOf("000000");
 exports.darkGray = Color.valueOf("4d4e58");
 exports.yellow = Color.valueOf("f3e979");
+exports.rainbow = Color.valueOf("ff7272").shiftHue(Time.time * 2.2);
