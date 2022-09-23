@@ -1,6 +1,82 @@
 targetable: false
 buildVisibility: sandboxOnly
 category: turret
+shootSound: laserblast
+shoot: {
+type: ShootMulti
+source: {
+type: ShootAlternate
+shots: 2
+spread: 10
+}
+
+dest: [
+{
+type: ShootBarrel
+barrels: [16, 15, 0]
+}
+{
+type: ShootBarrel
+barrels: [20, -4, 0]
+}
+{
+type: ShootBarrel
+barrels: [-16, 15, 0]
+}
+{
+type: ShootBarrel
+barrels: [16, -25, 0]
+}
+{
+type: ShootBarrel
+barrels: [-20, -4, 0]
+}
+{
+type: ShootBarrel
+barrels: [-16, -25, 0]
+}
+{
+type: ShootBarrel
+barrels: [24, 35, 0]
+}
+{
+type: ShootBarrel
+barrels: [40, -4, 0]
+}
+{
+type: ShootBarrel
+barrels: [-24, 35, 0]
+}
+{
+type: ShootBarrel
+barrels: [24, -45, 0]
+}
+{
+type: ShootBarrel
+barrels: [-40, -4, 0]
+}
+{
+type: ShootBarrel
+barrels: [-24, -45, 0]
+}
+{
+type: ShootBarrel
+barrels: [36, 25, 0]
+}
+{
+type: ShootBarrel
+barrels: [-36, 25, 0]
+}
+{
+type: ShootBarrel
+barrels: [36, -35, 0]
+}
+{
+type: ShootBarrel
+barrels: [-36, -35, 0]
+}
+]
+}
 consumes: {
   power: 1
 }
