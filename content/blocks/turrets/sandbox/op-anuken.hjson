@@ -1,3 +1,5 @@
 targetable: false
 buildVisibility: sandboxOnly
 category: turret
+hasPower: false
+consumesPower: false
