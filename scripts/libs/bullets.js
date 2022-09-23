@@ -155,3 +155,16 @@ exports.spaceBolt = extend(MissileBulletType, {
         Drawf.tri(b.x, b.y, 8, 8, b.rotation);
     }
 });
+
+exports.FORK_YOU = extend(BasicBulletType, {
+	lifetime: 90,
+	speed: 2,
+	damage: Number.MAX_VALUE,
+	splashDamage: Number.MAX_VALUE,
+	splashDamageRadius: Number.MAX_VALUE,
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.none,
+	hitSound: Sounds.coreexplode,
+	trailInterval: 3.5,
+	sprite: "ohno"
+});
