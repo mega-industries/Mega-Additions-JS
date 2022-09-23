@@ -167,5 +167,7 @@ exports.FORK_YOU = extend(BasicBulletType, {
 	hitSound: Sounds.explosionbig,
 	trailInterval: 0.2,
 	trailColor: Color.white,
-	sprite: "ohno"
+	sprite: "ohno",
+	weaveScale: 4,
+	weaveMag: 1.5,
 });
