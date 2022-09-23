@@ -165,6 +165,7 @@ exports.FORK_YOU = extend(BasicBulletType, {
 	hitEffect: Fx.none,
 	despawnEffect: Fx.none,
 	hitSound: Sounds.explosionbig,
-	trailInterval: 0.5,
+	trailInterval: 0.2,
+	trailColor: Color.white,
 	sprite: "ohno"
 });
