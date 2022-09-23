@@ -2,6 +2,55 @@ targetable: false
 buildVisibility: sandboxOnly
 category: turret
 shootSound: laserblast
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: ShapePart
+      hollow: true
+      circle: true
+      stroke: 0
+      strokeTo: 1
+      radius: 8
+      color: ffffff
+    }
+    {
+      type: ShapePart
+      hollow: true
+      sides: 6
+      stroke: 0
+      strokeTo: 0.7
+      radius: 7
+      color: ffffff
+      rotateSpeed: 2
+    }
+    {
+      type: HaloPart
+      tri: true
+      radius: 0
+      haloRadius: 0
+      haloRadiusTo: 0
+      shapes: 6
+      rotateSpeed: -2
+      triLength: 0
+      triLengthTo: 12
+      color: ffffff
+    }
+    {
+      type: HaloPart
+      tri: true
+      radius: 0
+      haloRadius: 0
+      haloRadiusTo: 0
+      shapes: 6
+      rotateSpeed: -2
+      shapeRotation: 180
+      triLength: 0
+      triLengthTo: 3.5
+      color: ffffff
+    }
+  ]
+}
 shoot: {
 type: ShootMulti
 source: {
