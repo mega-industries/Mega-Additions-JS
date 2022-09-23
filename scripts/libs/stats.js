@@ -12,3 +12,5 @@ exports.whatTheFork = new StatValue({
     t.add("what the fork").left().padLeft(4);
   }
 });
+
+exports.ohno = new Stat("ohno");
