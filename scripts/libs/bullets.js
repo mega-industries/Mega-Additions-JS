@@ -159,9 +159,9 @@ exports.spaceBolt = extend(MissileBulletType, {
 exports.FORK_YOU = extend(BasicBulletType, {
 	lifetime: 90,
 	speed: 2,
-	damage: Number.MAX_VALUE,
-	splashDamage: Number.MAX_VALUE,
-	splashDamageRadius: Number.MAX_VALUE,
+	damage: Infinity,
+	splashDamage: Infinity,
+	splashDamageRadius: Infinity,
 	hitEffect: Fx.flakExplosion,
 	despawnEffect: Fx.none,
 	hitSound: Sounds.coreexplode,
