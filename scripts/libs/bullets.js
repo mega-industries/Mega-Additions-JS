@@ -157,8 +157,8 @@ exports.spaceBolt = extend(MissileBulletType, {
 });
 
 exports.FORK_YOU = extend(BasicBulletType, {
-	lifetime: 90,
-	speed: 2,
+	lifetime: 1000 * 8,
+	speed: 1000 * 8 / 6,
 	damage: Infinity,
 	splashDamage: Infinity,
 	splashDamageRadius: Infinity,
